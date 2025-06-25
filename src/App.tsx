@@ -10,6 +10,7 @@ import AboutPage from "@/pages/AboutPage";
 import AcademicsPage from "./pages/AcademicsPage";
 import DepartmentsPage from "./pages/DepartmentsPage";
 import DepartmentCSE from "@/pages/DepartmentCSE";
+import DepartmentIT from "@/pages/DepartmentIT";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/academics" element={<AcademicsPage />} />
           <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/departments/cse" element={<DepartmentCSE />} />
+          <Route path="/departments/it" element={<DepartmentIT />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
