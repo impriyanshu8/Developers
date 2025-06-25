@@ -11,7 +11,7 @@ import AcademicsPage from "./pages/AcademicsPage";
 import DepartmentsPage from "./pages/DepartmentsPage";
 import DepartmentCSE from "@/pages/DepartmentCSE";
 import DepartmentIT from "@/pages/DepartmentIT";
-
+import DepartmentECE from "./pages/DepartmentECE";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -29,6 +29,7 @@ const App = () => (
           <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/departments/cse" element={<DepartmentCSE />} />
           <Route path="/departments/it" element={<DepartmentIT />} />
+          <Route path="/departments/ece" element={<DepartmentECE />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
