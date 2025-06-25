@@ -142,7 +142,7 @@ const Departments = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-2 bg-[#118DC4]/10 text-[#118DC4] rounded-full text-sm font-medium mb-4">
             Our Departments
           </div>
           <h2 className="text-4xl font-bold text-slate-900 mb-6">
@@ -172,7 +172,7 @@ const Departments = () => {
                 <div className="md:w-3/5">
                   <CardHeader className="pb-4">
                     <div className="flex items-center space-x-3 mb-3">
-                      <dept.icon className="h-8 w-8 text-blue-600" />
+                      <dept.icon className="h-8 w-8 text-[#118DC4]" />
                       <CardTitle className="text-xl text-slate-900 leading-tight">
                         {dept.name}
                       </CardTitle>
@@ -224,7 +224,7 @@ const Departments = () => {
                           {dept.specializations.map((spec, idx) => (
                             <span
                               key={idx}
-                              className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                              className="bg-[#118DC4]/10 text-[#118DC4] text-xs px-2 py-1 rounded-full"
                             >
                               {spec}
                             </span>
@@ -235,7 +235,7 @@ const Departments = () => {
                       <Link to={dept.link}>
                         <Button
                           variant="outline"
-                          className="w-full hover-button"
+                          className="w-full hover-button border-[#118DC4] text-[#118DC4] hover:bg-[#118DC4] hover:text-white"
                         >
                           Explore Department
                         </Button>
@@ -249,7 +249,7 @@ const Departments = () => {
         </div>
 
         {/* Department Stats */}
-        <div className="bg-gradient-to-r from-slate-900 to-blue-900 text-white rounded-2xl p-8">
+        <div className="bg-gradient-to-r from-slate-900 to-[#118DC4] text-white rounded-2xl p-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">Department Excellence</h3>
             <p className="text-slate-300">
@@ -258,22 +258,22 @@ const Departments = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <Users className="h-8 w-8 mx-auto mb-2 text-blue-300" />
+              <Users className="h-8 w-8 mx-auto mb-2 text-[#118DC4]/70" />
               <div className="text-2xl font-bold">99</div>
               <div className="text-slate-300">Total Faculty</div>
             </div>
             <div>
-              <BookOpen className="h-8 w-8 mx-auto mb-2 text-blue-300" />
+              <BookOpen className="h-8 w-8 mx-auto mb-2 text-[#118DC4]/70" />
               <div className="text-2xl font-bold">1350</div>
               <div className="text-slate-300">Total Students</div>
             </div>
             <div>
-              <Award className="h-8 w-8 mx-auto mb-2 text-blue-300" />
+              <Award className="h-8 w-8 mx-auto mb-2 text-[#118DC4]/70" />
               <div className="text-2xl font-bold">21+</div>
               <div className="text-slate-300">Programs</div>
             </div>
             <div>
-              <Computer className="h-8 w-8 mx-auto mb-2 text-blue-300" />
+              <Computer className="h-8 w-8 mx-auto mb-2 text-[#118DC4]/70" />
               <div className="text-2xl font-bold">35+</div>
               <div className="text-slate-300">Research Labs</div>
             </div>

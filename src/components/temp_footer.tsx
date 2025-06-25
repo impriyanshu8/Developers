@@ -63,11 +63,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white relative">
+   <footer className="bg-gray-900 text-white relative">
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="absolute -top-6 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="absolute -top-6 right-8 bg-[#118DC4] hover:bg-[#0e7db0] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Scroll to top"
       >
         <ArrowUp className="h-5 w-5" />
@@ -79,14 +79,19 @@ const Footer = () => {
           {/* University Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">U</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">UIET</h3>
-                <p className="text-sm text-gray-400">Panjab University</p>
-              </div>
-            </div>
+  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+    <img
+      src="https://imgs.search.brave.com/XfoNIRCzVe6i5gayiQSdwTrU26C4tp7OHzJQJ0AmVTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/OS85NC9VSUVUX2xv/Z28ucG5nLzUxMnB4/LVVJRVRfbG9nby5w/bmc"
+      alt="UIET Logo"
+      className="w-10 h-10 object-contain"
+    />
+  </div>
+  <div>
+    <h3 className="text-xl font-bold">UIET</h3>
+    <p className="text-sm text-gray-400">Panjab University</p>
+  </div>
+</div>
+
             
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
               University Institute of Engineering & Technology, committed to excellence in 
@@ -96,18 +101,18 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-sm group">
-                <MapPin className="h-4 w-4 mr-3 text-blue-400 flex-shrink-0 group-hover:text-blue-300 transition-colors" />
+                <MapPin className="h-4 w-4 mr-3 text-[#118DC4] flex-shrink-0 group-hover:text-[#1aa3e0] transition-colors" />
                 <span className="group-hover:text-white transition-colors">Sector 25, Chandigarh - 160014, India</span>
               </div>
               <div className="flex items-center text-sm group">
-                <Phone className="h-4 w-4 mr-3 text-blue-400 flex-shrink-0 group-hover:text-blue-300 transition-colors" />
-                <a href="tel:+91-172-2534818" className="hover:text-blue-400 transition-colors">
+                <Phone className="h-4 w-4 mr-3 text-[#118DC4] flex-shrink-0 group-hover:text-[#1aa3e0] transition-colors" />
+                <a href="tel:+91-172-2534818" className="hover:text-[#118DC4] transition-colors">
                   +91-172-2534818
                 </a>
               </div>
               <div className="flex items-center text-sm group">
-                <Mail className="h-4 w-4 mr-3 text-blue-400 flex-shrink-0 group-hover:text-blue-300 transition-colors" />
-                <a href="mailto:info@uiet.puchd.ac.in" className="hover:text-blue-400 transition-colors">
+                <Mail className="h-4 w-4 mr-3 text-[#118DC4] flex-shrink-0 group-hover:text-[#1aa3e0] transition-colors" />
+                <a href="mailto:info@uiet.puchd.ac.in" className="hover:text-[#118DC4] transition-colors">
                   info@uiet.puchd.ac.in
                 </a>
               </div>
@@ -121,7 +126,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`h-10 w-10 flex items-center justify-center text-gray-400 hover:text-white rounded-lg transition-all duration-300 ${social.color} transform hover:scale-110`}
+                  className={`h-10 w-10 flex items-center justify-center text-gray-400 hover:text-white rounded-lg transition-all duration-300 hover:bg-[#118DC4] transform hover:scale-110`}
                   aria-label={social.label}
                 >
                   <social.icon className="h-4 w-4" />
@@ -138,7 +143,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-300 hover:text-[#118DC4] transition-colors text-sm flex items-center group"
                   >
                     <ExternalLink className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
@@ -156,7 +161,7 @@ const Footer = () => {
                 <li key={dept.name}>
                   <Link
                     to={dept.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm group"
+                    className="text-gray-300 hover:text-[#118DC4] transition-colors text-sm group"
                   >
                     <span className="group-hover:translate-x-1 transition-transform inline-block">{dept.name}</span>
                   </Link>
@@ -173,7 +178,7 @@ const Footer = () => {
                 <li key={resource.name}>
                   <Link
                     to={resource.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm group"
+                    className="text-gray-300 hover:text-[#118DC4] transition-colors text-sm group"
                   >
                     <span className="group-hover:translate-x-1 transition-transform inline-block">{resource.name}</span>
                   </Link>
@@ -197,12 +202,12 @@ const Footer = () => {
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+                  className="flex-1 bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#118DC4] focus:ring-[#118DC4]"
                   required
                 />
                 <Button 
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 px-6 flex items-center"
+                  className="bg-[#118DC4] hover:bg-[#0e7db0] px-6 flex items-center"
                   disabled={isSubscribed}
                 >
                   {isSubscribed ? (
@@ -233,19 +238,19 @@ const Footer = () => {
               © 2025 University Institute of Engineering & Technology, Panjab University. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <Link to="/about#privacy" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/about#privacy" className="text-gray-400 hover:text-[#118DC4] transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/about#terms" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/about#terms" className="text-gray-400 hover:text-[#118DC4] transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/about#cookies" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/about#cookies" className="text-gray-400 hover:text-[#118DC4] transition-colors">
                 Cookie Policy
               </Link>
-              <Link to="/about#accessibility" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/about#accessibility" className="text-gray-400 hover:text-[#118DC4] transition-colors">
                 Accessibility
               </Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/contact" className="text-gray-400 hover:text-[#118DC4] transition-colors">
                 Support
               </Link>
             </div>
