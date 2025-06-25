@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play, GraduationCap, Users, Award, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import UietImage from '../assets/images/UietImage.jpg';
 
 const Hero = () => {
   const quickStats = [
@@ -24,19 +25,20 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-      <div 
-        className="absolute top-0 left-0 w-full h-full opacity-20"
-        style={{ backgroundImage: `url("${svgPattern}")` }}
-      ></div>
+  {/* Background Elements */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+
+  <div 
+    className="absolute top-0 left-0 w-full h-full opacity-20 bg-cover bg-center"
+    style={{ backgroundImage: `url("${UietImage}")` }}
+  ></div>
 
       <div className="container-modern relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen py-8 lg:py-0">
           {/* Left Content */}
           <div className="text-white space-y-6 lg:space-y-8 text-center lg:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-xs sm:text-sm">
+            <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm mt-8 rounded-full border border-white/20 text-xs sm:text-sm">
               <span className="font-medium">🏛️ Government Institute of Excellence</span>
             </div>
 
@@ -81,7 +83,7 @@ const Hero = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl group"
+                  className="w-full sm:w-auto border-white/30 text-blue-900 hover:bg-white/10 backdrop-blur-sm font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl group"
                 >
                   <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform" />
                   Learn More
@@ -90,7 +92,7 @@ const Hero = () => {
             </div>
 
             {/* Quick Navigation */}
-            <div className="pt-6 lg:pt-8">
+            {/* <div className="pt-6 lg:pt-8">
               <p className="text-blue-200 text-sm mb-3 sm:mb-4">Quick Access:</p>
               <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
                 <Link to="/academics" className="text-blue-300 hover:text-white text-xs sm:text-sm underline-offset-4 hover:underline transition-colors">
@@ -106,7 +108,7 @@ const Hero = () => {
                   Contact Us
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Content - Stats Cards */}
@@ -151,12 +153,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 hidden sm:block">
+      {/* <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 hidden sm:block">
         <div className="flex flex-col items-center space-y-2">
           <span className="text-sm">Explore More</span>
           <div className="w-px h-8 bg-gradient-to-b from-white/70 to-transparent"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
