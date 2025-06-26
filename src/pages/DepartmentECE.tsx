@@ -33,48 +33,56 @@ const DepartmentECE = () => {
 
   const faculty = [
     { 
-      name: 'Dr. Rajesh Kumar', 
-      position: 'Professor & HOD', 
-      specialization: 'VLSI Design, Digital Signal Processing',
+      name: 'Dr. Jaget Singh', 
+      position: 'Professor & Coordinator', 
+      specialization: 'Antenna and Microwave Engineering',
       experience: '20+ years',
-      publications: '85+ papers',
-      email: 'rajesh.kumar@pu.ac.in'
+      email: 'jaget_singh80yahoo.co.in'
     },
     { 
-      name: 'Dr. Priya Sharma', 
-      position: 'Associate Professor', 
-      specialization: 'Communication Systems, Wireless Networks',
+      name: 'Prof. Renu Vig', 
+      position: 'Professor', 
+      specialization: 'Wireless and Mobile Communication',
       experience: '15+ years',
-      publications: '65+ papers',
-      email: 'priya.sharma@pu.ac.in'
+      email: 'renuvig@pu.ac.in'
     },
     { 
-      name: 'Dr. Amit Singh', 
-      position: 'Assistant Professor', 
-      specialization: 'Embedded Systems, IoT',
+      name: 'Prof. Sunil Aggarwal', 
+      position: 'Professor', 
+      specialization: 'Wireless communication, Artificial Intelligence',
       experience: '12+ years',
-      publications: '45+ papers',
-      email: 'amit.singh@pu.ac.in'
+      email: 's.agrawal@pu.ac.in'
     },
     { 
-      name: 'Dr. Neha Gupta', 
-      position: 'Assistant Professor', 
-      specialization: 'Microwave Engineering, Antenna Design',
+      name: 'Prof. Arvind Kumar', 
+      position: 'Professor', 
+      specialization: 'Microelectronic, sensors Design, Biomass and photovoltaic energy systems',
       experience: '10+ years',
-      publications: '35+ papers',
-      email: 'neha.gupta@pu.ac.in'
+      email: 'arvind_uiet@pu.ac.in'
+    },
+    { 
+      name: 'Dr. Naresh Kumar', 
+      position: 'Professor', 
+      specialization: ' Wireless and Mobile Communication.',
+      experience: '10+ years',
+      email: 'naresh_uiet@yahoo.com'
+    },
+    { 
+      name: 'Dr. Sumit Budhiraja', 
+      position: 'Professor', 
+      specialization: ' Signal Processing and Communication.',
+      experience: '10+ years',
+      email: 'sumitbudhiraja@gmail.com'
     }
   ];
 
   const labs = [
-    { name: 'Digital Electronics Lab', equipment: 'Logic trainers, FPGA boards', capacity: '30 students' },
-    { name: 'Analog Electronics Lab', equipment: 'CRO, Function generators, Multimeters', capacity: '30 students' },
-    { name: 'Communication Systems Lab', equipment: 'DSO, Signal generators, Spectrum analyzers', capacity: '25 students' },
-    { name: 'VLSI Design Lab', equipment: 'Cadence tools, Xilinx ISE, ModelSim', capacity: '40 students' },
-    { name: 'Microprocessor Lab', equipment: '8085, 8086 kits, ARM boards', capacity: '30 students' },
-    { name: 'Signal Processing Lab', equipment: 'MATLAB, LabVIEW, DSP processors', capacity: '35 students' },
-    { name: 'Antenna & Wave Propagation Lab', equipment: 'Network analyzer, Anechoic chamber', capacity: '20 students' },
-    { name: 'Project Lab', equipment: 'Prototyping tools, 3D printer', capacity: '50 students' }
+    { name: 'Communication Lab', equipment: 'AM, FM, PCM/DM, TDM, ASK, FSK, PSK, QPSK trainers, Data Format Trainer kits, and RFID development system', capacity: '30 students' },
+    { name: 'VLSI and Embedded System Lab', equipment: 'FPGA and CPLD kits (Spartan 3 and Virtex 5)', capacity: '30 students' },
+    { name: 'Wireless Communication and Microwave Lab', equipment: 'GSM simulator, GSM evaluation kit, GPS trainer, CDMA and FDM trainers, Satellite Communication Trainer, ISDN trainer, and 3GHz spectrum analyzer.', capacity: '25 students' },
+    { name: 'Signal Processing and Image Processing Lab', equipment: 'ADSP processors, Blackfin development boards, TMS processors and Digital storage Oscilloscope.', capacity: '40 students' },
+    { name: 'Digital Electronics and Microprocessor Lab', equipment: '8085, and 8086 microprocessors, 8051 and PIC micro controllers, ARM based systems, and various interfacing cards.', capacity: '30 students' },
+    { name: 'Analog Electronics Lab', equipment: 'Analog electronic trainers and PCB designing machine.', capacity: '35 students' },
   ];
 
   const achievements = [
@@ -171,8 +179,7 @@ const DepartmentECE = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700">
-                    To be a center of excellence in Electronics & Communication Engineering education and research, 
-                    producing competent engineers who contribute to technological advancement and societal development.
+                    Electronics & Communication Engineering will contribute to the ever changing industrial requirements, economic growth and global societal needs by enhancing the technical skills and entrepreneurship abilities.
                   </p>
                 </CardContent>
               </Card>
@@ -186,10 +193,9 @@ const DepartmentECE = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="text-gray-700 space-y-2">
-                    <li>• Provide quality education in ECE with emphasis on practical learning</li>
-                    <li>• Foster innovation and research in emerging technologies</li>
-                    <li>• Develop industry-ready professionals with strong ethical values</li>
-                    <li>• Promote entrepreneurship and startup culture</li>
+                    <li>• To produce qualified engineers who are competent in the areas of Electronics & Communication Engineering and able to meet the challenges of ever changing industry requirements at global level.</li>
+                    <li>• To develop strong theoretical concepts complemented with practical trainings.</li>
+                    <li>• To inculcate innovative skills, research aptitude, team-work, ethical practices in students so as to meet expectations of the industry as well as society.</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -207,14 +213,14 @@ const DepartmentECE = () => {
               <Card className="text-center">
                 <CardContent className="p-4">
                   <GraduationCap className="h-8 w-8 mx-auto mb-2 text-green-600" />
-                  <div className="text-2xl font-bold">25+</div>
+                  <div className="text-2xl font-bold">22</div>
                   <div className="text-sm text-gray-600">Faculty</div>
                 </CardContent>
               </Card>
               <Card className="text-center">
                 <CardContent className="p-4">
                   <FlaskConical className="h-8 w-8 mx-auto mb-2 text-purple-600" />
-                  <div className="text-2xl font-bold">8</div>
+                  <div className="text-2xl font-bold">6</div>
                   <div className="text-sm text-gray-600">Laboratories</div>
                 </CardContent>
               </Card>
@@ -235,24 +241,24 @@ const DepartmentECE = () => {
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold mb-2 text-blue-600">PEO1: Technical Competence</h4>
+                    <h4 className="font-semibold mb-2 text-blue-600">PEO1: Engineering Fundamentals</h4>
                     <p className="text-sm text-gray-600 mb-4">
-                      Graduates will demonstrate technical competence in electronics and communication engineering domains
+                      To build a strong foundation in scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems for successful careers to meet the global demands of the society
                     </p>
-                    <h4 className="font-semibold mb-2 text-blue-600">PEO2: Innovation & Research</h4>
+                    <h4 className="font-semibold mb-2 text-blue-600">PEO2: Technical Application</h4>
                     <p className="text-sm text-gray-600">
-                      Graduates will engage in innovative research and development activities
+                      To develop the ability among students to synthesize data and technical concepts of Electronics and Communication for application to develop core and multidisciplinary projects
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-blue-600">PEO3: Professional Ethics</h4>
+                    <h4 className="font-semibold mb-2 text-blue-600">PEO3: Lifelong Learning & Ethics</h4>
                     <p className="text-sm text-gray-600 mb-4">
-                      Graduates will exhibit professional ethics and social responsibility
+                      To promote awareness among student for the value of lifelong learning and to introduce them to professional ethics and codes of professional practice.
                     </p>
-                    <h4 className="font-semibold mb-2 text-blue-600">PEO4: Lifelong Learning</h4>
+                    {/* <h4 className="font-semibold mb-2 text-blue-600">PEO4: Lifelong Learning</h4>
                     <p className="text-sm text-gray-600">
                       Graduates will pursue lifelong learning and adapt to changing technologies
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </CardContent>
@@ -336,7 +342,6 @@ const DepartmentECE = () => {
                     <p className="text-gray-600 mb-2">Specialization: {member.specialization}</p>
                     <div className="grid grid-cols-2 gap-2 text-sm text-gray-500 mb-3">
                       <span>Experience: {member.experience}</span>
-                      <span>Publications: {member.publications}</span>
                     </div>
                     <div className="flex items-center">
                       <Mail className="h-4 w-4 mr-2 text-blue-600" />
@@ -357,7 +362,7 @@ const DepartmentECE = () => {
               <CardContent>
                 <div className="grid md:grid-cols-4 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-blue-600">25+</div>
+                    <div className="text-2xl font-bold text-blue-600">22</div>
                     <div className="text-sm text-gray-600">Total Faculty</div>
                   </div>
                   <div>
@@ -410,24 +415,24 @@ const DepartmentECE = () => {
                     <li className="flex items-start">
                       <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" />
                       <div>
-                        <span className="font-medium">5G Massive MIMO Systems</span>
-                        <p className="text-sm text-gray-600">Funding: DRDO, ₹12L</p>
+                        <span className="font-medium">Design and development of system on chip for single lead wearable ECG for medical devices</span>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹3.63 Crores</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" />
                       <div>
-                        <span className="font-medium">IoT-based Smart Agriculture</span>
-                        <p className="text-sm text-gray-600">Funding: DST, ₹8L</p>
+                        <span className="font-medium">Capacity Building through skill and entrepreneurship development on e-Waste Management </span>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹2.53 Crores</p>
                       </div>
                     </li>
-                    <li className="flex items-start">
+                    {/* <li className="flex items-start">
                       <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" />
                       <div>
                         <span className="font-medium">Machine Learning for 6G</span>
                         <p className="text-sm text-gray-600">Funding: SERB, ₹15L</p>
                       </div>
-                    </li>
+                    </li> */}
                   </ul>
                 </CardContent>
               </Card>
@@ -441,22 +446,22 @@ const DepartmentECE = () => {
                     <li className="flex items-start">
                       <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
                       <div>
-                        <span className="font-medium">Smart Antenna Systems (2023)</span>
-                        <p className="text-sm text-gray-600">Published: 8 papers</p>
+                        <span className="font-medium">Development of 5G / 4G based UAV augmented intelligent monitoring & surveillance system (2022)</span>
+                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 1.82 Crores</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
                       <div>
-                        <span className="font-medium">Medical Image Processing (2023)</span>
-                        <p className="text-sm text-gray-600">Published: 5 papers</p>
+                        <span className="font-medium">Visvesvaraya Part time PhD Scheme(2022)</span>
+                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 2.50 Lakhs</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
                       <div>
-                        <span className="font-medium">Embedded System Design (2022)</span>
-                        <p className="text-sm text-gray-600">Published: 6 papers</p>
+                        <span className="font-medium">NTU-PU Science and Technology R&D Project(2022)</span>
+                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 9.98 Lakhs</p>
                       </div>
                     </li>
                   </ul>
@@ -833,11 +838,11 @@ const DepartmentECE = () => {
                   <div className="space-y-2">
                     <div className="flex items-center">
                       <Phone className="h-4 w-4 mr-2 text-blue-600" />
-                      <span className="text-sm">+91-172-2534816 (Ext: 2201)</span>
+                      <span className="text-sm">0172-2541242</span>
                     </div>
                     <div className="flex items-center">
                       <Mail className="h-4 w-4 mr-2 text-blue-600" />
-                      <span className="text-sm">ece@pu.ac.in</span>
+                      <span className="text-sm">directoruiet@pu.ac.in</span>
                     </div>
                     <div className="flex items-center">
                       <Clock className="h-4 w-4 mr-2 text-blue-600" />
@@ -883,7 +888,7 @@ const DepartmentECE = () => {
             {/* HOD Message */}
             <Card>
               <CardHeader>
-                <CardTitle>Head of Department</CardTitle>
+                <CardTitle>Coordinator</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-start space-x-4">
@@ -891,18 +896,18 @@ const DepartmentECE = () => {
                     <GraduationCap className="h-8 w-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-lg">Dr. Rajesh Kumar</h3>
-                    <p className="text-blue-600 font-medium mb-2">Professor & Head of Department</p>
+                    <h3 className="font-semibold text-lg">Dr. Jaget Singh</h3>
+                    <p className="text-blue-600 font-medium mb-2">Professor & Coordinator</p>
                     <p className="text-gray-700 text-sm mb-3">
                       "The ECE department is committed to excellence in education and research. 
                       We strive to prepare our students for the challenges of tomorrow's technology landscape."
                     </p>
                     <div className="flex items-center space-x-4 text-sm">
-                      <a href="mailto:rajesh.kumar@pu.ac.in" className="flex items-center text-blue-600 hover:underline">
+                      <a href="mailto:jaget_singh80yahoo.co.in" className="flex items-center text-blue-600 hover:underline">
                         <Mail className="h-4 w-4 mr-1" />
                         Contact HOD
                       </a>
-                      <span className="text-gray-500">Ph.D. IIT Delhi</span>
+                      <span className="text-gray-500">M.Tech R.G.V.P Bhopal</span>
                     </div>
                   </div>
                 </div>
