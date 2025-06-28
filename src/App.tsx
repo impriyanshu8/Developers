@@ -11,7 +11,8 @@ import AcademicsPage from "./pages/AcademicsPage";
 import DepartmentsPage from "./pages/DepartmentsPage";
 import DepartmentCSE from "@/pages/DepartmentCSE";
 import DepartmentIT from "@/pages/DepartmentIT";
-import DepartmentECE from "./pages/DepartmentECE";
+import DepartmentECE from "@/pages/DepartmentECE";
+import DepartmentEEE from "@/pages/DepartmentEEE";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/departments/cse" element={<DepartmentCSE />} />
           <Route path="/departments/it" element={<DepartmentIT />} />
           <Route path="/departments/ece" element={<DepartmentECE />} />
+          <Route path="/departments/eee" element={<DepartmentEEE />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
