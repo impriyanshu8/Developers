@@ -13,6 +13,7 @@ import DepartmentCSE from "@/pages/DepartmentCSE";
 import DepartmentIT from "@/pages/DepartmentIT";
 import DepartmentECE from "@/pages/DepartmentECE";
 import DepartmentEEE from "@/pages/DepartmentEEE";
+import DepartmentBT from "./pages/DepartmentBT";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/departments/it" element={<DepartmentIT />} />
           <Route path="/departments/ece" element={<DepartmentECE />} />
           <Route path="/departments/eee" element={<DepartmentEEE />} />
+          <Route path="/departments/bt" element={<DepartmentBT />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
