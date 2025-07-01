@@ -35,7 +35,7 @@ import {
   Target
 } from "lucide-react";
 
-const DepartmentEEE = () => {
+const DepartmentAS = () => {
   const [activeTab, setActiveTab] = useState("overview");
 
   // Department statistics
@@ -321,10 +321,10 @@ const DepartmentEEE = () => {
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Department of Electrical & Electronics Engineering
+              Department of Applied Sciences
             </h1>
             <p className="text-xl sm:text-2xl text-blue-100 mb-8 leading-relaxed">
-              Pioneering Innovation in Electrical & Electronics Engineering
+              Pioneering Innovation in Applied Sciences
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/admissions">
@@ -399,10 +399,13 @@ const DepartmentEEE = () => {
                 </CardHeader>
                 <CardContent className="prose max-w-none">
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    The program in Electrical & Electronics Engineering is a multidisciplinary course that aims to train engineers in the field of Core Electrical Engineering along with Electronics Engineering & Computer Sciences. The focus of the Electrical & Electronics Department is on three major areas-Power & Energy, Machines to Neural Networks, and Database Management Systems. Additionally, students have the opportunity to explore exciting projects.
+                    Applied Physics Branch of Applied Sciences has all basic infrastructure needed to build up knowledge of the subject for engineering graduates so as to have better insight of rapidly growing technology. The topics covered are relativity, optics, waves & oscillations, quantum physics, fibre optics, super conductivity, physics of materials etc.
                   </p>
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    The Department is well equipped and has lab facilities: Electric Machinery Lab. Power Systems Lab. Linear Circuit Analysis Lab. Control Engineering. Microcontroller & PLC lab.
+                    In Applied Chemistry Branch, the facilities offered are extremely good and stress on applied aspects of the subject as related to engineering. The topics covered are thermodynamics, fuel cells, spectroscopy, industrially important catalytic processes, abrasive metals and alloys, polymers etc.
+                  </p>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    In Applied Mathematics Branch, a number of courses have been offered to the students in semesters I, II & III.  Mathematics I has course subjects like vector analysis, vectorial dynamics and mechanical vibrations. Mathematics II covers important topics like Analytical Geometry of 3-Dimensions, linear series, multiple integrals and differential equations. For the future you can use this knowledge with some sloto games.
                   </p>
                 </CardContent>
               </Card>
@@ -418,7 +421,7 @@ const DepartmentEEE = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700">
-                    To impart knowledge of Electrical and Electronics Engineering and prepare graduates to achieve excellence in engineering education and research.
+    
                   </p>
                 </CardContent>
               </Card>
@@ -432,10 +435,7 @@ const DepartmentEEE = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="text-gray-700 space-y-2">
-                    <li>• To prepare students with deep understanding of fundamentals of Electrical and Electronics Engineering.</li>
-                    <li>• To prepare professionals with positive attitude, values and vision.</li>
-                    <li>• To collaborate with industry, research organizations and academia to encourage innovation.</li>
-                    <li>• To provide a platform for engineering graduates to create and design new products and systems that can help industry and society as a whole.</li>
+                    
                   </ul>
                 </CardContent>
               </Card>
@@ -451,17 +451,17 @@ const DepartmentEEE = () => {
                   <div>
                     <h4 className="font-semibold mb-2 text-blue-600">PEO1</h4>
                     <p className="text-sm text-gray-600 mb-4">
-                      Graduates will have knowledge of electrical and electronics engineering to solve problems of social relevance, pursue higher education and research.
+                      
                     </p>
                     <h4 className="font-semibold mb-2 text-blue-600">PEO2</h4>
                     <p className="text-sm text-gray-600">
-                      Graduates will undertake complex problems and develop appropriate solutions.
+                      
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2 text-blue-600">PEO3</h4>
                     <p className="text-sm text-gray-600 mb-4">
-                      Graduates will work effectively as individuals and as team members in multidisciplinary projects.
+                      
                     </p>
                     {/* <h4 className="font-semibold mb-2 text-blue-600">PEO4: Lifelong Learning</h4>
                     <p className="text-sm text-gray-600">
@@ -756,7 +756,7 @@ const DepartmentEEE = () => {
                       <div className="flex items-center space-x-3">
                         <Mail className="h-5 w-5 text-blue-600" />
                         <span className="text-gray-700">
-                          eee@uiet.puchd.ac.in
+                          as@uiet.puchd.ac.in
                         </span>
                       </div>
                     </div>
@@ -789,4 +789,4 @@ const DepartmentEEE = () => {
   );
 };
 
-export default DepartmentEEE;
+export default DepartmentAS;

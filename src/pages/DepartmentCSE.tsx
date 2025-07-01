@@ -31,6 +31,8 @@ import {
   MapPin,
   Phone,
   Mail,
+  Trophy,
+  Target
 } from "lucide-react";
 
 const DepartmentCSE = () => {
@@ -38,71 +40,10 @@ const DepartmentCSE = () => {
 
   // Department statistics
   const stats = [
-    { label: "Faculty Members", value: "28+", icon: Users },
-    { label: "Students Enrolled", value: "400+", icon: GraduationCap },
-    { label: "Research Projects", value: "15+", icon: Beaker },
-    { label: "Industry Partners", value: "50+", icon: Building },
-  ];
-
-  // Specialization areas
-  const specializations = [
-    {
-      name: "Artificial Intelligence & Machine Learning",
-      icon: Brain,
-      description:
-        "Advanced AI/ML algorithms, deep learning, and neural networks",
-      courses: [
-        "Pattern Recognition",
-        "Machine Learning",
-        "Deep Learning",
-        "Natural Language Processing",
-      ],
-    },
-    {
-      name: "Software Engineering",
-      icon: Code,
-      description:
-        "Software development methodologies, testing, and project management",
-      courses: [
-        "Software Engineering",
-        "Software Testing",
-        "Agile Development",
-        "DevOps",
-      ],
-    },
-    {
-      name: "Database Systems",
-      icon: Database,
-      description: "Database design, management, and big data analytics",
-      courses: [
-        "Database Management",
-        "Data Warehousing",
-        "Big Data Analytics",
-        "NoSQL Databases",
-      ],
-    },
-    {
-      name: "Web & Mobile Development",
-      icon: Smartphone,
-      description: "Modern web technologies and mobile application development",
-      courses: [
-        "Web Development",
-        "Mobile App Development",
-        "Cloud Computing",
-        "UI/UX Design",
-      ],
-    },
-    {
-      name: "Network & Security",
-      icon: Globe,
-      description: "Computer networks, cybersecurity, and information systems",
-      courses: [
-        "Computer Networks",
-        "Network Security",
-        "Cryptography",
-        "Ethical Hacking",
-      ],
-    },
+    { label: "Students Enrolled", value: "400+", icon: Users },
+    { label: "Faculty", value: "28+", icon: GraduationCap },
+    { label: "Laboratories", value: "6", icon: Beaker },
+    { label: "Placement", value: "95%", icon: Trophy },
   ];
 
   // Academic programs
@@ -142,18 +83,13 @@ const DepartmentCSE = () => {
     },
   ];
 
-  // Research areas
   const researchAreas = [
-    "Artificial Intelligence & Machine Learning",
-    "Computer Vision & Image Processing",
-    "Natural Language Processing",
-    "Internet of Things (IoT)",
-    "Cloud Computing & Distributed Systems",
-    "Cybersecurity & Cryptography",
-    "Software Engineering",
-    "Database & Data Mining",
-    "Human-Computer Interaction",
-    "Bioinformatics",
+    { area: '5G & Beyond Communication', projects: 8, funding: '₹25L' },
+    { area: 'VLSI Design & Testing', projects: 12, funding: '₹35L' },
+    { area: 'IoT & Wireless Sensor Networks', projects: 10, funding: '₹20L' },
+    { area: 'Digital Signal Processing', projects: 6, funding: '₹15L' },
+    { area: 'Antenna Design & RF Engineering', projects: 5, funding: '₹18L' },
+    { area: 'Machine Learning in Communications', projects: 7, funding: '₹22L' }
   ];
 
   // Recent achievements
@@ -487,50 +423,70 @@ const DepartmentCSE = () => {
                 </CardContent>
               </Card>
 
-              {/* Specialization Areas */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Areas of Specialization
-                </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {specializations.map((spec, index) => (
-                    <Card
-                      key={index}
-                      className="border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                    >
-                      <CardHeader>
-                        <div className="flex items-center space-x-3 mb-3">
-                          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                            <spec.icon className="h-5 w-5 text-white" />
-                          </div>
-                          <CardTitle className="text-xl">{spec.name}</CardTitle>
-                        </div>
-                        <CardDescription className="text-base">
-                          {spec.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-2">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            Key Courses:
-                          </p>
-                          <div className="flex flex-wrap gap-2">
-                            {spec.courses.map((course, idx) => (
-                              <Badge
-                                key={idx}
-                                variant="secondary"
-                                className="text-xs"
-                              >
-                                {course}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+              {/* Department Vision and Mission */}
+              <div className="grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <Target className="h-5 w-5 mr-2" />
+                    Vision
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">
+                    To be recognized as an eminent department in Computer Science and Engineering education and research for the benefit of society globally.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <Target className="h-5 w-5 mr-2" />
+                    Mission
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-gray-700 space-y-2">
+                    <li>• To sustain world-class computing infrastructure for the enhancement of technical knowledge in the field of Computer Science and Engineering.</li>
+                    <li>• To excel in research and innovation for the discovery of new knowledge and technologies.</li>
+                    <li>• To produce technocrats, entrepreneurs, and business leaders of future.</li>
+                    <li>• To foster human values for national growth and life-long learning amongst all the stakeholders.</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Program Educational Objectives */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Program Educational Objectives (PEOs)</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-2 text-blue-600">PEO1</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Apply the knowledge of Computer Science and Engineering to solve real world problems and communicate its solutions to various research platforms.
+                    </p>
+                    <h4 className="font-semibold mb-2 text-blue-600">PEO2</h4>
+                    <p className="text-sm text-gray-600">
+                      Pursue higher studies and research in different research labs and institutes of higher repute at national and international level.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-blue-600">PEO3</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Analyze and provide solutions to various industrial problems and work as a software professional in industry of repute.
+                    </p>
+                    {/* <h4 className="font-semibold mb-2 text-blue-600">PEO4: Lifelong Learning</h4>
+                    <p className="text-sm text-gray-600">
+                      Graduates will pursue lifelong learning and adapt to changing technologies
+                    </p> */}
+                  </div>
                 </div>
-              </div>
+              </CardContent>
+            </Card>
             </TabsContent>
 
             <TabsContent value="programs" className="space-y-8">
@@ -600,74 +556,124 @@ const DepartmentCSE = () => {
               />
             </TabsContent>
 
-            <TabsContent value="research" className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Research Areas
-                </h2>
-                <Card className="border-none shadow-lg">
-                  <CardContent className="p-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {researchAreas.map((area, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-3 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors"
-                        >
-                          <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                          <span className="text-gray-800 font-medium">
-                            {area}
-                          </span>
-                        </div>
-                      ))}
+          <TabsContent value="research" className="space-y-6">
+            {/* Research Areas */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {researchAreas.map((area, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-4">
+                    <h3 className="font-semibold mb-2">{area.area}</h3>
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      <div>
+                        <span className="text-gray-500">Projects: </span>
+                        <span className="font-medium text-blue-600">{area.projects}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-500">Funding: </span>
+                        <span className="font-medium text-green-600">{area.funding}</span>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
-              </div>
+              ))}
+            </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Current Research Projects
-                </h2>
+            {/* Ongoing and Completed Research */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Ongoing Research Projects</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
+                      <div>
+                        <span className="font-medium">Design and development of system on chip for single lead wearable ECG for medical devices</span>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹3.63 Crores</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
+                      <div>
+                        <span className="font-medium">Capacity Building through skill and entrepreneurship development on e-Waste Management </span>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹2.53 Crores</p>
+                      </div>
+                    </li>
+                    {/* <li className="flex items-start">
+                      <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" />
+                      <div>
+                        <span className="font-medium">Machine Learning for 6G</span>
+                        <p className="text-sm text-gray-600">Funding: SERB, ₹15L</p>
+                      </div>
+                    </li> */}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Completed Research Projects</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <div>
+                        <span className="font-medium">Development of 5G / 4G based UAV augmented intelligent monitoring & surveillance system (2022)</span>
+                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 1.82 Crores</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <div>
+                        <span className="font-medium">Visvesvaraya Part time PhD Scheme(2022)</span>
+                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 2.50 Lakhs</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <div>
+                        <span className="font-medium">NTU-PU Science and Technology R&D Project(2022)</span>
+                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 9.98 Lakhs</p>
+                      </div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Research Collaborations */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Research Collaborations</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <Card className="border-none shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl text-blue-600">
-                        AI-Driven Healthcare Solutions
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-700 mb-4">
-                        Developing machine learning algorithms for early disease
-                        detection and personalized treatment recommendations.
-                      </p>
-                      <div className="flex items-center text-sm text-gray-600">
-                        <Users className="h-4 w-4 mr-1" />
-                        <span>Principal Investigator: Dr. Sarah Johnson</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-none shadow-lg">
-                    <CardHeader>
-                      <CardTitle className="text-xl text-blue-600">
-                        Smart City Infrastructure
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-700 mb-4">
-                        IoT-based solutions for traffic management, waste
-                        management, and energy optimization in urban
-                        environments.
-                      </p>
-                      <div className="flex items-center text-sm text-gray-600">
-                        <Users className="h-4 w-4 mr-1" />
-                        <span>Principal Investigator: Dr. Michael Chen</span>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div>
+                    <h4 className="font-semibold text-blue-600 mb-3">Industry Partners</h4>
+                    <ul className="space-y-1 text-sm text-gray-600">
+                      <li>• Texas Instruments</li>
+                      <li>• Qualcomm Technologies</li>
+                      <li>• Samsung R&D Institute</li>
+                      <li>• Intel Technology</li>
+                      <li>• MediaTek Inc.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-600 mb-3">Academic Partners</h4>
+                    <ul className="space-y-1 text-sm text-gray-600">
+                      <li>• IIT Delhi</li>
+                      <li>• IIT Kanpur</li>
+                      <li>• IIIT Hyderabad</li>
+                      <li>• University of California</li>
+                      <li>• Technical University of Munich</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </TabsContent>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
             <TabsContent value="facilities" className="space-y-8">
               <div>
