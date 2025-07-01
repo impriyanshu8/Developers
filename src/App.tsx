@@ -7,17 +7,17 @@ import Index from "@/pages/Index";
 import ContactPage from "@/pages/ContactPage";
 import AboutPU from "@/pages/AboutPU";
 import AboutPage from "@/pages/AboutPage";
-import AcademicsPage from "./pages/AcademicsPage";
-import DepartmentsPage from "./pages/DepartmentsPage";
+import AcademicsPage from "@/pages/AcademicsPage";
+import DepartmentsPage from "@/pages/DepartmentsPage";
 import DepartmentCSE from "@/pages/DepartmentCSE";
 import DepartmentIT from "@/pages/DepartmentIT";
 import DepartmentECE from "@/pages/DepartmentECE";
 import DepartmentEEE from "@/pages/DepartmentEEE";
-import DepartmentME from "./pages/DepartmentME";
-import DepartmentBT from "./pages/DepartmentBT";
+import DepartmentBT from "@/pages/DepartmentBT";
 import NotFound from "@/pages/NotFound";
 import DepartmentME from "@/pages/DepartmentME";
 import DepartmentAS from "@/pages/DepartmentAS";
+import AdmissionsPage from "@/pages/AdmissionsPage";
 
 const queryClient = new QueryClient();
 
@@ -41,7 +41,7 @@ const App = () => (
           <Route path="/departments/bt" element={<DepartmentBT />} />
           <Route path="/departments/me" element={<DepartmentME />} />
           <Route path="/departments/as" element={<DepartmentAS />} />
-
+          <Route path="/admissions" element={<AdmissionsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
