@@ -18,6 +18,7 @@ import NotFound from "@/pages/NotFound";
 import DepartmentME from "@/pages/DepartmentME";
 import DepartmentAS from "@/pages/DepartmentAS";
 import AdmissionsPage from "@/pages/AdmissionsPage";
+import ResearchPage from "@/pages/ResearchPage";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/departments/me" element={<DepartmentME />} />
           <Route path="/departments/as" element={<DepartmentAS />} />
           <Route path="/admissions" element={<AdmissionsPage />} />
+          <Route path="/research" element={<ResearchPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
