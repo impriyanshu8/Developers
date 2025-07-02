@@ -19,6 +19,8 @@ import DepartmentME from "@/pages/DepartmentME";
 import DepartmentAS from "@/pages/DepartmentAS";
 import AdmissionsPage from "@/pages/AdmissionsPage";
 import ResearchPage from "@/pages/ResearchPage";
+import FacultyPage from "@/pages/FacultyPage";
+import CommitteesPage from "@/pages/CommitteesPage";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +46,8 @@ const App = () => (
           <Route path="/departments/as" element={<DepartmentAS />} />
           <Route path="/admissions" element={<AdmissionsPage />} />
           <Route path="/research" element={<ResearchPage />} />
+          <Route path="/faculty" element={<FacultyPage />} />
+          <Route path="/committees" element={<CommitteesPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
