@@ -30,7 +30,7 @@ const Departments = () => {
         "Cybersecurity",
         "Software Engineering",
       ],
-      image: "photo-1461749280684-dccba630e2f6",
+      image: "https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5mb3JtYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww",
       link: "/departments/cse",
     },
     {
@@ -47,7 +47,7 @@ const Departments = () => {
         "Communication Networks",
         "IoT",
       ],
-      image: "photo-1518877593221-1f28583780b4",
+      image: "https://images.unsplash.com/photo-1675602488453-c3897a475af5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGVsZWN0cm9uaWNlJTIwZW5naW5lZXJpbmd8ZW58MHx8MHx8fDA%3D",
       link: "/departments/ece",
     },
     {
@@ -64,7 +64,7 @@ const Departments = () => {
         "Renewable Energy",
         "Electric Drives",
       ],
-      image: "photo-1581092160562-40aa08e78837",
+      image: "https://plus.unsplash.com/premium_photo-1663040598592-9f3e311f9841?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGVsZWN0cmljYWwlMjBlbmdpbmVlcmluZ3xlbnwwfHwwfHx8MA%3D%3D",
       link: "/departments/eee",
     },
     {
@@ -81,7 +81,7 @@ const Departments = () => {
         "Cloud Technology",
         "Digital Marketing",
       ],
-      image: "photo-1551288049-bebda4e38f71",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGluZm9ybWF0aW9uJTIwdGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D",
       link: "/departments/it",
     },
     {
@@ -98,7 +98,7 @@ const Departments = () => {
         "Thermal Engineering",
         "Manufacturing",
       ],
-      image: "photo-1485833077593-4278bba3f11f",
+      image: "https://images.unsplash.com/photo-1519752594763-2633d8d4ea29?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVjaGFuaWNhbCUyMGVuZ2luZWVyaW5nfGVufDB8fDB8fHww",
       link: "/departments/me",
     },
     {
@@ -115,7 +115,7 @@ const Departments = () => {
         "Bioprocessing",
         "Medical Biotechnology",
       ],
-      image: "photo-1501286353178-1ec881214838",
+      image: "https://images.unsplash.com/photo-1531956656798-56686eeef3d4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlvdGVjaCUyMGVuZ2luZWVyaW5nfGVufDB8fDB8fHww",
       link: "/departments/bt",
     },
     {
@@ -132,7 +132,7 @@ const Departments = () => {
         "Chemistry",
         "Environmental Science",
       ],
-      image: "photo-1532094349884-543bc11b234d",
+      image: "https://plus.unsplash.com/premium_photo-1733306493254-52b143296396?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFwcGxpZWQlMjBzY2llbmNlc3xlbnwwfHwwfHx8MA%3D%3D",
       link: "/departments/as",
     },
   ];
@@ -164,7 +164,7 @@ const Departments = () => {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-2/5">
                   <img
-                    src={`https://images.unsplash.com/${dept.image}?w=300&h=250&fit=crop&crop=center`}
+                    src={dept.image}
                     alt={dept.name}
                     className="w-full h-48 md:h-full object-cover"
                   />

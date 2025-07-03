@@ -275,9 +275,14 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 flex-shrink-0 min-w-0"
           >
-            <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-[#118DC4] to-[#0f7db0] rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-              <GraduationCap className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-7 lg:w-7 text-white" />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center">
+              <img
+                src="https://imgs.search.brave.com/xC3gTQLulY-1CaC5-1vGWxLNAxY4ZXfdRp1O-EvepC4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/OS85NC9VSUVUX2xv/Z28ucG5nLzUxMnB4/LVVJRVRfbG9nby5w/bmc"
+                alt="UIET Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
+
             <div className="min-w-0 flex-1">
               <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-gray-900 tracking-tight leading-tight">
                 <span className="hidden lg:inline">
