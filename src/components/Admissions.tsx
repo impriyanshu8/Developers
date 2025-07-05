@@ -203,13 +203,11 @@ const Admissions = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center px-4 py-2 bg-[#118DC4]/10 text-[#118DC4] rounded-full text-sm font-medium mb-4">
             <GraduationCap className="w-4 h-4 mr-2" />
             Admissions 2024
           </div>
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Join UIET Family
-          </h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">Join UIET</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Begin your journey towards excellence in engineering education.
             Multiple admission pathways available.
@@ -220,7 +218,7 @@ const Admissions = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <Card className="text-center border-0 shadow-md bg-white">
             <CardContent className="p-6">
-              <div className="text-2xl font-bold text-blue-600 mb-1">602</div>
+              <div className="text-2xl font-bold text-[#118DC4] mb-1">602</div>
               <div className="text-slate-600 text-sm">Total Seats</div>
             </CardContent>
           </Card>
@@ -269,7 +267,7 @@ const Admissions = () => {
                         <p className="text-slate-600 text-sm">
                           {schedule.seats} seats
                         </p>
-                        <p className="text-blue-600 text-xs">
+                        <p className="text-[#118DC4] text-xs">
                           {schedule.eligibility}
                         </p>
                       </div>
@@ -277,7 +275,7 @@ const Admissions = () => {
                         <div className="text-sm font-medium text-slate-900">
                           App Start
                         </div>
-                        <div className="text-blue-600 text-sm">
+                        <div className="text-[#118DC4] text-sm">
                           {schedule.applicationStart}
                         </div>
                       </div>
@@ -306,7 +304,7 @@ const Admissions = () => {
                         </div>
                       </div>
                       <div>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                        <Button className="w-full bg-[#118DC4] hover:bg-[#0d7db0]">
                           Apply Now
                         </Button>
                       </div>
@@ -323,7 +321,7 @@ const Admissions = () => {
                 <Card key={index} className="border-0 shadow-md bg-white">
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <admission.icon className="h-6 w-6 mr-3 text-blue-600" />
+                      <admission.icon className="h-6 w-6 mr-3 text-[#118DC4]" />
                       {admission.name}
                     </CardTitle>
                     <p className="text-gray-600">{admission.description}</p>
@@ -332,7 +330,7 @@ const Admissions = () => {
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
                         <h4 className="font-semibold mb-2">Available Seats</h4>
-                        <p className="text-blue-600 font-medium">
+                        <p className="text-[#118DC4] font-medium">
                           {admission.seats}
                         </p>
                       </div>
@@ -341,7 +339,7 @@ const Admissions = () => {
                         <ul className="text-sm space-y-1">
                           {admission.requirements.map((req, idx) => (
                             <li key={idx} className="flex items-start">
-                              <div className="w-1 h-1 bg-blue-500 rounded-full mt-2 mr-2"></div>
+                              <div className="w-1 h-1 bg-[#118DC4] rounded-full mt-2 mr-2"></div>
                               {req}
                             </li>
                           ))}
@@ -404,10 +402,10 @@ const Admissions = () => {
                   className="text-center border-0 shadow-md bg-white"
                 >
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                    <div className="w-12 h-12 bg-[#118DC4] text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
                       {step.step}
                     </div>
-                    <step.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                    <step.icon className="w-8 h-8 text-[#118DC4] mx-auto mb-3" />
                     <h4 className="text-lg font-semibold text-slate-900 mb-2">
                       {step.title}
                     </h4>
@@ -475,23 +473,122 @@ const Admissions = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <Card className="border-0 shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Ready to Apply?</h3>
-              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <Card className="border-0 shadow-2xl bg-gradient-to-br from-[#118DC4] via-[#0d7db0] to-[#0a6b99] text-white relative overflow-hidden">
+            {/* Animated Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 animate-pulse"></div>
+
+            <CardContent className="p-12 relative z-10">
+              {/* Icon */}
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
+                Ready to Apply?
+              </h3>
+
+              <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
                 Multiple admission pathways available. Choose the one that best
                 fits your background and aspirations.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-white text-blue-600 hover:bg-slate-100 font-semibold px-8 py-3">
-                  Start Application
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button className="bg-white text-[#118DC4] hover:bg-white/95 hover:scale-105 font-semibold px-10 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:shadow-xl group">
+                  <span className="flex items-center">
+                    Start Application
+                    <svg
+                      className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
+                    </svg>
+                  </span>
                 </Button>
+
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
+                  className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#118DC4] hover:scale-105 font-semibold px-10 py-4 rounded-full transition-all duration-300 transform hover:shadow-xl group"
                 >
-                  Download Brochure
+                  <span className="flex items-center">
+                    <svg
+                      className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                    Download Brochure
+                  </span>
                 </Button>
+              </div>
+
+              {/* Additional Info */}
+              <div className="mt-8 pt-6 border-t border-white/20">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-white/80 text-sm">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                    Applications Open
+                  </div>
+                  <div className="flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    Quick Process
+                  </div>
+                  <div className="flex items-center">
+                    <svg
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    Secure & Verified
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
