@@ -24,6 +24,8 @@ import CommitteesPage from "@/pages/CommitteesPage";
 import PlacementsPage from "@/pages/PlacementsPage";
 import PreviousYearPapersPage from "@/pages/PreviousYearPapersPage";
 import StudentsPage from "./pages/StudentsPage";
+import ImportantDownloadsPage from "./pages/ImportantDownloadsPage";
+import FacultyProfilePage from "./pages/FacultyProfilePage";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +56,8 @@ const App = () => (
           <Route path="/placements" element={<PlacementsPage />} />
           <Route path="/previous-papers" element={<PreviousYearPapersPage />} />
           <Route path="/students" element={<StudentsPage />} />
+          <Route path="/importantDownload" element={<ImportantDownloadsPage />} />
+          <Route path="/facultyprofile" element={<FacultyProfilePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
