@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  // const [email, setEmail] = useState('');
+  // const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setEmail('');
-      setTimeout(() => setIsSubscribed(false), 3000);
-    }
-  };
+  // const handleNewsletterSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (email) {
+  //     setIsSubscribed(true);
+  //     setEmail('');
+  //     setTimeout(() => setIsSubscribed(false), 3000);
+  //   }
+  // };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -25,7 +25,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'About UIET', href: '/about' },
     { name: 'Academic Programs', href: '/academics' },
-    { name: 'Admissions 2024', href: '/admissions' },
+    { name: 'Admissions', href: '/admissions' },
     { name: 'Research', href: '/research' },
     { name: 'Faculty', href: '/faculty' },
     { name: 'Student Life', href: '/students' },
@@ -47,19 +47,17 @@ const Footer = () => {
     { name: 'Academic Calendar', href: '/academics#calendar' },
     { name: 'Previous Papers', href: '/previous-papers' },
     { name: 'Important Downloads', href: '/downloads' },
-    { name: 'Student Portal', href: '/students#portal' },
-    { name: 'Faculty Portal', href: '/faculty#portal' },
-    { name: 'E-Learning Platform', href: '/academics#elearning' },
-    { name: 'Library Resources', href: '/academics#library' },
-    { name: 'Campus Map', href: '/about#location' }
+    { name: 'UIET Web Portal', href: 'https://eakadamik.in/uietchd/' },
+    { name: 'Library Resources', href: 'https://library.puchd.ac.in/digital-library.php' },
+    { name: 'Campus Map', href: 'https://www.google.com/maps/place/University+Institute+Of+Engineering+and+Technology,+Panjab+University/@30.748099,76.757149,15z/data=!4m6!3m5!1s0x390feda45e945a31:0xdc967b3a7e0f1e95!8m2!3d30.748099!4d76.7571494!16zL20vMGM5cjNk?hl=en&entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D' }
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com/uiet', label: 'Facebook', color: 'hover:bg-blue-600' },
-    { icon: Twitter, href: 'https://twitter.com/uiet', label: 'Twitter', color: 'hover:bg-sky-500' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/uiet', label: 'LinkedIn', color: 'hover:bg-blue-700' },
-    { icon: Instagram, href: 'https://instagram.com/uiet', label: 'Instagram', color: 'hover:bg-pink-600' },
-    { icon: Youtube, href: 'https://youtube.com/uiet', label: 'YouTube', color: 'hover:bg-red-600' }
+    { icon: Facebook, href: 'https://www.facebook.com/uietpuofficial', label: 'Facebook', color: 'hover:bg-blue-600' },
+    { icon: Twitter, href: 'https://x.com/uietchd', label: 'Twitter', color: 'hover:bg-sky-500' },
+    { icon: Linkedin, href: 'https://in.linkedin.com/school/uietpu/', label: 'LinkedIn', color: 'hover:bg-blue-700' },
+    { icon: Instagram, href: 'https://www.instagram.com/uietpu/#', label: 'Instagram', color: 'hover:bg-pink-600' },
+    { icon: Youtube, href: 'https://www.youtube.com/@UIET_PUCHD', label: 'YouTube', color: 'hover:bg-red-600' }
   ];
 
   return (
@@ -188,7 +186,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
+{/*         {/* Newsletter Signup */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -228,7 +226,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800 bg-gray-950">
