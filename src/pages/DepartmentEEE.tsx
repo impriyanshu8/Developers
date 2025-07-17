@@ -41,17 +41,17 @@ const DepartmentEEE = () => {
   // Department statistics
   const stats = [
     { label: "Students Enrolled", value: "400+", icon: Users },
-    { label: "Faculty", value: "28+", icon: GraduationCap },
-    { label: "Laboratories", value: "6", icon: Beaker },
+    { label: "Faculty", value: "12+", icon: GraduationCap },
+    { label: "Laboratories", value: "7", icon: Beaker },
     { label: "Placement", value: "95%", icon: Trophy },
   ];
 
   // Academic programs
   const programs = [
     {
-      name: "B.E. Computer Science & Engineering",
+      name: "B.E. Electrical & Electronics Engineering",
       duration: "4 Years",
-      intake: "60 Students",
+      intake: "120 Students",
       eligibility: "10+2 with Physics, Chemistry, Mathematics",
       highlights: [
         "AICTE Approved",
@@ -60,10 +60,10 @@ const DepartmentEEE = () => {
       ],
     },
     {
-      name: "M.E. Computer Science & Engineering",
+      name: "M.E. Electrical Engineering (Power Systems)",
       duration: "2 Years",
       intake: "18 Students",
-      eligibility: "B.E./B.Tech in CSE or related field",
+      eligibility: "B.E./B.Tech in EE or related field",
       highlights: [
         "Research-Based Program",
         "Thesis Work",
@@ -71,7 +71,7 @@ const DepartmentEEE = () => {
       ],
     },
     {
-      name: "Ph.D Computer Science & Engineering",
+      name: "Ph.D Electrical & Electronics Engineering",
       duration: "3-5 Years",
       intake: "Variable",
       eligibility: "M.E./M.Tech with valid GATE/NET score",
@@ -123,34 +123,39 @@ const DepartmentEEE = () => {
   // Infrastructure and facilities
   const facilities = [
     {
-      name: "Advanced Computing Lab",
-      description: "High-performance workstations with latest software tools",
-      capacity: "40 Systems",
+      name: "Basic Electrical Labs",
+      description: "Major Equipments : Double wound 1-p, tfr.1kva 230/230v, Digital Multimeters Auto ranging, L C R Multimeters 954 M K 1, Function generator 3 MHz, Single Phase Variac 8A, CRO  20  MHz, Digital IC Trainer Kits",
+      capacity: " Systems",
     },
     {
-      name: "Network Security Lab",
-      description: "Dedicated lab for cybersecurity and network analysis",
-      capacity: "30 Systems",
+      name: "Power system 1 lab CAPSA lab & DSP lab",
+      description: "Major Equipments : Matlab software latest version, Matlab software tool kit, Power Word software Computers",
+      capacity: " Systems",
     },
     {
-      name: "Mobile Development Lab",
-      description: "Android and iOS development environment",
-      capacity: "35 Systems",
+      name: "Power System & LCA Lab",
+      description: "Major Equipments : Energy Auditor, Clamp on earth resistance tester, Digital Multimeters with data logger, Digital insulation tester, Digital  earth tester, Double wound 1-phase, Transformer.1kVA 230/230V",
+      capacity: " Systems",
     },
     {
-      name: "AI/ML Research Lab",
-      description: "GPU-enabled systems for machine learning research",
-      capacity: "20 Systems",
+      name: "Instrumentation labs",
+      description: "Major Equipments : Industrial control trainer with thermocouple, data logger, LCD Data projector",
+      capacity: " Systems",
     },
     {
-      name: "Project Development Lab",
-      description: "24/7 access lab for final year projects",
-      capacity: "25 Systems",
+      name: "Microprocessor labs & micro controller labs",
+      description: "Major Equipments : PLC kits with one software, DSO 4 channel 60 MHz, PID controller, 8085 Micro processor trainer kit, Micro controller kits, oscilloscope",
+      capacity: " Systems",
     },
     {
-      name: "Smart Classrooms",
-      description: "Interactive boards and multimedia facilities",
-      capacity: "3 Rooms",
+      name: "Control labs & Energy auditing lab",
+      description: "Major Equipments : DC speed control system, Compensation design, Potentiometeric error detector, Synchro transmitter receiver/trainer, DC position control system `1, CRO 100 MhZ, CRO 60 MhZ, CRO  20  MhZ, Function generator 3 MhZ, Function generator 1 MhZ, Energy Auditor, Lux meter, Clamp on earth resistance tester",
+      capacity: " Rooms",
+    },
+    {
+      name: "Electrical Machinery lab",
+      description: "Major Equipments : Double wound 1-p, tfr.1kva 230/230v, Single Phase core type tfr1kva220/115v, Three Phase core type tfr1kva415/240v, Three Phase core type tfr. 3kva 415/240v, Three phase variable loading unit, Dc gen.coupled with 3-phase I.M., With Spring balance pulley arrangement, 3 phase I.M/c.With DOL starter, Dc shunt motor, With Spring balance pulley arrangement, 1-p capacitor start split ph I.M.0.5kw, 3-p synch.coupled 3-p dc machine2.5kw, 3-p cylindrical alternator coupled dc mach, Machine design software, Digital Tachometer Contact/Nc Type, Digital Tachometer Contact Type, Rectifier Single phase 0-300V,10A, Rectifier Single phase 0-300V,3A, Three Phase rectifier dc 220v,20A, Three Phase Rectifier  25A",
+      capacity: " Rooms",
     },
   ];
 
@@ -158,152 +163,308 @@ const DepartmentEEE = () => {
   const facultyData = {
     coordinator: [
       {
-        name: "Dr. Rajesh Kumar",
-        designation: "Professor & Head",
-        specialization: "Machine Learning, Data Mining",
-        email: "rajesh.kumar@uiet.puchd.ac.in",
-        phone: "+91-172-2534816",
+        name: "Dr. Nisha Tayal",
+        designation: "Associate Professor & Coordinator",
+        specialization: "Area of Automation",
+        email: "nisha.tayal@pu.ac.in",
+        phone: "9814800768",
         office: "Room 301, UIET Building",
-        experience: "15+ years",
-        qualification: "Ph.D. Computer Science, IIT Delhi",
-        publications: 45,
-        image: "photo-1507003211169-0a1dd7228f2d",
+        experience: "23 years",
+        qualification: "M.E. Electrical/Electronics, Punjab Engineering College, Chandigarh",
+        publications: 1,
+        image: "",
         isCoordinator: true,
         researchAreas: [
-          "Machine Learning",
-          "Data Mining",
-          "Artificial Intelligence",
+          "Automation",
+          "Embedded Systems",
+          "Smart Grid",
         ],
-        courses: ["Advanced Algorithms", "Machine Learning", "Data Structures"],
+        courses: [
+          "Microcontrollers", 
+          "Control Systems", 
+          "Smart Grid"
+        ],
       },
     ],
     professors: [
       {
-        name: "Dr. Priya Sharma",
+        name: "Dr. Yajvender Pal Verma",
         designation: "Professor",
-        specialization: "Artificial Intelligence, Neural Networks",
-        email: "priya.sharma@uiet.puchd.ac.in",
-        experience: "12+ years",
-        qualification: "Ph.D. Computer Science, IIT Bombay",
-        publications: 38,
-        image: "photo-1494790108755-2616b612b786",
+        specialization: "Renewable Energy, Wind Power, Congestion, Microgrid Issues, DSM",
+        email: "yp_verma@pu.ac.in",
+        Phone: "9216384592",
+        experience: "22 years",
+        qualification: "Ph.D., UIET, PU, Chandigarh",
+        publications: 85,
+        image: "",
         researchAreas: [
-          "Artificial Intelligence",
-          "Neural Networks",
-          "Deep Learning",
-        ],
-        courses: ["AI Fundamentals", "Neural Networks", "Pattern Recognition"],
-      },
-      {
-        name: "Dr. Amit Singh",
-        designation: "Professor",
-        specialization: "Software Engineering, Database Systems",
-        email: "amit.singh@uiet.puchd.ac.in",
-        experience: "14+ years",
-        qualification: "Ph.D. Software Engineering, IIT Kanpur",
-        publications: 42,
-        image: "photo-1472099645785-5658abf4ff4e",
-        researchAreas: [
-          "Software Engineering",
-          "Database Systems",
-          "System Design",
+          "Renewable Energy",
+          "Smart Grid",
+          "Power Electronics",
         ],
         courses: [
-          "Software Engineering",
-          "Database Management",
-          "System Analysis",
+          "Power Electronics", 
+          "Smart Grids", 
+          "Renewable Systems"
+        ],
+      },
+      {
+        name: "Dr. Damanjit Kaur",
+        designation: "Professor",
+        specialization: "Electric Power Systems, Power System Optimization, Artificial Intelligence",
+        email: "damaneee@pu.ac.in",
+        Phone: "94171513030",
+        experience: "18 years",
+        qualification: "Ph.D. Power Systems, IIT Roorkee",
+        publications: 37,
+        image: "",
+        researchAreas: [
+          "Power Systems Optimization",
+          "Smart Grids",
+          "AI in EEE",
+        ],
+        courses: [
+          "Power Systems II",
+          "Power Electronics & Drives",
+          "Lab Coordination",
+        ],
+      },
+      {
+        name: "Dr. Deepak Kumar",
+        designation: "Professor",
+        specialization: "Power System Optimization, Renewable Energy, Smart Grid, Demand Side Management",
+        email: "dk_uiet@pu.ac.in",
+        Phone: "8427680088",
+        experience: "14 years",
+        qualification: "Ph.D. Electrical Engineering (Control Systems), National Institute of Technology, Kurukshetra",
+        publications: 14,
+        image: "",
+        researchAreas: [
+          "Control Systems",
+          "Optimization Techniques",
+          "AI in Power Systems",
+        ],
+        courses: [
+          "Control Systems",
+          "Electrical Machines",
+          "Power Electronics",
+          "Optimization",
+          "AI Applications",
         ],
       },
     ],
     associateProfessors: [
       {
-        name: "Dr. Neha Gupta",
+        name: "Dr. Manoj Kumar Sharma",
         designation: "Associate Professor",
-        specialization: "Computer Networks, Cybersecurity",
-        email: "neha.gupta@uiet.puchd.ac.in",
-        experience: "10+ years",
-        qualification: "Ph.D. Computer Networks, NIT Kurukshetra",
-        publications: 28,
-        image: "photo-1438761681033-6461ffad8d80",
+        specialization: "Neural Networks, Fuzzy Logic, Control Systems, Active Noise Control",
+        email: "mks_uiet@pu.ac.in",
+        Phone: "9872825095",
+        experience: "27 years",
+        qualification: "Ph.D. Electrical/Electronics (Pursuing), Panjab University, Chandigarh",
+        publications: 19,
+        image: "",
         researchAreas: [
-          "Computer Networks",
-          "Cybersecurity",
-          "Network Security",
+          "Neural Networks",
+          "Fuzzy Logic",
+          "Control Systems",
         ],
-        courses: ["Computer Networks", "Network Security", "Cryptography"],
+        courses: [
+          "Computer Networks", 
+          "Network Security", 
+          "Cryptography"
+        ],
       },
       {
-        name: "Dr. Vikash Yadav",
+        name: "Dr. Parul Gaur",
         designation: "Associate Professor",
-        specialization: "Human-Computer Interaction, UI/UX Design",
-        email: "vikash.yadav@uiet.puchd.ac.in",
-        experience: "8+ years",
-        qualification: "Ph.D. Human-Computer Interaction, PU Chandigarh",
-        publications: 22,
-        image: "photo-1500648767791-00dcc994a43e",
-        researchAreas: ["HCI", "UI/UX Design", "User Experience"],
-        courses: ["HCI", "UI/UX Design", "Web Development"],
+        specialization: "Communication Engineering, Digital Electronics, Power Electronics",
+        email: "parulgaur@pu.ac.in",
+        Phone: "8968403488",
+        experience: "15 years",
+        qualification: "Ph.D. Electronics & Communication Engineering, Panjab University, Chandigarh",
+        publications: 21,
+        image: "",
+        researchAreas: [
+          "Power Electronics", 
+          "Communication, Optical Comm.", 
+          "Signal Processing",
+        ],
+        courses: [
+          "Power Electronics", 
+          "Communication, Optical Comm.", 
+          "Signal Processing",
+        ],
       },
     ],
     assistantProfessors: [
       {
-        name: "Dr. Sunita Dhiman",
+        name: "Dr. Preetika Sharma",
         designation: "Assistant Professor",
-        specialization: "Data Science, Big Data Analytics",
-        email: "sunita.dhiman@uiet.puchd.ac.in",
-        experience: "6+ years",
-        qualification: "Ph.D. Data Science, Thapar University",
-        publications: 18,
-        image: "photo-1544005313-94ddf0286df2",
+        specialization: "Nanoelectronics, Analog and Digital Electronics, Semiconductors",
+        email: "preetikamadhav@yahoo.co.in",
+        Phone: "9872622921",
+        experience: "17 years",
+        qualification: "Ph.D. Electronics & Communication, Panjab University, Chandigarh",
+        publications: 5,
+        image: "",
         researchAreas: [
-          "Data Science",
-          "Big Data Analytics",
-          "Machine Learning",
-        ],
-        courses: ["Data Science", "Big Data", "Statistics"],
-      },
-      {
-        name: "Dr. Rohit Tanwar",
-        designation: "Assistant Professor",
-        specialization: "Cloud Computing, Distributed Systems",
-        email: "rohit.tanwar@uiet.puchd.ac.in",
-        experience: "5+ years",
-        qualification: "Ph.D. Cloud Computing, BITS Pilani",
-        publications: 15,
-        image: "photo-1507591064344-4c6ce005b128",
-        researchAreas: [
-          "Cloud Computing",
-          "Distributed Systems",
-          "Parallel Computing",
+          "Nanoelectronics", 
+          "Analog & Digital Electronics", 
+          "Semiconductors",
         ],
         courses: [
-          "Cloud Computing",
-          "Distributed Systems",
-          "Operating Systems",
+          "Analog Electronics", 
+          "Digital Electronics", 
+          "Nanoelectronics / Device Physics",
+        ],
+      },
+      {
+        name: "Dr. Sarpreet Kaur",
+        designation: "Assistant Professor",
+        specialization: "Power Systems",
+        email: "sarpreetdua@yahoo.co.in",
+        Phone: "9914616916",
+        experience: "16 years",
+        qualification: "Ph.D. Power Systems (Pursuing), UIET, Panjab University, Chandigarh",
+        publications: 9,
+        image: "",
+        researchAreas: [
+          "Power Systems", 
+        ],
+        courses: [
+          "Power Systems", 
+          "core EEE courses", 
+        ],
+      },
+      {
+        name: "Dr. Gaurav Sapra",
+        designation: "Assistant Professor",
+        specialization: "Digital Signal Processing, Wireless Communication, Sensor Fabrication, Nanotechnology and Biomedical Devices",
+        email: "gaurav.sapra@pu.ac.in",
+        Phone: "9815858051",
+        experience: "14 years",
+        qualification: "Ph.D. Electrical/Electronics, Panjab University, Chandigarh",
+        publications: 51,
+        image: "",
+        researchAreas: [
+          "DSP", 
+          "Sensors", 
+          "Nanotech",
+          "Biomedical Devices",
+        ],
+        courses: [
+          "DSP", 
+          "Sensor/Device Design", 
+          "Bio-Instrumentation",
+        ],
+      },
+      {
+        name: "Dr. Aditi Gupta",
+        designation: "Assistant Professor",
+        specialization: "Power Systems, Control Systems",
+        email: "aditigupta@pu.ac.in",
+        Phone: "9872672319",
+        experience: "11 years",
+        qualification: "Ph.D. Electrical, Panjab University, Chandigarh",
+        publications: 5,
+        image: "",
+        researchAreas: [
+          "Electrical & Electronic Engineering", 
+          "Energy, Materials Science", 
+          "CS",
+        ],
+        courses: [
+          "Electrical & Electronic Engineering", 
+          "Energy, Materials Science", 
+          "CS",
+        ],
+      },
+      {
+        name: "Dr. Sabhyata Soni",
+        designation: "Assistant Professor",
+        specialization: "",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "", 
+          "", 
+          "",
+        ],
+        courses: [
+          "", 
+          "", 
+          "",
+        ],
+      },
+      {
+        name: "Mr. Kuldeep Singh Bedi",
+        designation: "Assistant Professor",
+        specialization: "Power Electronic and Drive",
+        email: "kkuldeep1234@gmail.com",
+        Phone: "9023200077",
+        experience: "9 years",
+        qualification: "M.E. Electronics, Punjab Engineering College (PEC), Chandigarh",
+        publications: 7,
+        image: "",
+        researchAreas: [
+          "Power Electronics & Drives", 
+        ],
+        courses: [
+          "Power Electronics", 
+          "Drives", 
+          "EEE core courses",
+        ],
+      },
+      {
+        name: "Dr. Puneet Kaur",
+        designation: "Assistant Professor",
+        specialization: "Power Electronics, Electric Drives, Embedded Systems",
+        email: "puneetee@pu.ac.in",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "", 
+          "",
+          "",
+        ],
+        courses: [
+          "", 
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Dr. Vivek Pahwa",
+        designation: "Assistant Professor",
+        specialization: "Electrical Machines and Drive Systems, Power Systems",
+        email: "pahwa1974_uiet@pu.ac.in",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "", 
+          "",
+          "",
+        ],
+        courses: [
+          "", 
+          "",
+          "",
         ],
       },
     ],
     guestFaculty: [
-      {
-        name: "Prof. Arun Mehta",
-        designation: "Guest Faculty",
-        specialization: "Web Development, Programming Languages",
-        email: "arun.mehta@uiet.puchd.ac.in",
-        experience: "4+ years",
-        qualification: "M.Tech. Computer Science",
-        publications: 8,
-        image: "photo-1519085360753-af0119f7cbe7",
-        researchAreas: [
-          "Web Development",
-          "Programming Languages",
-          "Software Development",
-        ],
-        courses: [
-          "Web Development",
-          "Programming Languages",
-          "Software Engineering",
-        ],
-      },
+    
     ],
   };
 
@@ -535,7 +696,7 @@ const DepartmentEEE = () => {
 
             <TabsContent value="faculty">
               <DepartmentFaculty
-                departmentName="Computer Science & Engineering"
+                departmentName="Electrical & Electronics Engineering"
                 facultyData={facultyData}
               />
             </TabsContent>
@@ -571,26 +732,37 @@ const DepartmentEEE = () => {
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
                       <div>
-                        <span className="font-medium">Design and development of system on chip for single lead wearable ECG for medical devices</span>
-                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹3.63 Crores</p>
+                        <span className="font-medium">Solar Energy Training Network 
+                        (SETNET) Partner with NISE (For Solar Energy Manpower 
+                        Training)</span>
+                        <p className="text-sm text-gray-600">Funding: NISE, Gurgaon and MNRE, New Delhi, ₹12.84 Lakhs</p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
                       <div>
-                        <span className="font-medium">Capacity Building through skill and entrepreneurship development on e-Waste Management </span>
-                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹2.53 Crores</p>
+                        <span className="font-medium">Design Innovation Center (DIC) Sub Theme:  Energy Harvesting and Management Technologies</span>
+                        <p className="text-sm text-gray-600">Funding: MHRD, New Delhi, ₹10.00 Crores</p>
                       </div>
                     </li>
-                    {/* <li className="flex items-start">
-                      <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" />
+                    <li className="flex items-start">
                       <div>
-                        <span className="font-medium">Machine Learning for 6G</span>
-                        <p className="text-sm text-gray-600">Funding: SERB, ₹15L</p>
+                        <span className="font-medium">Energy Harvesting & Management Technologies</span>
+                        <p className="text-sm text-gray-600">Funding: Design Innovation Centre, Department of Higher Education, MHRD, ₹231 Lakhs</p>
                       </div>
-                    </li> */}
+                    </li>
+                    <li className="flex items-start">
+                      <div>
+                        <span className="font-medium">Design  ,  Development  and Fabrication  of Electronic Preferential Voting  Machine (EPVM)</span>
+                        <p className="text-sm text-gray-600">Funding: Department of Science & Technology & Renewable Energy, Chandigarh Administration , ₹1.50 Lakhs</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <div>
+                        <span className="font-medium">Development  of  an  Indigenous multi-axis  Machine  for  machining of Dental Implants</span>
+                        <p className="text-sm text-gray-600">Funding: M/S Esteem Industries, ₹26.90560 Lakhs</p>
+                      </div>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -604,22 +776,15 @@ const DepartmentEEE = () => {
                     <li className="flex items-start">
                       <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
                       <div>
-                        <span className="font-medium">Development of 5G / 4G based UAV augmented intelligent monitoring & surveillance system (2022)</span>
-                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 1.82 Crores</p>
+                        <span className="font-medium">Energy Auditing of Randomly Selected Schools of U.T.Chandigarh</span>
+                        <p className="text-sm text-gray-600">Funding: DST, Chandigarh, ₹2.00 Lakhs</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
                       <div>
-                        <span className="font-medium">Visvesvaraya Part time PhD Scheme(2022)</span>
-                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 2.50 Lakhs</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
-                      <div>
-                        <span className="font-medium">NTU-PU Science and Technology R&D Project(2022)</span>
-                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 9.98 Lakhs</p>
+                        <span className="font-medium">Performance Enhancement of Solar Photovoltaic System Using Multi Mirror Arrangement And To find optimum angle of inclination of solar panel in Chandigarh</span>
+                        <p className="text-sm text-gray-600">Funding: DST, Chandigarh, ₹3.00 Lakhs</p>
                       </div>
                     </li>
                   </ul>
