@@ -61,7 +61,7 @@ const Footer = () => {
   ];
 
   return (
-   <footer className="bg-gray-900 text-white relative">
+    <footer className="bg-gray-900 text-white relative">
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
@@ -77,25 +77,25 @@ const Footer = () => {
           {/* University Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-    <img
-      src="https://imgs.search.brave.com/XfoNIRCzVe6i5gayiQSdwTrU26C4tp7OHzJQJ0AmVTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/OS85NC9VSUVUX2xv/Z28ucG5nLzUxMnB4/LVVJRVRfbG9nby5w/bmc"
-      alt="UIET Logo"
-      className="w-10 h-10 object-contain"
-    />
-  </div>
-  <div>
-    <h3 className="text-xl font-bold">UIET</h3>
-    <p className="text-sm text-gray-400">Panjab University</p>
-  </div>
-</div>
+              <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                <img
+                  src="https://imgs.search.brave.com/XfoNIRCzVe6i5gayiQSdwTrU26C4tp7OHzJQJ0AmVTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/OS85NC9VSUVUX2xv/Z28ucG5nLzUxMnB4/LVVJRVRfbG9nby5w/bmc"
+                  alt="UIET Logo"
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">UIET</h3>
+                <p className="text-sm text-gray-400">Panjab University</p>
+              </div>
+            </div>
 
-            
+
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
-              University Institute of Engineering & Technology, committed to excellence in 
+              University Institute of Engineering & Technology, committed to excellence in
               engineering education, research, and innovation since 2002. Building tomorrow's engineers today.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-sm group">
@@ -186,7 +186,9 @@ const Footer = () => {
           </div>
         </div>
 
-{/*         
+
+        {/*         
+
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -225,37 +227,38 @@ const Footer = () => {
               )}
             </div>
           </div>
-        </div>*/}
+        </div> */}
       </div> 
 
 
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-800 bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm text-center md:text-left">
-              © 2025 University Institute of Engineering & Technology, Panjab University. All rights reserved.
-            </div>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <Link to="/about#privacy" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/about#terms" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/about#cookies" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                Cookie Policy
-              </Link>
-              <Link to="/about#accessibility" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                Accessibility
-              </Link>
-              <Link to="/contact" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                Support
-              </Link>
+
+        {/* Bottom Footer */}
+        <div className="border-t border-gray-800 bg-gray-950">
+          <div className="max-w-7xl mx-auto px-4 py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-gray-400 text-sm text-center md:text-left">
+                © 2025 University Institute of Engineering & Technology, Panjab University. All rights reserved.
+              </div>
+              <div className="flex flex-wrap justify-center gap-6 text-sm">
+                <Link to="/about#privacy" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link to="/about#terms" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+                  Terms of Service
+                </Link>
+                <Link to="/about#cookies" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+                  Cookie Policy
+                </Link>
+                <Link to="/about#accessibility" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+                  Accessibility
+                </Link>
+                <Link to="/contact" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+                  Support
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 };
