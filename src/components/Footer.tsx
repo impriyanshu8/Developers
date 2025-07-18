@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 
 const Footer = () => {
-  // const [email, setEmail] = useState('');
-  // const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
-  // const handleNewsletterSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   if (email) {
-  //     setIsSubscribed(true);
-  //     setEmail('');
-  //     setTimeout(() => setIsSubscribed(false), 3000);
-  //   }
-  // };
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setIsSubscribed(true);
+      setEmail('');
+      setTimeout(() => setIsSubscribed(false), 3000);
+    }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -186,7 +186,9 @@ const Footer = () => {
           </div>
         </div>
 
+
         {/*         
+
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -227,6 +229,8 @@ const Footer = () => {
           </div>
         </div> */}
       </div> 
+
+
 
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 bg-gray-950">

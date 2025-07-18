@@ -82,7 +82,8 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section
         id="uiet"
-        className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16"
+        className="text-white py-16"
+        style={{background: 'linear-gradient(to right, #118DC4, #0d6fa3)'}}
       >
         <div className="container mx-auto px-4">
           <div className="text-center">
@@ -90,7 +91,7 @@ const AboutPage = () => {
             <h1 className="text-4xl font-bold mb-4">
               University Institute of Engineering & Technology
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
+            <p className="text-xl max-w-3xl mx-auto mb-6" style={{color: '#e1f4fd'}}>
               A premier engineering institution under Panjab University,
               committed to excellence in technical education, research, and
               innovation since <strong>2002</strong>.
@@ -98,32 +99,35 @@ const AboutPage = () => {
             <div className="flex flex-wrap justify-center gap-2 mb-6">
               <Badge
                 variant="secondary"
-                className="bg-white/20 text-white border-white/30"
+                className="text-white"
+                style={{backgroundColor: 'rgba(255,255,255,0.2)', borderColor: 'rgba(255,255,255,0.3)'}}
               >
                 NAAC Accredited (Front‑Runner Institute)
               </Badge>
               <Badge
                 variant="secondary"
-                className="bg-white/20 text-white border-white/30"
+                className="text-white"
+                style={{backgroundColor: 'rgba(255,255,255,0.2)', borderColor: 'rgba(255,255,255,0.3)'}}
               >
                 NBA Accredited
               </Badge>
               <Badge
                 variant="secondary"
-                className="bg-white/20 text-white border-white/30"
+                className="text-white"
+                style={{backgroundColor: 'rgba(255,255,255,0.2)', borderColor: 'rgba(255,255,255,0.3)'}}
               >
                 NIRF Tier‑1
               </Badge>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/academics">
-                <Button className="bg-white text-blue-600 hover:bg-blue-50">
+                <Button className="bg-white hover:bg-gray-100" style={{color: '#118DC4'}}>
                   <GraduationCap className="h-4 w-4 mr-2" />
                   Explore Academics
                 </Button>
               </Link>
               <Link to="/admissions">
-                <Button className="bg-white text-blue-600 hover:bg-blue-50">
+                <Button className="bg-white hover:bg-gray-100" style={{color: '#118DC4'}}>
                   Apply Now
                 </Button>
               </Link>
@@ -191,7 +195,7 @@ const AboutPage = () => {
                   className="text-center hover:shadow-lg transition-shadow"
                 >
                   <CardContent className="p-6">
-                    <stat.icon className="h-8 w-8 mx-auto mb-3 text-blue-600" />
+                    <stat.icon className="h-8 w-8 mx-auto mb-3" style={{color: '#118DC4'}} />
                     <div className="text-2xl font-bold text-gray-900">
                       {stat.value}
                     </div>
@@ -225,13 +229,13 @@ const AboutPage = () => {
                   </p>
                   <div className="flex gap-3">
                     <Link to="/academics">
-                      <Button size="sm">
+                      <Button size="sm" style={{backgroundColor: '#118DC4', color: 'white'}}>
                         <BookOpen className="h-4 w-4 mr-2" />
                         View Programs
                       </Button>
                     </Link>
                     <Link to="/departments">
-                      <Button variant="outline" size="sm">
+                      <Button variant="outline" size="sm" style={{borderColor: '#118DC4', color: '#118DC4'}}>
                         <Building className="h-4 w-4 mr-2" />
                         All Departments
                       </Button>
@@ -257,7 +261,7 @@ const AboutPage = () => {
                       <Award className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
                       <span className="text-gray-700">
                         78.4% placement in 2024‑25, Highest on‑campus CTC
-                        ₹24.73 L, Avg ₹8.5 L
+                        ₹24.73 L, Avg ₹8.5 L
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -277,7 +281,7 @@ const AboutPage = () => {
                   </ul>
                   <div className="mt-4 pt-4 border-t">
                     <Link to="/placements">
-                      <Button variant="outline" size="sm" className="w-full">
+                      <Button variant="outline" size="sm" className="w-full" style={{borderColor: '#118DC4', color: '#118DC4'}}>
                         <Trophy className="h-4 w-4 mr-2" />
                         View Placement Records
                         <ArrowRight className="h-4 w-4 ml-2" />
@@ -289,7 +293,7 @@ const AboutPage = () => {
             </div>
 
             {/* Quick Navigation */}
-            <Card className="bg-gradient-to-r from-blue-50 to-indigo-50">
+            <Card style={{background: 'linear-gradient(to right, #f0f9ff, #e1f4fd)'}}>
               <CardHeader>
                 <CardTitle>Explore More</CardTitle>
               </CardHeader>
@@ -297,7 +301,7 @@ const AboutPage = () => {
                 <div className="grid md:grid-cols-3 gap-4">
                   <Link to="/research" className="block">
                     <div className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                      <Lightbulb className="h-6 w-6 text-blue-600 mb-2" />
+                      <Lightbulb className="h-6 w-6 mb-2" style={{color: '#118DC4'}} />
                       <h4 className="font-semibold">Research & Innovation</h4>
                       <p className="text-sm text-gray-600">
                         Cutting-edge research projects
@@ -339,14 +343,14 @@ const AboutPage = () => {
                 <p className="text-gray-700">
                   Established in 1882 in Lahore and reimagined in independent
                   India at Chandigarh in 1956, Panjab University is one of
-                  India’s most historic and respected educational institutions.
+                  India's most historic and respected educational institutions.
                   Known for its academic excellence, lush green campus, and
                   globally admired architectural heritage, PU continues to be a
                   beacon of learning and research in India.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-2">
+                    <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
                       Key Highlights
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -362,7 +366,7 @@ const AboutPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-2">
+                    <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
                       Recognition & Rankings
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -378,7 +382,7 @@ const AboutPage = () => {
                         • NIRF 2024: Pharmacy – Rank #7, Research – Rank #35
                       </li>
                       <li>
-                        • Consistently ranked among India’s top universities
+                        • Consistently ranked among India's top universities
                       </li>
                       <li>
                         • Active global collaborations & MoUs with top
@@ -388,7 +392,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 <Link to="/about/pu">
-                  <Button className="mt-4">Explore Panjab University</Button>
+                  <Button className="mt-4" style={{backgroundColor: '#118DC4', color: 'white'}}>Explore Panjab University</Button>
                 </Link>
               </CardContent>
             </Card>
@@ -406,19 +410,19 @@ const AboutPage = () => {
                 <p className="text-gray-700">
                   Chandigarh, the dream city of India's first Prime Minister Pt.
                   Jawahar Lal Nehru, was designed by the legendary architect
-                  Le Corbusier. Located at the foothills of the Shivaliks, it
-                  derives its name from the nearby “Chandi Mandir” and is
+                  Le Corbusier. Located at the foothills of the Shivaliks, it
+                  derives its name from the nearby "Chandi Mandir" and is
                   renowned globally as an exceptional example of 20th-century
                   urban planning and architecture.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-green-600 mb-2">
+                    <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
                       Historical & Geographical Highlights
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
                       <li>
-                        • Planned post-Partition as Punjab’s new capital (est.
+                        • Planned post-Partition as Punjab's new capital (est.
                         1952)
                       </li>
                       <li>
@@ -430,7 +434,7 @@ const AboutPage = () => {
                       </li>
                       <li>
                         • Located in Shivalik foothills, area: 114 sq km,
-                        altitude: 304–365 m
+                        altitude: 304–365 m
                       </li>
                       <li>
                         • Drained by Sukhna Choe and Patiala‑ki‑Rao Choe streams
@@ -438,7 +442,7 @@ const AboutPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-green-600 mb-2">
+                    <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
                       City Design & Urban Features
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -451,7 +455,7 @@ const AboutPage = () => {
                         tracks (~193 km)
                       </li>
                       <li>
-                        • Self-sufficient sectors (800×1200 m), each divided
+                        • Self-sufficient sectors (800×1200 m), each divided
                         into 4 parts (A–D)
                       </li>
                       <li>
@@ -464,7 +468,7 @@ const AboutPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-green-600 mb-2">
+                    <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
                       Environment & Infrastructure
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -479,17 +483,17 @@ const AboutPage = () => {
                         • Tree-lined roads: 26 flowering, 22 evergreen species
                       </li>
                       <li>
-                        • Climate: Hot summers (~42 °C), cold winters (~2 °C),
-                        avg rainfall: ~800–970 mm
+                        • Climate: Hot summers (~42 °C), cold winters (~2 °C),
+                        avg rainfall: ~800–970 mm
                       </li>
                       <li>
-                        • Industrial Area (2.35 sq km) planned for non-polluting
+                        • Industrial Area (2.35 sq km) planned for non-polluting
                         industries
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-green-600 mb-2">
+                    <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
                       Demographics & Stats
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -524,7 +528,7 @@ const AboutPage = () => {
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-3">
+                    <h4 className="font-semibold mb-3" style={{color: '#118DC4'}}>
                       Campus Address
                     </h4>
                     <div className="bg-gray-50 p-4 rounded-lg">
@@ -540,27 +544,25 @@ const AboutPage = () => {
                     </div>
                     <div className="mt-4 space-y-2">
                       <div className="flex items-center">
-                        <Phone className="h-4 w-4 mr-2 text-blue-600" />
+                        <Phone className="h-4 w-4 mr-2" style={{color: '#118DC4'}} />
                         <span className="text-sm">+91‑172‑2541242</span>
                       </div>
                       <div className="flex items-center">
-                        <Phone className="h-4 w-4 mr-2 text-blue-600" />
-
-                        <span className="text-sm">+91‑62800 89748</span>
+                        <Phone className="h-4 w-4 mr-2" style={{color: '#118DC4'}} />
+                        <span className="text-sm">+91‑62800 89748</span>
                       </div>
-
                       <div className="flex items-center">
-                        <Mail className="h-4 w-4 mr-2 text-blue-600" />
+                        <Mail className="h-4 w-4 mr-2" style={{color: '#118DC4'}} />
                         <span className="text-sm">directoruiet@pu.ac.in</span>
                       </div>
                       <div className="flex items-center">
-                        <Globe className="h-4 w-4 mr-2 text-blue-600" />
+                        <Globe className="h-4 w-4 mr-2" style={{color: '#118DC4'}} />
                         <span className="text-sm">www.uiet.puchd.ac.in</span>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-3">
+                    <h4 className="font-semibold mb-3" style={{color: '#118DC4'}}>
                       Campus Features
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-600">
@@ -599,16 +601,16 @@ const AboutPage = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-blue-50 p-6 rounded-lg">
+                <div className="p-6 rounded-lg" style={{backgroundColor: '#f0f9ff'}}>
                   <div className="flex items-start space-x-4">
-                    <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{backgroundColor: '#118DC4'}}>
                       <GraduationCap className="h-10 w-10 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         Professor Sanjeev Puri
                       </h3>
-                      <p className="text-blue-600 font-medium mb-4">
+                      <p className="font-medium mb-4" style={{color: '#118DC4'}}>
                         Director, UIET
                       </p>
                       <blockquote className="text-gray-700 italic">
@@ -679,8 +681,8 @@ const AboutPage = () => {
                     research—delivering technological solutions for industry and
                     society.
                   </p>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-blue-600 mb-2">
+                  <div className="p-4 rounded-lg" style={{backgroundColor: '#f0f9ff'}}>
+                    <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
                       Key Aspirations
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">

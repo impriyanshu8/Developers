@@ -623,7 +623,7 @@ const DepartmentECE = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-[#118DC4] via-[#0D76A8] to-[#0A5D8A] text-white py-16 sm:py-20">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
@@ -641,14 +641,14 @@ const DepartmentECE = () => {
               <Link to="/admissions">
                 <Button
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-white text-[#118DC4] hover:bg-blue-50 font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Apply Now <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white text-[#118DC4] hover:bg-blue-50 font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Department Brochure <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
@@ -668,7 +668,7 @@ const DepartmentECE = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex justify-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#118DC4] to-[#0D76A8] rounded-xl flex items-center justify-center">
                       <stat.icon className="h-6 w-6 text-white" />
                     </div>
                   </div>
@@ -710,7 +710,7 @@ const DepartmentECE = () => {
                 </CardHeader>
                 <CardContent className="prose max-w-none">
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                    Department of Electronics and Communication is one of the most sought after departments of UIET and boasts of excellent infrastructure. The studer encouraged to take up challenging projects and enhance their knowledge about various aspects of Electronics. The course curriculum is upgraded regularly to keep pace with the changing world of electronics. The Department is well equipped in all aspects and has the following labs: Digital Microprocessor. Microcontroller and Logic Design Lab. Communication Engineering Lab. Mobile and Satellite Communication Lab. Optical Communication Lab. Embedded System Design Lab. Digital Signal Processing Lab.
+                    Department of Electronics and Communication is one of the most sought after departments of UIET and boasts of excellent infrastructure. The students are encouraged to take up challenging projects and enhance their knowledge about various aspects of Electronics. The course curriculum is upgraded regularly to keep pace with the changing world of electronics. The Department is well equipped in all aspects and has the following labs: Digital Microprocessor, Microcontroller and Logic Design Lab, Communication Engineering Lab, Mobile and Satellite Communication Lab, Optical Communication Lab, Embedded System Design Lab, Digital Signal Processing Lab.
                   </p>
                   <p className="text-gray-700 text-lg leading-relaxed mb-6">
                     Research programmes in the broad areas of all types of Wireless communication, signal processing, optical communication, antenna system & VLSI design.
@@ -762,24 +762,20 @@ const DepartmentECE = () => {
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold mb-2 text-blue-600">PEO1</h4>
+                    <h4 className="font-semibold mb-2 text-[#118DC4]">PEO1</h4>
                     <p className="text-sm text-gray-600 mb-4">
                       To build a strong foundation in scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems for successful careers to meet the global demands of the society.
                     </p>
-                    <h4 className="font-semibold mb-2 text-blue-600">PEO2</h4>
+                    <h4 className="font-semibold mb-2 text-[#118DC4]">PEO2</h4>
                     <p className="text-sm text-gray-600">
                       To develop the ability among students to synthesize data and technical concepts of Electronics and Communication for application to develop core and multidisciplinary projects.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-blue-600">PEO3</h4>
+                    <h4 className="font-semibold mb-2 text-[#118DC4]">PEO3</h4>
                     <p className="text-sm text-gray-600 mb-4">
                       To promote awareness among students for the value of lifelong learning and to introduce them to professional ethics and codes of professional practice.
                     </p>
-                    {/* <h4 className="font-semibold mb-2 text-blue-600">PEO4: Lifelong Learning</h4>
-                    <p className="text-sm text-gray-600">
-                      Graduates will pursue lifelong learning and adapt to changing technologies
-                    </p> */}
                   </div>
                 </div>
               </CardContent>
@@ -797,7 +793,7 @@ const DepartmentECE = () => {
                       <CardHeader>
                         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                           <div>
-                            <CardTitle className="text-xl text-blue-600 mb-2">
+                            <CardTitle className="text-xl text-[#118DC4] mb-2">
                               {program.name}
                             </CardTitle>
                             <div className="flex flex-wrap gap-4 text-sm text-gray-600">
@@ -863,7 +859,7 @@ const DepartmentECE = () => {
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       <div>
                         <span className="text-gray-500">Projects: </span>
-                        <span className="font-medium text-blue-600">{area.projects}</span>
+                        <span className="font-medium text-[#118DC4]">{area.projects}</span>
                       </div>
                       <div>
                         <span className="text-gray-500">Funding: </span>
@@ -884,19 +880,18 @@ const DepartmentECE = () => {
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
                       <div>
                         <span className="font-medium">Design and development of system on chip for single lead wearable ECG for medical devices</span>
                         <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹3.63 Crores</p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
                       <div>
                         <span className="font-medium">Capacity Building through skill and entrepreneurship development on e-Waste Management </span>
                         <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹2.53 Crores</p>
                       </div>
                     </li>
+
                     <li className="flex items-start">
                       {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
                       <div>
@@ -911,6 +906,7 @@ const DepartmentECE = () => {
                         <p className="text-sm text-gray-600">Funding: Consultancy to M/s Amit Trehan LLC, USA, ₹1.30 Lakhs</p>
                       </div>
                     </li>
+
                   </ul>
                 </CardContent>
               </Card>
@@ -922,21 +918,21 @@ const DepartmentECE = () => {
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <Award className="h-4 w-4 mr-2 text-[#118DC4] mt-1" />
                       <div>
                         <span className="font-medium">Development of 5G / 4G based UAV augmented intelligent monitoring & surveillance system (2022)</span>
                         <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹1.82 Crores</p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <Award className="h-4 w-4 mr-2 text-[#118DC4] mt-1" />
                       <div>
                         <span className="font-medium">Visvesvaraya Part time PhD Scheme(2022)</span>
                         <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology (MeitY), Govt. of India, ₹2.50 Lakhs</p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <Award className="h-4 w-4 mr-2 text-[#118DC4] mt-1" />
                       <div>
                         <span className="font-medium">NTU-PU Science and Technology R&D Project(2022)</span>
                         <p className="text-sm text-gray-600">Funding: NTU STPC funding, Nottingham Trent University, UK, ₹9.98 Lakhs</p>
@@ -969,7 +965,7 @@ const DepartmentECE = () => {
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-3">Industry Partners</h4>
+                    <h4 className="font-semibold text-[#118DC4] mb-3">Industry Partners</h4>
                     <ul className="space-y-1 text-sm text-gray-600">
                       <li>• Texas Instruments</li>
                       <li>• Qualcomm Technologies</li>
@@ -979,7 +975,7 @@ const DepartmentECE = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-3">Academic Partners</h4>
+                    <h4 className="font-semibold text-[#118DC4] mb-3">Academic Partners</h4>
                     <ul className="space-y-1 text-sm text-gray-600">
                       <li>• IIT Delhi</li>
                       <li>• IIT Kanpur</li>
@@ -1005,7 +1001,7 @@ const DepartmentECE = () => {
                       className="border-none shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <CardHeader>
-                        <CardTitle className="text-lg text-blue-600">
+                        <CardTitle className="text-lg text-[#118DC4]">
                           {facility.name}
                         </CardTitle>
                         <CardDescription>
@@ -1034,7 +1030,7 @@ const DepartmentECE = () => {
                     <Card key={index} className="border-none shadow-lg">
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                          <div className="w-12 h-12 bg-gradient-to-br from-[#118DC4] to-[#0D76A8] rounded-xl flex items-center justify-center flex-shrink-0">
                             <Award className="h-6 w-6 text-white" />
                           </div>
                           <div className="flex-1">
@@ -1046,7 +1042,7 @@ const DepartmentECE = () => {
                             </p>
                             <Badge
                               variant="outline"
-                              className="text-blue-600 border-blue-600"
+                              className="text-[#118DC4] border-[#118DC4]"
                             >
                               {achievement.year}
                             </Badge>
@@ -1078,17 +1074,17 @@ const DepartmentECE = () => {
                     </h3>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
-                        <MapPin className="h-5 w-5 text-blue-600" />
+                        <MapPin className="h-5 w-5 text-[#118DC4]" />
                         <span className="text-gray-700">
                           Room 301, UIET Building, Panjab University
                         </span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Phone className="h-5 w-5 text-blue-600" />
+                        <Phone className="h-5 w-5 text-[#118DC4]" />
                         <span className="text-gray-700">+91-172-2534816</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Mail className="h-5 w-5 text-blue-600" />
+                        <Mail className="h-5 w-5 text-[#118DC4]" />
                         <span className="text-gray-700">
                           ece@uiet.puchd.ac.in
                         </span>
