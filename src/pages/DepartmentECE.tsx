@@ -41,7 +41,7 @@ const DepartmentECE = () => {
   // Department statistics
   const stats = [
     { label: "Students Enrolled", value: "400+", icon: Users },
-    { label: "Faculty", value: "28+", icon: GraduationCap },
+    { label: "Faculty", value: "20+", icon: GraduationCap },
     { label: "Laboratories", value: "6", icon: Beaker },
     { label: "Placement", value: "95%", icon: Trophy },
   ];
@@ -49,9 +49,9 @@ const DepartmentECE = () => {
   // Academic programs
   const programs = [
     {
-      name: "B.E. Computer Science & Engineering",
+      name: "B.E. Electronics & Communication Engineering",
       duration: "4 Years",
-      intake: "60 Students",
+      intake: "120 Students",
       eligibility: "10+2 with Physics, Chemistry, Mathematics",
       highlights: [
         "AICTE Approved",
@@ -60,10 +60,10 @@ const DepartmentECE = () => {
       ],
     },
     {
-      name: "M.E. Computer Science & Engineering",
+      name: "M.E. Electronics & Communication Engineering",
       duration: "2 Years",
       intake: "18 Students",
-      eligibility: "B.E./B.Tech in CSE or related field",
+      eligibility: "B.E./B.Tech in ECE or related field",
       highlights: [
         "Research-Based Program",
         "Thesis Work",
@@ -71,7 +71,7 @@ const DepartmentECE = () => {
       ],
     },
     {
-      name: "Ph.D Computer Science & Engineering",
+      name: "Ph.D Electronics & Communication Engineering",
       duration: "3-5 Years",
       intake: "Variable",
       eligibility: "M.E./M.Tech with valid GATE/NET score",
@@ -123,34 +123,34 @@ const DepartmentECE = () => {
   // Infrastructure and facilities
   const facilities = [
     {
-      name: "Advanced Computing Lab",
-      description: "High-performance workstations with latest software tools",
-      capacity: "40 Systems",
+      name: "Communication Lab",
+      description: "Communication Lab: Communication lab is equipped with AM, FM, PCM/DM, TDM, ASK, FSK, PSK, QPSK trainers, Data Format Trainer kits, and RFID development system. For simulation of communication systems, MATLAB, and opti-system are used. The hardware tools available are OTDR, WDM trainer, Spectrum Analyzer, and Optical Communication Trainer. For simulation of computer networks, Deft Netz is used",
+      capacity: " Systems",
     },
     {
-      name: "Network Security Lab",
-      description: "Dedicated lab for cybersecurity and network analysis",
-      capacity: "30 Systems",
+      name: "VLSI and Embedded System Lab",
+      description: "VLSI and Embedded System Lab: The lab is used for design and simulation of analog and digital systems. FPGA and CPLD kits (Spartan 3 and Virtex 5) are available for designing the systems. The software tools used are Tanner tool, Silvaco, µ-wind, Model-Sim, and Xilinx ISE, Xilinx Embedded Development Kit.",
+      capacity: " Systems",
     },
     {
-      name: "Mobile Development Lab",
-      description: "Android and iOS development environment",
-      capacity: "35 Systems",
+      name: "Wireless Communication and Microwave Lab",
+      description: "Wireless Communication and Microwave Lab: This lab contains equipments related to design and implementation of wireless systems. The tools used are GSM simulator, GSM evaluation kit, GPS trainer, CDMA and FDM trainers, Satellite Communication Trainer, ISDN trainer, and 3GHz spectrum analyzer. The microwave experiments are performed on Klystron benches and Gunn benches. Microwave power sensors are used for power measurement. The simulation of circuits is done using Microwave wizard.",
+      capacity: " Systems",
     },
     {
-      name: "AI/ML Research Lab",
-      description: "GPU-enabled systems for machine learning research",
-      capacity: "20 Systems",
+      name: "Signal Processing and Image Processing Lab",
+      description: "Signal Processing and Image Processing Lab: This lab contains software and hardware tools required for design and implementation of signal processing and image processing systems. MATLAB, Systemvue, and Mathematica are the software tool used for simulation of systems. The hardware tools used in this lab are ADSP processors, Blackfin development boards, TMS processors and Digital storage Oscilloscope.",
+      capacity: " Systems",
     },
     {
-      name: "Project Development Lab",
-      description: "24/7 access lab for final year projects",
-      capacity: "25 Systems",
+      name: "Digital Electronics and Microprocessor Lab",
+      description: "Digital Electronics and Microprocessor Lab: The goal of this lab is to make students conversant with the designing of digital systems, and programmable aspects of microprocessors and microcontrollers. This lab is equipped with 8085, and 8086 microprocessors, 8051 and PIC micro controllers, ARM based systems, and various interfacing cards. For implementation of digital systems, digital trainers and logic analyzers are available. The software tools used is Keil, and Proteus VSM",
+      capacity: " Systems",
     },
     {
-      name: "Smart Classrooms",
-      description: "Interactive boards and multimedia facilities",
-      capacity: "3 Rooms",
+      name: "Analog Electronics Lab",
+      description: "Analog Electronics Lab: This lab is intended to give the students a practical experience in working with semiconductor devices and examines the design and operation of important circuits that utilize these devices. The software tools used in the lab are p-spice, TCAD, Circuit-Maker, and Chip-Scope Pro. Hardware tools used in the lab are Analog electronic trainers and PCB designing machine.",
+      capacity: " Rooms",
     },
   ];
 
@@ -158,152 +158,463 @@ const DepartmentECE = () => {
   const facultyData = {
     coordinator: [
       {
-        name: "Dr. Rajesh Kumar",
-        designation: "Professor & Head",
-        specialization: "Machine Learning, Data Mining",
-        email: "rajesh.kumar@uiet.puchd.ac.in",
-        phone: "+91-172-2534816",
+        name: "Dr. Jaget Singh",
+        designation: "Professor & Coordinator",
+        specialization: "Antenna and Microwave Engineering",
+        email: "jaget_singh80yahoo.co.in",
+        phone: "9464169791",
         office: "Room 301, UIET Building",
-        experience: "15+ years",
-        qualification: "Ph.D. Computer Science, IIT Delhi",
-        publications: 45,
-        image: "photo-1507003211169-0a1dd7228f2d",
+        experience: "8 years approx",
+        qualification: "M.Tech, R.G.P.V. Bhopal",
+        publications: 13,
+        image: "/",
         isCoordinator: true,
         researchAreas: [
-          "Machine Learning",
-          "Data Mining",
-          "Artificial Intelligence",
+          "Microwave",
+          "Antennas Design",
         ],
-        courses: ["Advanced Algorithms", "Machine Learning", "Data Structures"],
+        courses: ["Microwave", "Antennas Design"],
       },
     ],
     professors: [
       {
-        name: "Dr. Priya Sharma",
+        name: "Prof. Renu Vig",
         designation: "Professor",
-        specialization: "Artificial Intelligence, Neural Networks",
-        email: "priya.sharma@uiet.puchd.ac.in",
-        experience: "12+ years",
-        qualification: "Ph.D. Computer Science, IIT Bombay",
-        publications: 38,
-        image: "photo-1494790108755-2616b612b786",
+        specialization: "Wireless and Mobile Communication",
+        email: "renuvig@pu.ac.in",
+        phone: "9814126152",
+        experience: "35+ years",
+        qualification: "Ph.D. Artificial Intelligence & Neural Networks, Panjab University, Chandigarh",
+        publications: 164,
+        image: "",
         researchAreas: [
           "Artificial Intelligence",
           "Neural Networks",
-          "Deep Learning",
+          "Fuzzy Logic",
+          "Signal Processing",
+          "Biomedical Systems",
         ],
-        courses: ["AI Fundamentals", "Neural Networks", "Pattern Recognition"],
+        courses: ["Signal Processing", "Fuzzy Systems", "AI/Neural Networks", "Control Systems"],
       },
       {
-        name: "Dr. Amit Singh",
+        name: "Prof. Sunil Aggarwal",
         designation: "Professor",
-        specialization: "Software Engineering, Database Systems",
-        email: "amit.singh@uiet.puchd.ac.in",
-        experience: "14+ years",
-        qualification: "Ph.D. Software Engineering, IIT Kanpur",
-        publications: 42,
-        image: "photo-1472099645785-5658abf4ff4e",
+        specialization: "Wireless communication, Artificial Intelligence",
+        email: "s.agrawal@pu.ac.in",
+        phone: "9417723296",
+        experience: "34 years",
+        qualification: "Ph.D. Electronics & Communication, Panjab University (Chandigarh)",
+        publications: 63,
+        image: "",
         researchAreas: [
-          "Software Engineering",
-          "Database Systems",
-          "System Design",
+          "Wireless Comm",
+          "AI",
+          "Signal/Image Processing",
         ],
         courses: [
-          "Software Engineering",
-          "Database Management",
-          "System Analysis",
+          "Wireless Comm",
+          "AI",
+          "Signal/Image Processing",
+        ],
+      },
+      {
+        name: "Prof. Arvind Kumar",
+        designation: "Professor",
+        specialization: "Microelectronics, Sensors Design, Biomass and Photovoltaic Energy Systems",
+        email: "arvind_uiet@pu.ac.in",
+        phone: "9417600579",
+        experience: "10+ years",
+        qualification: "Ph.D. Thin-Film Based Temperature Sensors, Panjab University (Chandigarh)",
+        publications: 6,
+        image: "",
+        researchAreas: [
+          "Microelectronics",
+          "VLSI",
+          "Sensor Design",
+        ],
+        courses: [
+          "Microelectronics",
+          "VLSI",
+          "Sensor Design",
+        ],
+      },
+      {
+        name: "Dr. Naresh Kumar",
+        designation: "Professor",
+        specialization: "Wireless and Mobile Communication",
+        email: "naresh_uiet@yahoo.com",
+        phone: "9216392982",
+        experience: "21 years",
+        qualification: "Ph.D. Electronics & Communication Engg., Panjab University (Chandigarh)",
+        publications: 56,
+        image: "",
+        researchAreas: [
+          "Wireless Comm",
+          "Underwater Acoustic Comm",
+          "Cognitive Radios",
+        ],
+        courses: [
+          "Wireless Comm",
+          "Underwater Acoustic Comm",
+          "Cognitive Radios",
+        ],
+      },
+      {
+        name: "Dr. Sumit Budhiraja",
+        designation: "Professor",
+        specialization: "Signal Processing and Communication",
+        email: "sumitbudhiraja@gmail.com",
+        phone: "9876193545",
+        experience: "20 years",
+        qualification: "Ph.D. Electronics & Communication Engg., Panjab University (Chandigarh)",
+        publications: 50,
+        image: "",
+        researchAreas: [
+          "Signal & Image Processing",
+          "Sparse Representation",
+        ],
+        courses: [
+          "Signal & Image Processing",
+          "Sparse Representation",
+        ],
+      },
+      {
+        name: "Dr. Preeti Singh",
+        designation: "Professor",
+        specialization: "Optical Communication (wired and wireless) and Optical Biosensor",
+        email: "preeti_singh@pu.ac.in",
+        phone: "8054001599",
+        experience: "24 years",
+        qualification: "Ph.D. CSE (Medical Image Retrieval), Panjab University (Chandigarh)",
+        publications: 35,
+        image: "",
+        researchAreas: [
+          "Image Processing",
+          "ML/DL",
+          "Biomedical Imaging",
+        ],
+        courses: [
+          "Image Processing",
+          "ML/DL",
+          "Biomedical Imaging",
+        ],
+      },
+      {
+        name: "Dr. Charu Madhu",
+        designation: "Professor",
+        specialization: "Nanophotonics, Optical Communication",
+        email: "charu_uiet@pu.ac.in",
+        phone: "8146560572",
+        experience: "17 years",
+        qualification: "Ph.D. Nanoelectronics, Panjab University (Chandigarh)",
+        publications: 65,
+        image: "",
+        researchAreas: [
+          "Nanophotonics",
+          "Optical Communication",
+          "Device Modeling",
+        ],
+        courses: [
+          "Nanophotonics",
+          "Optical Communication",
+          "Device Modeling",
+        ],
+      },
+      {
+        name: "Dr. Nidhi Garg",
+        designation: "Professor",
+        specialization: "Digital System Design, Digital signal and Bio-signal Processing",
+        email: "nidhi_garg@pu.ac.in ",
+        phone: "8727058014",
+        experience: "14 years",
+        qualification: "Ph.D., Panjab University (Chandigarh)",
+        publications: 14,
+        image: "",
+        researchAreas: [
+          "Digital systems",
+          "signal & bio-signal processing",
+        ],
+        courses: [
+          "Digital systems",
+          "signal & bio-signal processing",
         ],
       },
     ],
     associateProfessors: [
       {
-        name: "Dr. Neha Gupta",
+        name: "Dr. Neeraj Sharma",
         designation: "Associate Professor",
-        specialization: "Computer Networks, Cybersecurity",
-        email: "neha.gupta@uiet.puchd.ac.in",
-        experience: "10+ years",
-        qualification: "Ph.D. Computer Networks, NIT Kurukshetra",
-        publications: 28,
-        image: "photo-1438761681033-6461ffad8d80",
+        specialization: "Optical Fiber Communication",
+        email: "sharma_n@pu.ac.in",
+        Phone: "9988403911",
+        experience: "18 years",
+        qualification: "Ph.D. Electronics & Communication, Panjab University, Chandigarh",
+        publications: 30,
+        image: "",
         researchAreas: [
-          "Computer Networks",
-          "Cybersecurity",
-          "Network Security",
+          "Optical communication",
+          "MEMS",
+          "Microsystems",
         ],
-        courses: ["Computer Networks", "Network Security", "Cryptography"],
-      },
-      {
-        name: "Dr. Vikash Yadav",
-        designation: "Associate Professor",
-        specialization: "Human-Computer Interaction, UI/UX Design",
-        email: "vikash.yadav@uiet.puchd.ac.in",
-        experience: "8+ years",
-        qualification: "Ph.D. Human-Computer Interaction, PU Chandigarh",
-        publications: 22,
-        image: "photo-1500648767791-00dcc994a43e",
-        researchAreas: ["HCI", "UI/UX Design", "User Experience"],
-        courses: ["HCI", "UI/UX Design", "Web Development"],
+        courses: [
+          "Optical communication",
+          "MEMS",
+          "Microsystems",
+        ],
       },
     ],
     assistantProfessors: [
       {
-        name: "Dr. Sunita Dhiman",
+        name: "Ms. Sharmelle Thangjam",
         designation: "Assistant Professor",
-        specialization: "Data Science, Big Data Analytics",
-        email: "sunita.dhiman@uiet.puchd.ac.in",
-        experience: "6+ years",
-        qualification: "Ph.D. Data Science, Thapar University",
-        publications: 18,
-        image: "photo-1544005313-94ddf0286df2",
+        specialization: "Signal Processing",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
         researchAreas: [
-          "Data Science",
-          "Big Data Analytics",
-          "Machine Learning",
-        ],
-        courses: ["Data Science", "Big Data", "Statistics"],
-      },
-      {
-        name: "Dr. Rohit Tanwar",
-        designation: "Assistant Professor",
-        specialization: "Cloud Computing, Distributed Systems",
-        email: "rohit.tanwar@uiet.puchd.ac.in",
-        experience: "5+ years",
-        qualification: "Ph.D. Cloud Computing, BITS Pilani",
-        publications: 15,
-        image: "photo-1507591064344-4c6ce005b128",
-        researchAreas: [
-          "Cloud Computing",
-          "Distributed Systems",
-          "Parallel Computing",
+          "",
+          "",
+          "",
         ],
         courses: [
-          "Cloud Computing",
-          "Distributed Systems",
-          "Operating Systems",
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Mr. Vishal Sharma",
+        designation: "Assistant Professor",
+        specialization: "VLSI and Microelectronics",
+        email: "vishaluiet@pu.ac.in",
+        Phone: "8360644211",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Ms. Preeti Gupta",
+        designation: "Assistant Professor",
+        specialization: "Digital System Design, Control System and Biometrics",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Dr. Amit Chaudhary",
+        designation: "Assistant Professor",
+        specialization: "Semiconductor and VLSI",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Dr. Sarvjit Singh",
+        designation: "Assistant Professor",
+        specialization: "Wireless Communication",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Dr. Garima Joshi",
+        designation: "Assistant Professor",
+        specialization: "VLSI Design, Image Processing, Pattern Recognition",
+        email: "joshi_garima5@yahoo.com",
+        Phone: "8847436313",
+        experience: "21 years",
+        qualification: "Ph.D. VLSI, Image Processing, Pattern Recognition, UIET, Panjab University, Chandigarh",
+        publications: 32,
+        image: "",
+        researchAreas: [
+          "VLSI",
+          "Image Processing",
+          "Pattern Recognition",
+        ],
+        courses: [
+          "VLSI",
+          "Image Processing",
+          "Pattern Recognition",
+        ],
+      },
+      {
+        name: "Ms. Daljeet Kaur",
+        designation: "Assistant Professor",
+        specialization: "Image Processing",
+        email: "er.daljeetkaur@gmail.com",
+        Phone: "9888491183",
+        experience: "15 years",
+        qualification: "M.E. Electronics & Communication, NITTTR, Punjab University, Chandigarh",
+        publications: 5,
+        image: "",
+        researchAreas: [
+          "Material Science",
+          "Nanotechnology",
+        ],
+        courses: [
+          "Material Science",
+          "Nanotechnology",
+        ],
+      },
+      {
+        name: "Dr. Pardeep Kaur",
+        designation: "Assistant Professor",
+        specialization: "Wireless Sensor Networks and Optical Communication",
+        email: "pardeep.tur@gmail.com",
+        Phone: "9815402979",
+        experience: "12 years",
+        qualification: "Ph.D. ECE, Panjab University, Chandigarh",
+        publications: 10,
+        image: "",
+        researchAreas: [
+          "Wireless Sensor Networks",
+          "Optical/FSO Communication",
+        ],
+        courses: [
+          "Wireless Sensor Networks",
+          "Optical/FSO Communication",
+        ],
+      },
+      {
+        name: "Mr. Sanjiv Kumar",
+        designation: "Assistant Professor",
+        specialization: "Optical Communication",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Ms. Harvinder Kaur",
+        designation: "Assistant Professor",
+        specialization: "Optical Communication",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Mr. Vijay Kumar",
+        designation: "Assistant Professor",
+        specialization: "VLSI Design",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
+        ],
+      },
+      {
+        name: "Dr. Gurpreet Kaur",
+        designation: "Assistant Professor",
+        specialization: "Digital Signal Processing",
+        email: "",
+        Phone: "",
+        experience: " years",
+        qualification: "",
+        publications: 0,
+        image: "",
+        researchAreas: [
+          "",
+          "",
+          "",
+        ],
+        courses: [
+          "",
+          "",
+          "",
         ],
       },
     ],
     guestFaculty: [
-      {
-        name: "Prof. Arun Mehta",
-        designation: "Guest Faculty",
-        specialization: "Web Development, Programming Languages",
-        email: "arun.mehta@uiet.puchd.ac.in",
-        experience: "4+ years",
-        qualification: "M.Tech. Computer Science",
-        publications: 8,
-        image: "photo-1519085360753-af0119f7cbe7",
-        researchAreas: [
-          "Web Development",
-          "Programming Languages",
-          "Software Development",
-        ],
-        courses: [
-          "Web Development",
-          "Programming Languages",
-          "Software Engineering",
-        ],
-      },
+
     ],
   };
 
@@ -580,6 +891,22 @@ const DepartmentECE = () => {
                         <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹2.53 Crores</p>
                       </div>
                     </li>
+
+                    <li className="flex items-start">
+                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
+                      <div>
+                        <span className="font-medium">Visvesvaraya Part time PhD Scheme</span>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology (MeitY), Govt. of India, ₹2.50 Lakhs</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      {/* <TrendingUp className="h-4 w-4 mr-2 text-green-600 mt-1" /> */}
+                      <div>
+                        <span className="font-medium">Revolutionizing Colonic Histopathology using Artificial Intelligence</span>
+                        <p className="text-sm text-gray-600">Funding: Consultancy to M/s Amit Trehan LLC, USA, ₹1.30 Lakhs</p>
+                      </div>
+                    </li>
+
                   </ul>
                 </CardContent>
               </Card>
@@ -594,21 +921,35 @@ const DepartmentECE = () => {
                       <Award className="h-4 w-4 mr-2 text-[#118DC4] mt-1" />
                       <div>
                         <span className="font-medium">Development of 5G / 4G based UAV augmented intelligent monitoring & surveillance system (2022)</span>
-                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 1.82 Crores</p>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India, ₹1.82 Crores</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Award className="h-4 w-4 mr-2 text-[#118DC4] mt-1" />
                       <div>
                         <span className="font-medium">Visvesvaraya Part time PhD Scheme(2022)</span>
-                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 2.50 Lakhs</p>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology (MeitY), Govt. of India, ₹2.50 Lakhs</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Award className="h-4 w-4 mr-2 text-[#118DC4] mt-1" />
                       <div>
                         <span className="font-medium">NTU-PU Science and Technology R&D Project(2022)</span>
-                        <p className="text-sm text-gray-600">Amount(in Rs): Rs 9.98 Lakhs</p>
+                        <p className="text-sm text-gray-600">Funding: NTU STPC funding, Nottingham Trent University, UK, ₹9.98 Lakhs</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <div>
+                        <span className="font-medium">Development of Unified IP Based Communication Platform for Voice, Video and Data Services</span>
+                        <p className="text-sm text-gray-600">Funding: Ministry of Electronics & Information Technology, Govt. of India & Coral Telecommunication, Noida as industry partner, ₹66.00 Lakhs</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Award className="h-4 w-4 mr-2 text-blue-600 mt-1" />
+                      <div>
+                        <span className="font-medium">Kisan Mitra (2019)</span>
+                        <p className="text-sm text-gray-600">Funding: Department of Agriculture & Farmers Welfare, Govt of Haryana, ₹14.84 Lakhs</p>
                       </div>
                     </li>
                   </ul>
