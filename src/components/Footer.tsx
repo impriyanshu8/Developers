@@ -1,264 +1,358 @@
-
-import React, { useState } from 'react';
-import { Facebook, Twitter, Linkedin, Instagram, Youtube, Mail, Phone, MapPin, ExternalLink, Send, ArrowUp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { Input } from '@/components/ui/input';
+import React, { useState } from "react";
+import {
+  Facebook,
+  X,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Send,
+  ArrowUp,
+  BookOpen,
+  Users,
+} from "lucide-react";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setEmail('');
-      setTimeout(() => setIsSubscribed(false), 3000);
-    }
-  };
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const quickLinks = [
-    { name: 'About UIET', href: '/about' },
-    { name: 'Academic Programs', href: '/academics' },
-    { name: 'Admissions', href: '/admissions' },
-    { name: 'Research', href: '/research' },
-    { name: 'Faculty', href: '/faculty' },
-    { name: 'Student Life', href: '/students' },
-    { name: 'Alumni Network', href: '/students#alumni' },
-    { name: 'Employment', href: '/employment' }
+    { name: "About UIET", href: "/about" },
+    { name: "Academic Programs", href: "/academics" },
+    { name: "Admissions", href: "/admissions" },
+    { name: "Research", href: "/research" },
+    { name: "Faculty", href: "/faculty" },
+    { name: "Student Life", href: "/students" },
+    { name: "Alumni Network", href: "/students#alumni" },
+    { name: "Employment", href: "/employment" },
   ];
 
   const departments = [
-    { name: 'Computer Science & Engineering', href: '/departments/cse' },
-    { name: 'Electronics & Communication', href: '/departments/ece' },
-    { name: 'Electrical & Electronics', href: '/departments/eee' },
-    { name: 'Information Technology', href: '/departments/it' },
-    { name: 'Mechanical Engineering', href: '/departments/me' },
-    { name: 'Biotechnology', href: '/departments/bt' },
-    { name: 'Applied Sciences', href: '/departments/as' }
+    { name: "Computer Science & Engineering", href: "/departments/cse" },
+    { name: "Electronics & Communication", href: "/departments/ece" },
+    { name: "Electrical & Electronics", href: "/departments/eee" },
+    { name: "Information Technology", href: "/departments/it" },
+    { name: "Mechanical Engineering", href: "/departments/me" },
+    { name: "Biotechnology", href: "/departments/bt" },
+    { name: "Applied Sciences", href: "/departments/as" },
   ];
 
-  const resources = [
-    { name: 'Academic Calendar', href: '/academics#calendar' },
-    { name: 'Previous Papers', href: '/previous-papers' },
-    { name: 'Important Downloads', href: '/downloads' },
-    { name: 'UIET Web Portal', href: 'https://eakadamik.in/uietchd/' },
-    { name: 'Library Resources', href: 'https://library.puchd.ac.in/digital-library.php' },
-    { name: 'Campus Map', href: 'https://www.google.com/maps/place/University+Institute+Of+Engineering+and+Technology,+Panjab+University/@30.748099,76.757149,15z/data=!4m6!3m5!1s0x390feda45e945a31:0xdc967b3a7e0f1e95!8m2!3d30.748099!4d76.7571494!16zL20vMGM5cjNk?hl=en&entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D' }
+  const importantLinks = [
+    { name: "Latest News and Notices", href: "/news" },
+    { name: "Employment and Jobs", href: "/employment" },
+    { name: "Shraman Foundation Scholarship", href: "/scholarships/shraman" },
+    { name: "UIET Web Portal", href: "https://eakadamik.in/uietchd/" },
+    { name: "TEQIP", href: "/teqip" },
+    { name: "Design Innovation Centre (DIC)", href: "/dic" },
+    { name: "Telelabs", href: "/telelabs" },
+    { name: "Maivrik Labs", href: "/maivrik-labs" },
+    { name: "TBIU", href: "/tbiu" },
+    { name: "National Apprenticeship Training Scheme (NATS)", href: "/nats" },
+  ];
+
+  const importantInformation = [
+    { name: "AICTE Approval Letters", href: "/aicte-approval" },
+    { name: "Student Notices", href: "/student-notices" },
+    { name: "Previous Year Papers", href: "/previous-papers" },
+    { name: "NBA Accreditation Letters", href: "/nba-accreditation" },
+    { name: "N.I.R.F.", href: "/nirf" },
+    { name: "Handbook of Information", href: "/handbook" },
+    {
+      name: "Library",
+      href: "https://library.puchd.ac.in/digital-library.php",
+    },
+    { name: "Government Scholarships", href: "/government-scholarships" },
+    { name: "Research Scholars", href: "/research-scholars" },
+    { name: "RTI-UIET", href: "/rti" },
+    { name: "UIET @ FB", href: "https://www.facebook.com/uietpuofficial" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com/uietpuofficial', label: 'Facebook', color: 'hover:bg-blue-600' },
-    { icon: Twitter, href: 'https://x.com/uietchd', label: 'Twitter', color: 'hover:bg-sky-500' },
-    { icon: Linkedin, href: 'https://in.linkedin.com/school/uietpu/', label: 'LinkedIn', color: 'hover:bg-blue-700' },
-    { icon: Instagram, href: 'https://www.instagram.com/uietpu/#', label: 'Instagram', color: 'hover:bg-pink-600' },
-    { icon: Youtube, href: 'https://www.youtube.com/@UIET_PUCHD', label: 'YouTube', color: 'hover:bg-red-600' }
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/uietpuofficial",
+      label: "Facebook",
+      color: "hover:bg-blue-600",
+    },
+    {
+      icon: X,
+      href: "https://x.com/uietchd",
+      label: "X",
+      color: "hover:bg-sky-500",
+    },
+    {
+      icon: Linkedin,
+      href: "https://in.linkedin.com/school/uietpu/",
+      label: "LinkedIn",
+      color: "hover:bg-blue-700",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/uietpu/#",
+      label: "Instagram",
+      color: "hover:bg-pink-600",
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/@UIET_PUCHD",
+      label: "YouTube",
+      color: "hover:bg-red-600",
+    },
   ];
 
   return (
-    <footer className="bg-gray-900 text-white relative">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="absolute -top-6 right-8 bg-[#118DC4] hover:bg-[#0e7db0] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="fixed bottom-8 right-8 bg-gradient-to-r from-[#118DC4] to-[#1aa3e0] hover:from-[#0e7db0] hover:to-[#118DC4] text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-50 group"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="h-5 w-5" />
+        <ArrowUp className="h-5 w-5 group-hover:animate-bounce" />
       </button>
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-          {/* University Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                <img
-                  src="https://imgs.search.brave.com/XfoNIRCzVe6i5gayiQSdwTrU26C4tp7OHzJQJ0AmVTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/OS85NC9VSUVUX2xv/Z28ucG5nLzUxMnB4/LVVJRVRfbG9nby5w/bmc"
-                  alt="UIET Logo"
-                  className="w-10 h-10 object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">UIET</h3>
-                <p className="text-sm text-gray-400">Panjab University</p>
-              </div>
-            </div>
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Top Section - University Info */}
+          <div className="mb-16">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div className="flex-1">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#118DC4] to-[#1aa3e0] rounded-2xl p-3 shadow-xl">
+                      <img
+                        src="https://imgs.search.brave.com/XfoNIRCzVe6i5gayiQSdwTrU26C4tp7OHzJQJ0AmVTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/OS85NC9VSUVUX2xv/Z28ucG5nLzUxMnB4/LVVJRVRfbG9nby5w/bmc"
+                        alt="UIET Logo"
+                        className="w-full h-full object-contain filter brightness-0 invert"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                      UIET
+                    </h2>
+                    <p className="text-[#118DC4] font-semibold text-lg">
+                      Panjab University
+                    </p>
+                  </div>
+                </div>
 
-
-            <p className="text-gray-300 mb-6 leading-relaxed text-sm">
-              University Institute of Engineering & Technology, committed to excellence in
-              engineering education, research, and innovation since 2002. Building tomorrow's engineers today.
-            </p>
-
-            {/* Contact Info */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-sm group">
-                <MapPin className="h-4 w-4 mr-3 text-[#118DC4] flex-shrink-0 group-hover:text-[#1aa3e0] transition-colors" />
-                <span className="group-hover:text-white transition-colors">Sector 25, Chandigarh - 160014, India</span>
+                <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
+                  University Institute of Engineering & Technology, committed to
+                  excellence in engineering education, research, and innovation
+                  since 2002. Building tomorrow's engineers today.
+                </p>
               </div>
-              <div className="flex items-center text-sm group">
-                <Phone className="h-4 w-4 mr-3 text-[#118DC4] flex-shrink-0 group-hover:text-[#1aa3e0] transition-colors" />
-                <a href="tel:+91-172-2534818" className="hover:text-[#118DC4] transition-colors">
-                  +91-172-2534818
-                </a>
-              </div>
-              <div className="flex items-center text-sm group">
-                <Mail className="h-4 w-4 mr-3 text-[#118DC4] flex-shrink-0 group-hover:text-[#1aa3e0] transition-colors" />
-                <a href="mailto:info@uiet.puchd.ac.in" className="hover:text-[#118DC4] transition-colors">
-                  info@uiet.puchd.ac.in
-                </a>
-              </div>
-            </div>
 
-            {/* Social Links */}
-            <div className="flex space-x-2">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`h-10 w-10 flex items-center justify-center text-gray-400 hover:text-white rounded-lg transition-all duration-300 hover:bg-[#118DC4] transform hover:scale-110`}
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-4 w-4" />
-                </a>
-              ))}
+              {/* Social Links */}
+              <div className="flex flex-col items-center lg:items-end">
+                <p className="text-gray-400 mb-4 text-sm font-medium">
+                  Follow Us
+                </p>
+                <div className="flex space-x-3">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-slate-800 hover:bg-gradient-to-r hover:from-[#118DC4] hover:to-[#1aa3e0] rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group"
+                      aria-label={social.label}
+                    >
+                      <social.icon className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-[#118DC4] transition-colors text-sm flex items-center group"
-                  >
-                    <ExternalLink className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Links Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
+            {/* Quick Links */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
+              <ul className="space-y-4">
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm"
+                    >
+                      <ExternalLink className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity text-[#118DC4]" />
+                      <span className="group-hover:translate-x-1 transition-transform">
+                        {link.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Departments */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">Departments</h3>
+              <ul className="space-y-4">
+                {departments.map((dept) => (
+                  <li key={dept.name}>
+                    <a
+                      href={dept.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-200 group text-sm"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform inline-block">
+                        {dept.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Important Links */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <BookOpen className="h-5 w-5 mr-2 text-[#118DC4]" />
+                Important Links
+              </h3>
+              <ul className="space-y-4">
+                {importantLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-200 group text-sm"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform inline-block">
+                        {link.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Important Information */}
+            <div className="lg:col-span-2">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <Users className="h-5 w-5 mr-2 text-[#118DC4]" />
+                Important Information
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {importantInformation.map((info) => (
+                  <div key={info.name}>
+                    <a
+                      href={info.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-200 group text-sm"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform inline-block">
+                        {info.name}
+                      </span>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Departments */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">Departments</h3>
-            <ul className="space-y-3">
-              {departments.map((dept) => (
-                <li key={dept.name}>
-                  <Link
-                    to={dept.href}
-                    className="text-gray-300 hover:text-[#118DC4] transition-colors text-sm group"
-                  >
-                    <span className="group-hover:translate-x-1 transition-transform inline-block">{dept.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Contact Info Section */}
+          <div className="mb-16 pt-12 border-t border-slate-700">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#118DC4] transition-colors">
+                  <MapPin className="h-5 w-5 text-[#118DC4] group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Address</p>
+                  <p className="text-white font-medium">
+                    Sector 25, Chandigarh - 160014
+                  </p>
+                </div>
+              </div>
 
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
-            <ul className="space-y-3">
-              {resources.map((resource) => (
-                <li key={resource.name}>
-                  <Link
-                    to={resource.href}
-                    className="text-gray-300 hover:text-[#118DC4] transition-colors text-sm group"
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#118DC4] transition-colors">
+                  <Phone className="h-5 w-5 text-[#118DC4] group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Phone</p>
+                  <a
+                    href="tel:+91-172-2534818"
+                    className="text-white font-medium hover:text-[#118DC4] transition-colors"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform inline-block">{resource.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    +91-172-2534818
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#118DC4] transition-colors">
+                  <Mail className="h-5 w-5 text-[#118DC4] group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Email</p>
+                  <a
+                    href="mailto:info@uiet.puchd.ac.in"
+                    className="text-white font-medium hover:text-[#118DC4] transition-colors"
+                  >
+                    info@uiet.puchd.ac.in
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-
-        {/*         
-
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Stay Connected</h3>
-              <p className="text-gray-300">Subscribe to our newsletter for latest updates, announcements, and opportunities.</p>
+      {/* Bottom Footer */}
+      <div className="border-t border-slate-700 bg-slate-900/80 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div className="text-gray-400 text-sm text-center lg:text-left">
+              © 2025 University Institute of Engineering & Technology, Panjab
+              University. All rights reserved.
             </div>
-            <div>
-              <form onSubmit={handleNewsletterSubmit} className="flex space-x-3">
-                <Input
-                  type="email"
-                  placeholder="Enter your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#118DC4] focus:ring-[#118DC4]"
-                  required
-                />
-                <Button 
-                  type="submit"
-                  className="bg-[#118DC4] hover:bg-[#0e7db0] px-6 flex items-center"
-                  disabled={isSubscribed}
-                >
-                  {isSubscribed ? (
-                    <>
-                      <span className="text-sm">Subscribed!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4 mr-2" />
-                      <span className="hidden sm:inline">Subscribe</span>
-                    </>
-                  )}
-                </Button>
-              </form>
-              {isSubscribed && (
-                <p className="text-green-400 text-sm mt-2">Thank you for subscribing!</p>
-              )}
-            </div>
-          </div>
-        </div> */}
-      </div> 
-
-
-
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 bg-gray-950">
-          <div className="max-w-7xl mx-auto px-4 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="text-gray-400 text-sm text-center md:text-left">
-                © 2025 University Institute of Engineering & Technology, Panjab University. All rights reserved.
-              </div>
-              <div className="flex flex-wrap justify-center gap-6 text-sm">
-                <Link to="/about#privacy" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link to="/about#terms" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                  Terms of Service
-                </Link>
-                <Link to="/about#cookies" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                  Cookie Policy
-                </Link>
-                <Link to="/about#accessibility" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                  Accessibility
-                </Link>
-                <Link to="/contact" className="text-gray-400 hover:text-[#118DC4] transition-colors">
-                  Support
-                </Link>
-              </div>
+            <div className="flex flex-wrap justify-center gap-8 text-sm">
+              <a
+                href="/about#privacy"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="/about#terms"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
+                Terms of Service
+              </a>
+              <a
+                href="/about#cookies"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
+                Cookie Policy
+              </a>
+              <a
+                href="/about#accessibility"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
+                Accessibility
+              </a>
+              <a
+                href="/contact"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
+                Support
+              </a>
             </div>
           </div>
         </div>
+      </div>
     </footer>
   );
 };
