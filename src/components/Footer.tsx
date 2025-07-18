@@ -1,86 +1,114 @@
-import React, { useState } from 'react';
-import { Facebook, Twitter, Linkedin, Instagram, Youtube, Mail, Phone, MapPin, ExternalLink, Send, ArrowUp, BookOpen, Users } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import React, { useState } from "react";
+import {
+  Facebook,
+  X,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Send,
+  ArrowUp,
+  BookOpen,
+  Users,
+} from "lucide-react";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setEmail('');
-      setTimeout(() => setIsSubscribed(false), 3000);
-    }
-  };
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const quickLinks = [
-    { name: 'About UIET', href: '/about' },
-    { name: 'Academic Programs', href: '/academics' },
-    { name: 'Admissions', href: '/admissions' },
-    { name: 'Research', href: '/research' },
-    { name: 'Faculty', href: '/faculty' },
-    { name: 'Student Life', href: '/students' },
-    { name: 'Alumni Network', href: '/students#alumni' },
-    { name: 'Employment', href: '/employment' }
+    { name: "About UIET", href: "/about" },
+    { name: "Academic Programs", href: "/academics" },
+    { name: "Admissions", href: "/admissions" },
+    { name: "Research", href: "/research" },
+    { name: "Faculty", href: "/faculty" },
+    { name: "Student Life", href: "/students" },
+    { name: "Alumni Network", href: "/students#alumni" },
+    { name: "Employment", href: "/employment" },
   ];
 
   const departments = [
-    { name: 'Computer Science & Engineering', href: '/departments/cse' },
-    { name: 'Electronics & Communication', href: '/departments/ece' },
-    { name: 'Electrical & Electronics', href: '/departments/eee' },
-    { name: 'Information Technology', href: '/departments/it' },
-    { name: 'Mechanical Engineering', href: '/departments/me' },
-    { name: 'Biotechnology', href: '/departments/bt' },
-    { name: 'Applied Sciences', href: '/departments/as' }
+    { name: "Computer Science & Engineering", href: "/departments/cse" },
+    { name: "Electronics & Communication", href: "/departments/ece" },
+    { name: "Electrical & Electronics", href: "/departments/eee" },
+    { name: "Information Technology", href: "/departments/it" },
+    { name: "Mechanical Engineering", href: "/departments/me" },
+    { name: "Biotechnology", href: "/departments/bt" },
+    { name: "Applied Sciences", href: "/departments/as" },
   ];
 
   const importantLinks = [
-    { name: 'Latest News and Notices', href: '/news' },
-    { name: 'Employment and Jobs', href: '/employment' },
-    { name: 'Shraman Foundation Scholarship', href: '/scholarships/shraman' },
-    { name: 'UIET Web Portal', href: 'https://eakadamik.in/uietchd/' },
-    { name: 'TEQIP', href: '/teqip' },
-    { name: 'Design Innovation Centre (DIC)', href: '/dic' },
-    { name: 'Telelabs', href: '/telelabs' },
-    { name: 'Maivrik Labs', href: '/maivrik-labs' },
-    { name: 'TBIU', href: '/tbiu' },
-    { name: 'National Apprenticeship Training Scheme (NATS)', href: '/nats' }
+    { name: "Latest News and Notices", href: "/news" },
+    { name: "Employment and Jobs", href: "/employment" },
+    { name: "Shraman Foundation Scholarship", href: "/scholarships/shraman" },
+    { name: "UIET Web Portal", href: "https://eakadamik.in/uietchd/" },
+    { name: "TEQIP", href: "/teqip" },
+    { name: "Design Innovation Centre (DIC)", href: "/dic" },
+    { name: "Telelabs", href: "/telelabs" },
+    { name: "Maivrik Labs", href: "/maivrik-labs" },
+    { name: "TBIU", href: "/tbiu" },
+    { name: "National Apprenticeship Training Scheme (NATS)", href: "/nats" },
   ];
 
   const importantInformation = [
-    { name: 'AICTE Approval Letters', href: '/aicte-approval' },
-    { name: 'Student Notices', href: '/student-notices' },
-    { name: 'Previous Year Papers', href: '/previous-papers' },
-    { name: 'NBA Accreditation Letters', href: '/nba-accreditation' },
-    { name: 'N.I.R.F.', href: '/nirf' },
-    { name: 'Handbook of Information', href: '/handbook' },
-    { name: 'Library', href: 'https://library.puchd.ac.in/digital-library.php' },
-    { name: 'Government Scholarships', href: '/government-scholarships' },
-    { name: 'Research Scholars', href: '/research-scholars' },
-    { name: 'RTI-UIET', href: '/rti' },
-    { name: 'UIET @ FB', href: 'https://www.facebook.com/uietpuofficial' }
+    { name: "AICTE Approval Letters", href: "/aicte-approval" },
+    { name: "Student Notices", href: "/student-notices" },
+    { name: "Previous Year Papers", href: "/previous-papers" },
+    { name: "NBA Accreditation Letters", href: "/nba-accreditation" },
+    { name: "N.I.R.F.", href: "/nirf" },
+    { name: "Handbook of Information", href: "/handbook" },
+    {
+      name: "Library",
+      href: "https://library.puchd.ac.in/digital-library.php",
+    },
+    { name: "Government Scholarships", href: "/government-scholarships" },
+    { name: "Research Scholars", href: "/research-scholars" },
+    { name: "RTI-UIET", href: "/rti" },
+    { name: "UIET @ FB", href: "https://www.facebook.com/uietpuofficial" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com/uietpuofficial', label: 'Facebook', color: 'hover:bg-blue-600' },
-    { icon: Twitter, href: 'https://x.com/uietchd', label: 'Twitter', color: 'hover:bg-sky-500' },
-    { icon: Linkedin, href: 'https://in.linkedin.com/school/uietpu/', label: 'LinkedIn', color: 'hover:bg-blue-700' },
-    { icon: Instagram, href: 'https://www.instagram.com/uietpu/#', label: 'Instagram', color: 'hover:bg-pink-600' },
-    { icon: Youtube, href: 'https://www.youtube.com/@UIET_PUCHD', label: 'YouTube', color: 'hover:bg-red-600' }
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/uietpuofficial",
+      label: "Facebook",
+      color: "hover:bg-blue-600",
+    },
+    {
+      icon: X,
+      href: "https://x.com/uietchd",
+      label: "X",
+      color: "hover:bg-sky-500",
+    },
+    {
+      icon: Linkedin,
+      href: "https://in.linkedin.com/school/uietpu/",
+      label: "LinkedIn",
+      color: "hover:bg-blue-700",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/uietpu/#",
+      label: "Instagram",
+      color: "hover:bg-pink-600",
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/@UIET_PUCHD",
+      label: "YouTube",
+      color: "hover:bg-red-600",
+    },
   ];
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
+
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
@@ -111,19 +139,24 @@ const Footer = () => {
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                       UIET
                     </h2>
-                    <p className="text-[#118DC4] font-semibold text-lg">Panjab University</p>
+                    <p className="text-[#118DC4] font-semibold text-lg">
+                      Panjab University
+                    </p>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
-                  University Institute of Engineering & Technology, committed to excellence in 
-                  engineering education, research, and innovation since 2002. Building tomorrow's engineers today.
+                  University Institute of Engineering & Technology, committed to
+                  excellence in engineering education, research, and innovation
+                  since 2002. Building tomorrow's engineers today.
                 </p>
               </div>
-              
+
               {/* Social Links */}
               <div className="flex flex-col items-center lg:items-end">
-                <p className="text-gray-400 mb-4 text-sm font-medium">Follow Us</p>
+                <p className="text-gray-400 mb-4 text-sm font-medium">
+                  Follow Us
+                </p>
                 <div className="flex space-x-3">
                   {socialLinks.map((social) => (
                     <a
@@ -146,9 +179,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-16">
             {/* Quick Links */}
             <div className="lg:col-span-1">
-              <h3 className="text-xl font-bold text-white mb-6">
-                Quick Links
-              </h3>
+              <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
               <ul className="space-y-4">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
@@ -157,7 +188,9 @@ const Footer = () => {
                       className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group text-sm"
                     >
                       <ExternalLink className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity text-[#118DC4]" />
-                      <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
+                      <span className="group-hover:translate-x-1 transition-transform">
+                        {link.name}
+                      </span>
                     </a>
                   </li>
                 ))}
@@ -166,9 +199,7 @@ const Footer = () => {
 
             {/* Departments */}
             <div className="lg:col-span-1">
-              <h3 className="text-xl font-bold text-white mb-6">
-                Departments
-              </h3>
+              <h3 className="text-xl font-bold text-white mb-6">Departments</h3>
               <ul className="space-y-4">
                 {departments.map((dept) => (
                   <li key={dept.name}>
@@ -176,7 +207,9 @@ const Footer = () => {
                       href={dept.href}
                       className="text-gray-400 hover:text-white transition-colors duration-200 group text-sm"
                     >
-                      <span className="group-hover:translate-x-1 transition-transform inline-block">{dept.name}</span>
+                      <span className="group-hover:translate-x-1 transition-transform inline-block">
+                        {dept.name}
+                      </span>
                     </a>
                   </li>
                 ))}
@@ -196,7 +229,9 @@ const Footer = () => {
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors duration-200 group text-sm"
                     >
-                      <span className="group-hover:translate-x-1 transition-transform inline-block">{link.name}</span>
+                      <span className="group-hover:translate-x-1 transition-transform inline-block">
+                        {link.name}
+                      </span>
                     </a>
                   </li>
                 ))}
@@ -216,7 +251,9 @@ const Footer = () => {
                       href={info.href}
                       className="text-gray-400 hover:text-white transition-colors duration-200 group text-sm"
                     >
-                      <span className="group-hover:translate-x-1 transition-transform inline-block">{info.name}</span>
+                      <span className="group-hover:translate-x-1 transition-transform inline-block">
+                        {info.name}
+                      </span>
                     </a>
                   </div>
                 ))}
@@ -226,7 +263,6 @@ const Footer = () => {
 
           {/* Contact Info Section */}
           <div className="mb-16 pt-12 border-t border-slate-700">
-            <h3 className="text-xl font-bold text-white mb-8 text-center">Get in Touch</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="flex items-center space-x-4 group">
                 <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#118DC4] transition-colors">
@@ -234,75 +270,39 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Address</p>
-                  <p className="text-white font-medium">Sector 25, Chandigarh - 160014</p>
+                  <p className="text-white font-medium">
+                    Sector 25, Chandigarh - 160014
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4 group">
                 <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#118DC4] transition-colors">
                   <Phone className="h-5 w-5 text-[#118DC4] group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <a href="tel:+91-172-2534818" className="text-white font-medium hover:text-[#118DC4] transition-colors">
+                  <a
+                    href="tel:+91-172-2534818"
+                    className="text-white font-medium hover:text-[#118DC4] transition-colors"
+                  >
                     +91-172-2534818
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4 group">
                 <div className="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#118DC4] transition-colors">
                   <Mail className="h-5 w-5 text-[#118DC4] group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <a href="mailto:info@uiet.puchd.ac.in" className="text-white font-medium hover:text-[#118DC4] transition-colors">
+                  <a
+                    href="mailto:info@uiet.puchd.ac.in"
+                    className="text-white font-medium hover:text-[#118DC4] transition-colors"
+                  >
                     info@uiet.puchd.ac.in
                   </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Newsletter Signup */}
-          <div className="pt-12 border-t border-slate-700">
-            <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Stay Connected</h3>
-                  <p className="text-gray-300 text-lg">Subscribe to our newsletter for latest updates, announcements, and opportunities.</p>
-                </div>
-                <div>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Input
-                      type="email"
-                      placeholder="Enter your email address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1 bg-slate-800/50 border-slate-600 text-white placeholder-gray-400 focus:border-[#118DC4] focus:ring-[#118DC4] h-12 rounded-lg"
-                      required
-                    />
-                    <Button 
-                      onClick={handleNewsletterSubmit}
-                      className="bg-gradient-to-r from-[#118DC4] to-[#1aa3e0] hover:from-[#0e7db0] hover:to-[#118DC4] px-8 h-12 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                      disabled={isSubscribed}
-                    >
-                      {isSubscribed ? (
-                        <span>Subscribed!</span>
-                      ) : (
-                        <>
-                          <Send className="h-4 w-4 mr-2" />
-                          Subscribe
-                        </>
-                      )}
-                    </Button>
-                  </div>
-                  {isSubscribed && (
-                    <p className="text-green-400 text-sm mt-3 flex items-center">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                      Thank you for subscribing!
-                    </p>
-                  )}
                 </div>
               </div>
             </div>
@@ -315,22 +315,38 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
             <div className="text-gray-400 text-sm text-center lg:text-left">
-              © 2025 University Institute of Engineering & Technology, Panjab University. All rights reserved.
+              © 2025 University Institute of Engineering & Technology, Panjab
+              University. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-8 text-sm">
-              <a href="/about#privacy" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+              <a
+                href="/about#privacy"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="/about#terms" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+              <a
+                href="/about#terms"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
                 Terms of Service
               </a>
-              <a href="/about#cookies" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+              <a
+                href="/about#cookies"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
                 Cookie Policy
               </a>
-              <a href="/about#accessibility" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+              <a
+                href="/about#accessibility"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
                 Accessibility
               </a>
-              <a href="/contact" className="text-gray-400 hover:text-[#118DC4] transition-colors">
+              <a
+                href="/contact"
+                className="text-gray-400 hover:text-[#118DC4] transition-colors"
+              >
                 Support
               </a>
             </div>
