@@ -250,7 +250,7 @@ const Research = () => {
               <Button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-3">
                 Research Opportunities
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-3">
+              <Button variant="outline" className="border-white text-blue-600 hover:bg-white hover:text-blue-600 font-semibold px-8 py-3">
                 Collaboration Proposals
               </Button>
             </div>
