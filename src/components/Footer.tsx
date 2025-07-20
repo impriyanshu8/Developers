@@ -127,11 +127,11 @@ const Footer = () => {
               <div className="flex-1">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="relative">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#118DC4] to-[#1aa3e0] rounded-2xl p-3 shadow-xl">
+                    <div className="w-16 h-16 rounded-2xl p-3 shadow-xl">
                       <img
                         src="https://imgs.search.brave.com/XfoNIRCzVe6i5gayiQSdwTrU26C4tp7OHzJQJ0AmVTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/OS85NC9VSUVUX2xv/Z28ucG5nLzUxMnB4/LVVJRVRfbG9nby5w/bmc"
                         alt="UIET Logo"
-                        className="w-full h-full object-contain filter brightness-0 invert"
+                        className="w-full h-full object-contain filter"
                       />
                     </div>
                   </div>
