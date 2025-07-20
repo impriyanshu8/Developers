@@ -179,205 +179,205 @@ const CommitteesPage = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
-      
-      {/* Page Hero */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <Users className="h-16 w-16 mx-auto mb-4" />
-            <h1 className="text-4xl font-bold mb-4">Institute Committees</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Ensuring governance, welfare, and excellence across all aspects of institute life through 
-              dedicated committees and transparent processes
-            </p>
+  <Header />
+  
+  {/* Page Hero */}
+  <section className="bg-gradient-to-r from-[#118DC4] to-[#0a6ba2] text-white py-16">
+    <div className="container mx-auto px-4">
+      <div className="text-center">
+        <Users className="h-16 w-16 mx-auto mb-4" />
+        <h1 className="text-4xl font-bold mb-4">Institute Committees</h1>
+        <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          Ensuring governance, welfare, and excellence across all aspects of institute life through 
+          dedicated committees and transparent processes
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div className="container mx-auto px-4 py-12">
+    {/* Search and Filter */}
+    <Card className="mb-8">
+      <CardContent className="p-6">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+            <input
+              type="text"
+              placeholder="Search committees..."
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#118DC4]"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedCategory(category)}
+                className={`capitalize ${selectedCategory === category ? 'bg-[#118DC4] text-white' : 'border-[#118DC4] text-[#118DC4] hover:bg-[#118DC4]/10'}`}
+              >
+                {category}
+              </Button>
+            ))}
           </div>
         </div>
-      </section>
+      </CardContent>
+    </Card>
 
-      <div className="container mx-auto px-4 py-12">
-        {/* Search and Filter */}
-        <Card className="mb-8">
-          <CardContent className="p-6">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                <input
-                  type="text"
-                  placeholder="Search committees..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-              <div className="flex gap-2 flex-wrap">
-                {categories.map((category) => (
-                  <Button
-                    key={category}
-                    variant={selectedCategory === category ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedCategory(category)}
-                    className="capitalize"
-                  >
-                    {category}
-                  </Button>
-                ))}
+    {/* Committees Grid */}
+    <div className="grid gap-8">
+      {filteredCommittees.map((committee, index) => (
+        <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
+          <CardHeader className="bg-gradient-to-r from-gray-50 to-[#118DC4]/10">
+            <div className="flex items-start justify-between">
+              <div className="flex items-center">
+                <committee.icon className="h-8 w-8 mr-3 text-[#118DC4]" />
+                <div>
+                  <CardTitle className="text-xl">{committee.name}</CardTitle>
+                  <div className="flex items-center mt-2 gap-2">
+                    <Badge variant="secondary" className="capitalize bg-[#118DC4]/10 text-[#118DC4] hover:bg-[#118DC4]/20">{committee.category}</Badge>
+                    <span className="text-sm text-gray-600">Chair: {committee.chairperson}</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </CardContent>
-        </Card>
-
-        {/* Committees Grid */}
-        <div className="grid gap-8">
-          {filteredCommittees.map((committee, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
-              <CardHeader className="bg-gradient-to-r from-gray-50 to-blue-50">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center">
-                    <committee.icon className="h-8 w-8 mr-3 text-blue-600" />
-                    <div>
-                      <CardTitle className="text-xl">{committee.name}</CardTitle>
-                      <div className="flex items-center mt-2 gap-2">
-                        <Badge variant="secondary" className="capitalize">{committee.category}</Badge>
-                        <span className="text-sm text-gray-600">Chair: {committee.chairperson}</span>
+            <p className="text-gray-600 mt-3">{committee.description}</p>
+          </CardHeader>
+          <CardContent className="p-6">
+            <Tabs defaultValue="overview" className="w-full">
+              <TabsList className="grid w-full grid-cols-4">
+                <TabsTrigger value="overview" className="data-[state=active]:bg-[#118DC4] data-[state=active]:text-white">Overview</TabsTrigger>
+                <TabsTrigger value="members" className="data-[state=active]:bg-[#118DC4] data-[state=active]:text-white">Members</TabsTrigger>
+                <TabsTrigger value="responsibilities" className="data-[state=active]:bg-[#118DC4] data-[state=active]:text-white">Responsibilities</TabsTrigger>
+                <TabsTrigger value="contact" className="data-[state=active]:bg-[#118DC4] data-[state=active]:text-white">Contact</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="overview" className="mt-4">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-3 text-gray-900">Meeting Schedule</h4>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Clock className="h-4 w-4 mr-2 text-[#118DC4]" />
+                      {committee.meetingSchedule}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-3 text-gray-900">Recent Achievements</h4>
+                    <ul className="space-y-1">
+                      {committee.achievements.map((achievement, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <div className="w-2 h-2 bg-[#118DC4] rounded-full mr-3"></div>
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="members" className="mt-4">
+                <h4 className="font-semibold mb-3 text-gray-900">Committee Members</h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {committee.members.map((member, idx) => (
+                    <div key={idx} className="flex items-center p-3 bg-[#118DC4]/5 rounded-lg">
+                      <div className="w-2 h-2 bg-[#118DC4] rounded-full mr-3"></div>
+                      <span className="text-sm">{member}</span>
+                    </div>
+                  ))}
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="responsibilities" className="mt-4">
+                <h4 className="font-semibold mb-3 text-gray-900">Key Responsibilities</h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {committee.responsibilities.map((responsibility, idx) => (
+                    <div key={idx} className="flex items-start p-3 bg-[#118DC4]/5 rounded-lg">
+                      <div className="w-2 h-2 bg-[#118DC4] rounded-full mr-3 mt-2"></div>
+                      <span className="text-sm">{responsibility}</span>
+                    </div>
+                  ))}
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="contact" className="mt-4">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-3 text-gray-900">Contact Information</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-center">
+                        <Mail className="h-4 w-4 mr-2 text-[#118DC4]" />
+                        <span className="text-sm">{committee.contact}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="h-4 w-4 mr-2 text-[#118DC4]" />
+                        <span className="text-sm">+91-172-2534816</span>
+                      </div>
+                      <div className="flex items-center">
+                        <MapPin className="h-4 w-4 mr-2 text-[#118DC4]" />
+                        <span className="text-sm">UIET Campus, Sector 25, Chandigarh</span>
                       </div>
                     </div>
                   </div>
+                  <div>
+                    <h4 className="font-semibold mb-3 text-gray-900">Office Hours</h4>
+                    <div className="bg-[#118DC4]/10 p-4 rounded-lg">
+                      <p className="text-sm text-[#118DC4]">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                      <p className="text-sm text-[#118DC4]">Saturday: 9:00 AM - 1:00 PM</p>
+                      <p className="text-sm text-[#118DC4] mt-2">For urgent matters, contact via email</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-600 mt-3">{committee.description}</p>
-              </CardHeader>
-              <CardContent className="p-6">
-                <Tabs defaultValue="overview" className="w-full">
-                  <TabsList className="grid w-full grid-cols-4">
-                    <TabsTrigger value="overview">Overview</TabsTrigger>
-                    <TabsTrigger value="members">Members</TabsTrigger>
-                    <TabsTrigger value="responsibilities">Responsibilities</TabsTrigger>
-                    <TabsTrigger value="contact">Contact</TabsTrigger>
-                  </TabsList>
-                  
-                  <TabsContent value="overview" className="mt-4">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold mb-3 text-gray-900">Meeting Schedule</h4>
-                        <div className="flex items-center text-sm text-gray-600">
-                          <Clock className="h-4 w-4 mr-2" />
-                          {committee.meetingSchedule}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-3 text-gray-900">Recent Achievements</h4>
-                        <ul className="space-y-1">
-                          {committee.achievements.map((achievement, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-gray-600">
-                              <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                              {achievement}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </TabsContent>
-                  
-                  <TabsContent value="members" className="mt-4">
-                    <h4 className="font-semibold mb-3 text-gray-900">Committee Members</h4>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {committee.members.map((member, idx) => (
-                        <div key={idx} className="flex items-center p-3 bg-gray-50 rounded-lg">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                          <span className="text-sm">{member}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </TabsContent>
-                  
-                  <TabsContent value="responsibilities" className="mt-4">
-                    <h4 className="font-semibold mb-3 text-gray-900">Key Responsibilities</h4>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {committee.responsibilities.map((responsibility, idx) => (
-                        <div key={idx} className="flex items-start p-3 bg-green-50 rounded-lg">
-                          <div className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>
-                          <span className="text-sm">{responsibility}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </TabsContent>
-                  
-                  <TabsContent value="contact" className="mt-4">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold mb-3 text-gray-900">Contact Information</h4>
-                        <div className="space-y-3">
-                          <div className="flex items-center">
-                            <Mail className="h-4 w-4 mr-2 text-blue-600" />
-                            <span className="text-sm">{committee.contact}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Phone className="h-4 w-4 mr-2 text-blue-600" />
-                            <span className="text-sm">+91-172-2534816</span>
-                          </div>
-                          <div className="flex items-center">
-                            <MapPin className="h-4 w-4 mr-2 text-blue-600" />
-                            <span className="text-sm">UIET Campus, Sector 25, Chandigarh</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-3 text-gray-900">Office Hours</h4>
-                        <div className="bg-blue-50 p-4 rounded-lg">
-                          <p className="text-sm text-blue-800">Monday - Friday: 9:00 AM - 5:00 PM</p>
-                          <p className="text-sm text-blue-800">Saturday: 9:00 AM - 1:00 PM</p>
-                          <p className="text-sm text-blue-600 mt-2">For urgent matters, contact via email</p>
-                        </div>
-                      </div>
-                    </div>
-                  </TabsContent>
-                </Tabs>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {filteredCommittees.length === 0 && (
-          <Card className="text-center py-12">
-            <CardContent>
-              <Users className="h-12 w-12 mx-auto mb-4 text-gray-400" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">No committees found</h3>
-              <p className="text-gray-600">Try adjusting your search or filter criteria</p>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* General Contact Information */}
-        <Card className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">Need Assistance?</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              For any concerns, suggestions, or queries related to any committee, 
-              please reach out through the following channels. We are committed to transparency and prompt response.
-            </p>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <Mail className="h-6 w-6 mx-auto mb-2 text-blue-600" />
-                <h4 className="font-semibold mb-1">Email</h4>
-                <p className="text-blue-600">committees@uiet.puchd.ac.in</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <Phone className="h-6 w-6 mx-auto mb-2 text-blue-600" />
-                <h4 className="font-semibold mb-1">Phone</h4>
-                <p className="text-blue-600">+91-172-2534816</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <Clock className="h-6 w-6 mx-auto mb-2 text-blue-600" />
-                <h4 className="font-semibold mb-1">Office Hours</h4>
-                <p className="text-blue-600">9:00 AM - 5:00 PM</p>
-              </div>
-            </div>
+              </TabsContent>
+            </Tabs>
           </CardContent>
         </Card>
-      </div>
-
-      <Footer />
+      ))}
     </div>
+
+    {filteredCommittees.length === 0 && (
+      <Card className="text-center py-12">
+        <CardContent>
+          <Users className="h-12 w-12 mx-auto mb-4 text-gray-400" />
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">No committees found</h3>
+          <p className="text-gray-600">Try adjusting your search or filter criteria</p>
+        </CardContent>
+      </Card>
+    )}
+
+    {/* General Contact Information */}
+    <Card className="mt-12 bg-gradient-to-r from-[#118DC4]/10 to-[#0a6ba2]/10">
+      <CardContent className="p-8 text-center">
+        <h3 className="text-2xl font-bold mb-4">Need Assistance?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          For any concerns, suggestions, or queries related to any committee, 
+          please reach out through the following channels. We are committed to transparency and prompt response.
+        </p>
+        <div className="grid md:grid-cols-3 gap-4 text-sm">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <Mail className="h-6 w-6 mx-auto mb-2 text-[#118DC4]" />
+            <h4 className="font-semibold mb-1">Email</h4>
+            <p className="text-[#118DC4]">committees@uiet.puchd.ac.in</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <Phone className="h-6 w-6 mx-auto mb-2 text-[#118DC4]" />
+            <h4 className="font-semibold mb-1">Phone</h4>
+            <p className="text-[#118DC4]">+91-172-2534816</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <Clock className="h-6 w-6 mx-auto mb-2 text-[#118DC4]" />
+            <h4 className="font-semibold mb-1">Office Hours</h4>
+            <p className="text-[#118DC4]">9:00 AM - 5:00 PM</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </div>
+
+  <Footer />
+</div>
   );
 };
 
