@@ -25,6 +25,7 @@ const Admissions = () => {
       resultsDate: "July 5, 2024",
       seats: 420,
       eligibility: "JEE Main qualified",
+      apply_link: "https://jacchd.admissions.nic.in/",
     },
     {
       program: "M.E./M.Tech (Latest Year)",
@@ -34,6 +35,7 @@ const Admissions = () => {
       resultsDate: "July 15, 2024",
       seats: 126,
       eligibility: "GATE qualified",
+      apply_link: "https://onlineadmissions.puchd.ac.in/",
     },
     {
       program: "Ph.D (Doctor of Philosophy)",
@@ -43,6 +45,7 @@ const Admissions = () => {
       resultsDate: "May 20, 2024",
       seats: 35,
       eligibility: "NET/GATE/JRF",
+      apply_link: "https://phdadmissions.puchd.ac.in/",
     },
     {
       program: "NRI/Foreign Admissions",
@@ -52,6 +55,8 @@ const Admissions = () => {
       resultsDate: "July 1, 2024",
       seats: 21,
       eligibility: "International qualifications",
+      apply_link: "",
+
     },
   ];
 
@@ -304,9 +309,16 @@ const Admissions = () => {
                         </div>
                       </div>
                       <div>
-                        <Button className="w-full bg-[#118DC4] hover:bg-[#0d7db0]">
-                          Apply Now
-                        </Button>
+                        <a
+                          href={schedule.apply_link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-full"
+                        >
+                          <Button className="w-full bg-[#118DC4] hover:bg-[#0d7db0]">
+                            Apply Now
+                          </Button>
+                        </a>
                       </div>
                     </div>
                   </CardContent>
@@ -470,129 +482,6 @@ const Admissions = () => {
             </Card>
           </TabsContent>
         </Tabs>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <Card className="border-0 shadow-2xl bg-gradient-to-br from-[#118DC4] via-[#0d7db0] to-[#0a6b99] text-white relative overflow-hidden">
-            {/* Animated Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 animate-pulse"></div>
-
-            <CardContent className="p-12 relative z-10">
-              {/* Icon */}
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
-                Ready to Apply?
-              </h3>
-
-              <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
-                Multiple admission pathways available. Choose the one that best
-                fits your background and aspirations.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button className="bg-white text-[#118DC4] hover:bg-white/95 hover:scale-105 font-semibold px-10 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:shadow-xl group">
-                  <span className="flex items-center">
-                    Start Application
-                    <svg
-                      className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </span>
-                </Button>
-
-                <Button
-                  variant="outline"
-                  className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#118DC4] hover:scale-105 font-semibold px-10 py-4 rounded-full transition-all duration-300 transform hover:shadow-xl group"
-                >
-                  <span className="flex items-center">
-                    <svg
-                      className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                    Download Brochure
-                  </span>
-                </Button>
-              </div>
-
-              {/* Additional Info */}
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-white/80 text-sm">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                    Applications Open
-                  </div>
-                  <div className="flex items-center">
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    Quick Process
-                  </div>
-                  <div className="flex items-center">
-                    <svg
-                      className="w-4 h-4 mr-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    Secure & Verified
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
