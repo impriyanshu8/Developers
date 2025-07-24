@@ -26,6 +26,7 @@ import PreviousYearPapersPage from "@/pages/PreviousYearPapersPage";
 import StudentsPage from "./pages/StudentsPage";
 import ImportantDownloadsPage from "./pages/ImportantDownloadsPage";
 import FacultyProfilePage from "./pages/FacultyProfilePage";
+import ScrollToTop from "./lib/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+          <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />
