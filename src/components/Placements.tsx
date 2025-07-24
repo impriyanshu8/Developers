@@ -361,10 +361,12 @@ const Placements = () => {
                   <div>
                     <h4 className="text-lg font-semibold mb-4">Download Training Materials</h4>
                     <div className="space-y-3">
-                      <Button className="w-full justify-start" variant="outline">
+                      <a href="/training-letter.pdf" target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full justify-start" variant="outline">
                         <FileText className="h-4 w-4 mr-2" />
-                        Training Schedule 2024
-                      </Button>
+                          Training Letter 
+                        </Button>
+                       </a>
                       <Button className="w-full justify-start" variant="outline">
                         <FileText className="h-4 w-4 mr-2" />
                         Aptitude Test Papers
