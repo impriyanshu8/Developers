@@ -234,12 +234,6 @@ const AboutPage = () => {
                         View Programs
                       </Button>
                     </Link>
-                    <Link to="/departments">
-                      <Button variant="outline" size="sm" style={{borderColor: '#118DC4', color: '#118DC4'}}>
-                        <Building className="h-4 w-4 mr-2" />
-                        All Departments
-                      </Button>
-                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -391,9 +385,18 @@ const AboutPage = () => {
                     </ul>
                   </div>
                 </div>
-                <Link to="/about/pu">
-                  <Button className="mt-4" style={{backgroundColor: '#118DC4', color: 'white'}}>Explore Panjab University</Button>
-                </Link>
+                  <a
+                    href="https://puchd.ac.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      className="mt-4"
+                      style={{ backgroundColor: '#118DC4', color: 'white' }}
+                    >
+                      Explore Panjab University
+                    </Button>
+                  </a>
               </CardContent>
             </Card>
           </TabsContent>
