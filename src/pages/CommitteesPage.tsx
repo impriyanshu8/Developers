@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,9 +7,25 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Users, Shield, Heart, Scale, UserCheck, AlertTriangle, Beaker, Laptop, Search, Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const CommitteesPage = () => {
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Handle hash navigation to scroll to specific committees
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const sectionId = hash.substring(1); // Remove the # character
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   const committees = [
     {
@@ -229,8 +245,22 @@ const CommitteesPage = () => {
 
     {/* Committees Grid */}
     <div className="grid gap-8">
-      {filteredCommittees.map((committee, index) => (
-        <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
+      {filteredCommittees.map((committee, index) => {
+        // Generate ID based on committee name
+        const committeeId = committee.name
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, '')
+          .replace('departmentalcommittee', 'departmental')
+          .replace('grievanceredressalcell', 'grievance')
+          .replace('antisexualharassment', 'harassment')
+          .replace('boardofcontrol', 'board')
+          .replace('scstcell', 'scst')
+          .replace('antiraggingcommittee', 'ragging')
+          .replace('rdcell', 'rnd')
+          .replace('utechnoscommittee', 'utechnos');
+        
+        return (
+        <Card key={index} id={committeeId} className="overflow-hidden hover:shadow-xl transition-shadow">
           <CardHeader className="bg-gradient-to-r from-gray-50 to-[#118DC4]/10">
             <div className="flex items-start justify-between">
               <div className="flex items-center">
@@ -334,7 +364,8 @@ const CommitteesPage = () => {
             </Tabs>
           </CardContent>
         </Card>
-      ))}
+        );
+      })}
     </div>
 
     {filteredCommittees.length === 0 && (

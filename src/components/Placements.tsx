@@ -1,11 +1,54 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TrendingUp, Users, Building, Award, Target, Star, Briefcase, DollarSign, MessageSquare, FileText, BarChart3, Globe, GraduationCap, Phone, Mail } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Placements = () => {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("tpo-message");
+
+  // Map hash fragments to tab values
+  const hashToTab = {
+    "#tpo-message": "tpo-message",
+    "#statistics": "statistics", 
+    "#recruiters": "recruiters",
+    "#procedure": "procedure",
+    "#portal": "portal",
+    "#training": "training",
+    "#tpc-contact": "contact",
+    "#brochure": "brochure"
+  };
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash && hashToTab[hash]) {
+      setActiveTab(hashToTab[hash]);
+      // Also scroll to tabs section when navigating via navbar
+      const tabsElement = document.getElementById('placements-tabs');
+      if (tabsElement) {
+        setTimeout(() => {
+          tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    } else {
+      setActiveTab("tpo-message");
+    }
+  }, [location.hash]);
+
+  // Handle tab change and scroll to tabs section
+  const handleTabChange = (value) => {
+    setActiveTab(value);
+    // Scroll to the tabs section for better visibility
+    const tabsElement = document.getElementById('placements-tabs');
+    if (tabsElement) {
+      setTimeout(() => {
+        tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  };
   const placementStats = [
     { icon: TrendingUp, label: 'Placement Rate', value: '95%', color: 'text-green-600' },
     { icon: DollarSign, label: 'Highest Package', value: '₹45 LPA', color: 'text-blue-600' },
@@ -86,7 +129,7 @@ const Placements = () => {
         </div>
 
         {/* Placement Tabs */}
-        <Tabs defaultValue="tpo-message" className="mb-16">
+        <Tabs id="placements-tabs" value={activeTab} onValueChange={handleTabChange} className="mb-16">
           <TabsList className="grid w-full lg:w-fit mx-auto grid-cols-3 lg:grid-cols-7 mb-8 h-auto p-1">
             <TabsTrigger value="tpo-message" className="px-2 py-3 text-xs">TPO Message</TabsTrigger>
             <TabsTrigger value="brochure" className="px-2 py-3 text-xs">Brochure</TabsTrigger>

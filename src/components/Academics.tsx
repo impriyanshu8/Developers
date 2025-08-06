@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -11,9 +11,40 @@ import {
   ArrowRight,
   Calculator,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Academics = () => {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("undergraduate");
+
+  useEffect(() => {
+    // Handle tab switching (no hash for programs)
+    setActiveTab("undergraduate");
+    
+    // Handle scrolling to specific sections for hash fragments
+    const hash = location.hash;
+    if (hash) {
+      const sectionId = hash.substring(1); // Remove the # character
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
+  // Handle tab change and scroll to tabs section
+  const handleTabChange = (value) => {
+    setActiveTab(value);
+    // Scroll to the tabs section for better visibility
+    const tabsElement = document.getElementById('academics-tabs');
+    if (tabsElement) {
+      setTimeout(() => {
+        tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  };
   const programs = {
     undergraduate: [
       {
@@ -230,7 +261,7 @@ const Academics = () => {
         </div>
 
         {/* Programs Tabs */}
-        <Tabs defaultValue="undergraduate" className="mb-20">
+        <Tabs id="academics-tabs" value={activeTab} onValueChange={handleTabChange} className="mb-20">
           <TabsList className="grid w-full lg:w-fit mx-auto grid-cols-3 mb-8 h-12">
             <TabsTrigger value="undergraduate" className="px-8 text-base">
               Undergraduate
@@ -320,7 +351,7 @@ const Academics = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link to="/downloads">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card id="calendar" className="hover:shadow-lg transition-shadow cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <BookOpen
                     className="h-8 w-8 mx-auto mb-3"
@@ -334,7 +365,7 @@ const Academics = () => {
               </Card>
             </Link>
             <Link to="/previous-papers">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card id="timetable" className="hover:shadow-lg transition-shadow cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <BookOpen
                     className="h-8 w-8 mx-auto mb-3"
@@ -348,7 +379,7 @@ const Academics = () => {
               </Card>
             </Link>
             <Link to="/downloads">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card id="syllabus" className="hover:shadow-lg transition-shadow cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <Calculator
                     className="h-8 w-8 mx-auto mb-3"
@@ -362,7 +393,7 @@ const Academics = () => {
               </Card>
             </Link>
             <Link to="/downloads">
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card id="examination" className="hover:shadow-lg transition-shadow cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <Award
                     className="h-8 w-8 mx-auto mb-3"

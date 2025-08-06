@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -14,8 +14,37 @@ import {
   Globe,
   Trophy,
 } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const Admissions = () => {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("schedule");
+
+  // Map hash fragments to tab values - these don't map directly, so we'll use scroll behavior
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const sectionId = hash.substring(1); // Remove the # character
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
+  // Handle tab change and scroll to tabs section
+  const handleTabChange = (value) => {
+    setActiveTab(value);
+    // Scroll to the tabs section for better visibility
+    const tabsElement = document.getElementById('admissions-tabs');
+    if (tabsElement) {
+      setTimeout(() => {
+        tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  };
   const admissionSchedule = [
     {
       program: "B.E. (Latest Year)",
@@ -250,7 +279,7 @@ const Admissions = () => {
         </div>
 
         {/* Main Content */}
-        <Tabs defaultValue="schedule" className="mb-12">
+        <Tabs id="admissions-tabs" value={activeTab} onValueChange={handleTabChange} className="mb-12">
           <TabsList className="grid grid-cols-2 md:grid-cols-5 w-full lg:w-fit mx-auto mb-8 bg-white shadow-sm">
             <TabsTrigger value="schedule">Schedule</TabsTrigger>
             <TabsTrigger value="special">Special</TabsTrigger>
@@ -262,7 +291,16 @@ const Admissions = () => {
           <TabsContent value="schedule">
             <div className="space-y-6">
               {admissionSchedule.map((schedule, index) => (
-                <Card key={index} className="border-0 shadow-md bg-white">
+                <Card 
+                  key={index} 
+                  id={
+                    schedule.program.includes("M.E./M.Tech") ? "mtech" :
+                    schedule.program.includes("Ph.D") ? "phd" :
+                    schedule.program.includes("NRI/Foreign") ? "nri" :
+                    `program-${index}`
+                  }
+                  className="border-0 shadow-md bg-white"
+                >
                   <CardContent className="p-6">
                     <div className="grid grid-cols-1 md:grid-cols-7 gap-4 items-center">
                       <div className="md:col-span-2">
@@ -330,7 +368,16 @@ const Admissions = () => {
           <TabsContent value="special">
             <div className="grid gap-6">
               {specialAdmissions.map((admission, index) => (
-                <Card key={index} className="border-0 shadow-md bg-white">
+                <Card 
+                  key={index} 
+                  id={
+                    admission.name === "Sports Quota" ? "sports" :
+                    admission.name === "PUMEET" ? "pumeet" :
+                    admission.name === "PULEET" ? "puleet" :
+                    admission.name.toLowerCase().replace(/[^a-z0-9]/g, '')
+                  }
+                  className="border-0 shadow-md bg-white"
+                >
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <admission.icon className="h-6 w-6 mr-3 text-[#118DC4]" />

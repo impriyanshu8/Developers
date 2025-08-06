@@ -1,11 +1,54 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Users, Trophy, BookOpen, Calendar, Star, Award, Activity, GraduationCap, Bell, DollarSign, FileText, Heart, User } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Students = () => {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("batches");
+
+  // Map hash fragments to tab values
+  const hashToTab = {
+    "#be-first-year": "batches",
+    "#research-scholars": "research", 
+    "#notices": "notices",
+    "#scholarships": "scholarships",
+    "#aicte-scholarships": "aicte",
+    "#achievements": "achievements",
+    "#activities": "activities",
+    "#medical-emergency": "emergency"
+  };
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash && hashToTab[hash]) {
+      setActiveTab(hashToTab[hash]);
+      // Also scroll to tabs section when navigating via navbar
+      const tabsElement = document.getElementById('students-tabs');
+      if (tabsElement) {
+        setTimeout(() => {
+          tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    } else {
+      setActiveTab("batches");
+    }
+  }, [location.hash]);
+
+  // Handle tab change and scroll to tabs section
+  const handleTabChange = (value) => {
+    setActiveTab(value);
+    // Scroll to the tabs section for better visibility
+    const tabsElement = document.getElementById('students-tabs');
+    if (tabsElement) {
+      setTimeout(() => {
+        tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  };
   const studentStats = [
     { icon: Users, label: 'Total Students', value: '750+' },
     { icon: GraduationCap, label: 'Graduates (2023)', value: '450' },
@@ -69,7 +112,7 @@ const Students = () => {
     </div>
 
     {/* Student Services Tabs */}
-    <Tabs defaultValue="batches" className="mb-16">
+    <Tabs id="students-tabs" value={activeTab} onValueChange={handleTabChange} className="mb-16">
       <TabsList className="grid w-full lg:w-fit mx-auto grid-cols-4 lg:grid-cols-8 mb-8 h-auto p-1">
         <TabsTrigger 
           value="batches" 

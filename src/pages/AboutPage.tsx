@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -31,9 +32,49 @@ import {
   Users as UsersIcon,
 } from "lucide-react";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const AboutPage = () => {
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState("overview");
+
+  // Map hash fragments to tab values
+  const hashToTab = {
+    "#mission": "mission",
+    "#director": "director", 
+    "#location": "location",
+    "#infrastructure": "infrastructure",
+    "#chandigarh": "chandigarh"
+  };
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash && hashToTab[hash]) {
+      setActiveTab(hashToTab[hash]);
+      // Also scroll to tabs section when navigating via navbar
+      const tabsElement = document.getElementById('about-tabs');
+      if (tabsElement) {
+        setTimeout(() => {
+          tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    } else {
+      setActiveTab("overview");
+    }
+  }, [location.hash]);
+
+  // Handle tab change and scroll to tabs section
+  const handleTabChange = (value) => {
+    setActiveTab(value);
+    // Scroll to the tabs section for better visibility
+    const tabsElement = document.getElementById('about-tabs');
+    if (tabsElement) {
+      setTimeout(() => {
+        tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  };
+
   const stats = [
     { icon: Users, value: "2,500+", label: "Students" },
     { icon: GraduationCap, value: "150+", label: "Faculty" },
@@ -137,7 +178,7 @@ const AboutPage = () => {
       </section>
 
       <div className="container mx-auto px-4 py-12">
-        <Tabs defaultValue="overview" className="w-full">
+        <Tabs id="about-tabs" value={activeTab} onValueChange={handleTabChange} className="w-full">
           {/* Fixed TabsList for better responsiveness */}
           <div className="w-full overflow-x-auto mb-8">
             <TabsList className="flex flex-nowrap w-max min-w-full justify-start gap-1 bg-gray-100 p-1 rounded-lg">
