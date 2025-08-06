@@ -18,23 +18,21 @@ const Contact = () => {
       icon: MapPin,
       title: "Address",
       details: [
-        "University Institute of Engineering & Technology",
-        "Sector 25, Chandigarh - 160014",
-        "Punjab, India",
+        "University Institute of Engineering and Technology",
+        "Sector 25, South Campus, Panjab University",
+        "Chandigarh (U.T.), INDIA 160014",
       ],
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["0172-2541242"],
+      details: ["0172-2541242", "+916280089748", "7719716783"],
     },
     {
       icon: Mail,
       title: "Email",
       details: [
-        "info@uiet.puchd.ac.in",
-        "director@uiet.puchd.ac.in",
-        "admissions@uiet.puchd.ac.in",
+        "directoruiet@pu.ac.in",
       ],
     },
     {

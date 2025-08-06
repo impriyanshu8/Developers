@@ -76,10 +76,10 @@ const AboutPage = () => {
   };
 
   const stats = [
-    { icon: Users, value: "2,500+", label: "Students" },
+    { icon: Users, value: "7,600+", label: "Students" },
     { icon: GraduationCap, value: "150+", label: "Faculty" },
     { icon: Building, value: "7", label: "Departments" },
-    { icon: Calendar, value: "25+", label: "Years of Excellence" },
+    { icon: Calendar, value: "Since 1958", label: "Years of Excellence" },
   ];
 
   const infrastructure = [
@@ -652,7 +652,7 @@ const AboutPage = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        Professor Sanjeev Puri
+                        Professor Sukhwinder Singh
                       </h3>
                       <p className="font-medium mb-4" style={{color: '#118DC4'}}>
                         Director, UIET
@@ -721,21 +721,17 @@ const AboutPage = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    To be the front‑runner in engineering education and
-                    research—delivering technological solutions for industry and
-                    society.
+                    To be the Front runner in Engineering Education and Research
                   </p>
                   <div className="p-4 rounded-lg" style={{backgroundColor: '#f0f9ff'}}>
                     <h4 className="font-semibold mb-2" style={{color: '#118DC4'}}>
-                      Key Aspirations
+                      Key Focus Areas
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Global leadership in engineering education</li>
-                      <li>• Cutting-edge, industry-relevant research</li>
-                      <li>
-                        • Strong international and industrial collaborations
-                      </li>
-                      <li>• Sustainable innovation impacting society</li>
+                      <li>• Engineering Education Excellence</li>
+                      <li>• Advanced Research & Innovation</li>
+                      <li>• Industry & Academic Collaboration</li>
+                      <li>• Global Technology Leadership</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -753,36 +749,25 @@ const AboutPage = () => {
                     <li className="flex items-start">
                       <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
                       <span>
-                        Impart strong fundamentals and hands-on engineering
-                        education
+                        To produce professionally competent students for a career in engineering and technology by providing value-based quality education
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
                       <span>
-                        Foster research, innovation, and prototype development
-                        with IP outcomes
+                        To provide the readily acceptable quality trained manpower to meet the requirements of the National and International industry in the emerging areas of engineering and technology as well as for research and design
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
                       <span>
-                        Build ethical, socially responsible engineers, ready for
-                        global challenges
+                        To develop strong collaboration with academic and research institutes as well as the industry in the country and abroad
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
                       <span>
-                        Cultivate strong industry-academia partnerships and
-                        international linkages
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
-                      <span>
-                        Promote entrepreneurship via Incubation, IIC, and
-                        Make-in-India initiatives
+                        To provide world level consultancy to generate wealth through services and new product design
                       </span>
                     </li>
                   </ul>

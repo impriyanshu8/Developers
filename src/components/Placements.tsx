@@ -50,21 +50,21 @@ const Placements = () => {
     }
   };
   const placementStats = [
-    { icon: TrendingUp, label: 'Placement Rate', value: '95%', color: 'text-green-600' },
-    { icon: DollarSign, label: 'Highest Package', value: '₹45 LPA', color: 'text-blue-600' },
-    { icon: Users, label: 'Average Package', value: '₹12 LPA', color: 'text-purple-600' },
-    { icon: Building, label: 'Companies Visited', value: '150+', color: 'text-orange-600' }
+    { icon: TrendingUp, label: 'Total Offers 2023-24', value: '314' },
+    { icon: DollarSign, label: 'Highest Package 2023-24', value: '₹42 LPA' },
+    { icon: Users, label: 'Average CTC 2023-24', value: '₹9.11 LPA' },
+    { icon: Building, label: 'Companies Visited', value: '50+' }
   ];
 
   const topRecruiters = [
-    { name: 'Google', logo: 'Building', package: '₹45 LPA', hired: 5 },
-    { name: 'Microsoft', logo: 'Building', package: '₹42 LPA', hired: 8 },
-    { name: 'Amazon', logo: 'Building', package: '₹38 LPA', hired: 12 },
-    { name: 'Flipkart', logo: 'Building', package: '₹35 LPA', hired: 10 },
-    { name: 'Adobe', logo: 'Building', package: '₹40 LPA', hired: 6 },
-    { name: 'Salesforce', logo: 'Building', package: '₹38 LPA', hired: 4 },
-    { name: 'TCS', logo: 'Building', package: '₹8 LPA', hired: 45 },
-    { name: 'Infosys', logo: 'Building', package: '₹7.5 LPA', hired: 40 }
+    { name: 'Amazon', logo: 'Building', package: '₹42 LPA', hired: 3 },
+    { name: 'ServiceNow', logo: 'Building', package: '₹42 LPA', hired: 1 },
+    { name: 'Cisco', logo: 'Building', package: '₹25 LPA', hired: 2 },
+    { name: 'American Express', logo: 'Building', package: '₹15 LPA', hired: 3 },
+    { name: 'ZS Associates', logo: 'Building', package: '₹12 LPA', hired: 27 },
+    { name: 'L&T Technology Services', logo: 'Building', package: '₹8 LPA', hired: 17 },
+    { name: 'KPMG', logo: 'Building', package: '₹7 LPA', hired: 14 },
+    { name: 'Amdocs', logo: 'Building', package: '₹6 LPA', hired: 15 }
   ];
 
   const placementProcess = [
@@ -102,14 +102,17 @@ const Placements = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+          <div
+            className="inline-block px-4 py-2 text-sm font-medium mb-4 rounded-full"
+            style={{ backgroundColor: "#e6f3fb", color: "#118DC4" }}
+          >
             Career Services
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Training & Placement Cell</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-6">Training & Placement Cell</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Our dedicated placement cell ensures students secure rewarding careers with top companies across various industries through comprehensive training and industry partnerships.
           </p>
@@ -118,9 +121,9 @@ const Placements = () => {
         {/* Placement Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {placementStats.map((stat, index) => (
-            <Card key={index} className="text-center bg-white shadow-lg border-0 hover:shadow-xl transition-shadow">
+            <Card key={index} className="text-center bg-white shadow-sm border hover:shadow-md transition-shadow">
               <CardContent className="p-6">
-                <stat.icon className={`h-8 w-8 mx-auto mb-3 ${stat.color}`} />
+                <stat.icon className="h-8 w-8 mx-auto mb-3" style={{ color: "#118DC4" }} />
                 <div className="text-2xl font-bold text-slate-900 mb-1">{stat.value}</div>
                 <div className="text-slate-600 text-sm">{stat.label}</div>
               </CardContent>
@@ -144,7 +147,7 @@ const Placements = () => {
             <Card className="max-w-4xl mx-auto">
               <CardHeader className="text-center">
                 <CardTitle className="flex items-center justify-center">
-                  <MessageSquare className="h-6 w-6 mr-2 text-blue-600" />
+                  <MessageSquare className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
                   Message from Training & Placement Officer
                 </CardTitle>
               </CardHeader>
@@ -163,7 +166,7 @@ const Placements = () => {
                     <p className="text-gray-600 leading-relaxed">
                       "With strong industry partnerships, comprehensive training programs, and personalized career guidance, we have consistently achieved excellent placement records. I encourage all students to actively participate in our training programs and make the most of the opportunities we provide."
                     </p>
-                    <p className="text-blue-600 font-medium mt-4">- Dr. Rajesh Kumar, Training & Placement Officer</p>
+                    <p className="font-medium mt-4" style={{ color: "#118DC4" }}>- Dr. Rajesh Kumar, Training & Placement Officer</p>
                   </div>
                 </div>
               </CardContent>
@@ -174,7 +177,7 @@ const Placements = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <FileText className="h-6 w-6 mr-2 text-green-600" />
+                  <FileText className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
                   Placement Brochure
                 </CardTitle>
               </CardHeader>
@@ -243,22 +246,24 @@ const Placements = () => {
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h4 className="text-lg font-semibold mb-4">5-Year Placement Trend</h4>
+                      <h4 className="text-lg font-semibold mb-4">Recent Placement Statistics</h4>
                       <div className="space-y-3">
                         {[
-                          { year: '2024', placed: 425, total: 450, percentage: 94.4, avgPackage: 12.5 },
-                          { year: '2023', placed: 410, total: 430, percentage: 95.3, avgPackage: 11.8 },
-                          { year: '2022', placed: 395, total: 420, percentage: 94.0, avgPackage: 10.2 },
-                          { year: '2021', placed: 380, total: 400, percentage: 95.0, avgPackage: 9.8 },
-                          { year: '2020', placed: 365, total: 390, percentage: 93.6, avgPackage: 9.2 }
+                          { year: '2023-24', placed: 314, companies: 50, percentage: 'Strong Performance', avgPackage: 9.11, highest: 42 },
+                          { year: '2022-23', placed: 382, companies: 50, percentage: 'Excellent Growth', avgPackage: 8.72, highest: 45 },
+                          { year: '2021-22', placed: 325, companies: 45, percentage: 'Consistent', avgPackage: 8.2, highest: 56 }
                         ].map((trend, index) => (
                           <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                            <div className="flex justify-between items-center">
+                            <div className="flex justify-between items-center mb-2">
                               <span className="font-semibold">{trend.year}</span>
                               <div className="text-right">
-                                <div className="text-green-600 font-semibold">{trend.percentage}%</div>
+                                <div className="font-semibold" style={{ color: "#118DC4" }}>{trend.placed} offers</div>
                                 <div className="text-sm text-gray-600">₹{trend.avgPackage} LPA avg</div>
                               </div>
+                            </div>
+                            <div className="flex justify-between text-sm text-gray-600">
+                              <span>Highest: ₹{trend.highest} LPA</span>
+                              <span>{trend.companies}+ companies</span>
                             </div>
                           </div>
                         ))}
@@ -269,7 +274,7 @@ const Placements = () => {
                       <div className="grid grid-cols-2 gap-3">
                         {topRecruiters.slice(0, 8).map((recruiter, index) => (
                           <div key={index} className="bg-white border rounded-lg p-3 text-center">
-                            <Building className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                            <Building className="h-8 w-8 mx-auto mb-2" style={{ color: "#118DC4" }} />
                             <div className="text-sm font-semibold">{recruiter.name}</div>
                             <div className="text-xs text-gray-600">{recruiter.hired} hired</div>
                           </div>
@@ -286,7 +291,7 @@ const Placements = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Target className="h-6 w-6 mr-2 text-orange-600" />
+                  <Target className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
                   Campus Placement Procedure
                 </CardTitle>
               </CardHeader>
@@ -346,7 +351,7 @@ const Placements = () => {
                   <div>
                     <h4 className="text-lg font-semibold mb-4">For Companies</h4>
                     <div className="space-y-3">
-                      <Button className="w-full justify-start bg-green-600 hover:bg-green-700">
+                      <Button className="w-full justify-start hover:opacity-90" style={{ backgroundColor: "#118DC4", color: "white" }}>
                         <Building className="h-4 w-4 mr-2" />
                         Company Registration
                       </Button>
@@ -374,7 +379,7 @@ const Placements = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <GraduationCap className="h-6 w-6 mr-2 text-red-600" />
+                  <GraduationCap className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
                   Training Programs & Letters
                 </CardTitle>
               </CardHeader>
@@ -383,15 +388,15 @@ const Placements = () => {
                   <div>
                     <h4 className="text-lg font-semibold mb-4">Training Programs</h4>
                     <div className="space-y-4">
-                      <div className="border-l-4 border-blue-500 pl-4">
+                      <div className="border-l-4 pl-4" style={{ borderColor: "#118DC4" }}>
                         <h5 className="font-semibold">Technical Skills Training</h5>
                         <p className="text-sm text-gray-600">Programming, system design, latest technologies</p>
                       </div>
-                      <div className="border-l-4 border-green-500 pl-4">
+                      <div className="border-l-4 pl-4" style={{ borderColor: "#118DC4" }}>
                         <h5 className="font-semibold">Soft Skills Development</h5>
                         <p className="text-sm text-gray-600">Communication, leadership, teamwork</p>
                       </div>
-                      <div className="border-l-4 border-purple-500 pl-4">
+                      <div className="border-l-4 pl-4" style={{ borderColor: "#118DC4" }}>
                         <h5 className="font-semibold">Interview Preparation</h5>
                         <p className="text-sm text-gray-600">Mock interviews, HR rounds, group discussions</p>
                       </div>
@@ -450,7 +455,7 @@ const Placements = () => {
                           <Users className="h-10 w-10 text-gray-500" />
                         </div>
                         <h3 className="font-semibold text-gray-900 mb-1">{member.name}</h3>
-                        <p className="text-blue-600 text-sm mb-3">{member.designation}</p>
+                        <p className="text-sm mb-3" style={{ color: "#118DC4" }}>{member.designation}</p>
                         <div className="space-y-2 text-sm">
                           <div className="flex items-center justify-center space-x-2">
                             <Mail className="h-4 w-4 text-gray-500" />
@@ -488,17 +493,17 @@ const Placements = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-2xl p-8 shadow-xl">
+          <div className="text-white rounded-2xl p-8 shadow-xl" style={{ background: "linear-gradient(to right, #118DC4, #0f7ab8)" }}>
             <h3 className="text-2xl font-bold mb-4">Ready to Launch Your Career?</h3>
-            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+            <p className="mb-6 max-w-2xl mx-auto" style={{ color: "#e6f3fb" }}>
               Join UIET and benefit from our strong industry connections, comprehensive training programs, and exceptional placement support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-green-600 hover:bg-green-50 font-semibold px-8 py-3">
+              <Button className="bg-white font-semibold px-8 py-3 hover:bg-gray-50" style={{ color: "#118DC4" }}>
                 Contact Placement Cell
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 font-semibold px-8 py-3">
-                Download Brochure
+             <Button className="bg-white font-semibold px-8 py-3 hover:bg-gray-50" style={{ color: "#118DC4" }}>
+               Download Brochure
               </Button>
             </div>
           </div>

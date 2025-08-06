@@ -238,29 +238,29 @@ const Header = () => {
           <div className="flex justify-between items-center text-xs sm:text-sm text-gray-700">
             <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 min-w-0 flex-1">
               <a
-                href="tel:+91-172-2534816"
+                href="tel:+91-172-2541242"
                 className="flex items-center hover:text-[#118DC4] transition-colors min-w-0"
               >
                 <Phone className="h-3 w-3 mr-1 flex-shrink-0" />
                 <span className="hidden sm:inline truncate">
-                  +91-172-2534816
+                  +91-172-2541242
                 </span>
                 <span className="sm:hidden">Call</span>
               </a>
               <a
-                href="mailto:info@uiet.puchd.ac.in"
+                href="mailto:directoruiet@pu.ac.in"
                 className="hidden sm:flex items-center hover:text-[#118DC4] transition-colors min-w-0"
               >
                 <Mail className="h-3 w-3 mr-1 flex-shrink-0" />
                 <span className="hidden lg:inline truncate">
-                  info@uiet.puchd.ac.in
+                  directoruiet@pu.ac.in
                 </span>
                 <span className="lg:hidden">Email</span>
               </a>
             </div>
             <div className="flex items-center space-x-1 text-xs flex-shrink-0 ml-1 sm:ml-2">
               <MapPin className="h-3 w-3 flex-shrink-0" />
-              <span className="hidden sm:inline">Chandigarh, India</span>
+              <span className="hidden sm:inline">Sector 25, Chandigarh</span>
               <span className="sm:hidden">CHD</span>
             </div>
           </div>
