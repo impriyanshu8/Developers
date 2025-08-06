@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Menu,
   X,
@@ -10,6 +10,11 @@ import {
   GraduationCap,
   MoreHorizontal,
   ChevronRight,
+  Bell,
+  Star,
+  TrendingUp,
+  Calendar,
+  ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
@@ -121,7 +126,57 @@ const navigationItems = [
       { name: "Employment Opportunities", href: "/employment" },
     ],
   },
+  { name: "News", href: "/news" },
   { name: "Contact", href: "/contact" },
+];
+
+// Trending news/announcements data
+const trendingNews = [
+  {
+    id: 1,
+    type: "admission",
+    icon: GraduationCap,
+    title: "JEE Main 2024-25 Counselling Started - Apply Now",
+    link: "/news",
+    isNew: true,
+    priority: "high"
+  },
+  {
+    id: 2,
+    type: "placement",
+    icon: TrendingUp,
+    title: "Record Breaking Placements 2024-25 - 314 Offers with ₹42 LPA Highest Package",
+    link: "/news",
+    isNew: false,
+    priority: "high"
+  },
+  {
+    id: 3,
+    type: "research",
+    icon: Star,
+    title: "UIET Researchers Publish 50+ Papers in Top International Journals",
+    link: "/news",
+    isNew: true,
+    priority: "medium"
+  },
+  {
+    id: 4,
+    type: "event",
+    icon: Calendar,
+    title: "Technical Fest UTechnos 2024-25 Registration Open",
+    link: "/news",
+    isNew: false,
+    priority: "medium"
+  },
+  {
+    id: 5,
+    type: "achievement",
+    icon: Star,
+    title: "UIET Maintains NIRF Tier-1 Ranking in Engineering Category",
+    link: "/news",
+    isNew: false,
+    priority: "high"
+  }
 ];
 
 const Header = () => {
@@ -130,8 +185,30 @@ const Header = () => {
   const [expandedMoreItem, setExpandedMoreItem] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [visibleItems, setVisibleItems] = useState(navigationItems.length);
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+  const [showNotifications, setShowNotifications] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+  const [progress, setProgress] = useState(0);
   const navRef = useRef(null);
   const location = useLocation();
+
+  // Handle keyboard navigation for news banner
+  const handleKeyDown = (e) => {
+    if (!showNotifications) return;
+    
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      setCurrentNewsIndex((prev) => (prev === 0 ? trendingNews.length - 1 : prev - 1));
+      setProgress(0);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      setCurrentNewsIndex((prev) => (prev + 1) % trendingNews.length);
+      setProgress(0);
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      setShowNotifications(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,6 +217,25 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Auto-rotate trending news with progress tracking
+  useEffect(() => {
+    if (!showNotifications || isPaused) return;
+    
+    const interval = setInterval(() => {
+      setCurrentNewsIndex((prev) => (prev + 1) % trendingNews.length);
+      setProgress(0);
+    }, 4000); // Change every 4 seconds
+    
+    const progressInterval = setInterval(() => {
+      setProgress((prev) => (prev >= 100 ? 0 : prev + (100 / (4000 / 50))));
+    }, 50);
+    
+    return () => {
+      clearInterval(interval);
+      clearInterval(progressInterval);
+    };
+  }, [showNotifications, isPaused, currentNewsIndex]);
 
   useEffect(() => {
     const calculateVisibleItems = () => {
@@ -231,6 +327,101 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Trending News/Announcements Banner */}
+      {showNotifications && trendingNews.length > 0 && (
+        <div 
+          className="relative bg-gradient-to-r from-orange-50 to-red-50 border-b border-orange-100 py-2 overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          role="region"
+          aria-label="Trending news and announcements"
+        >
+          <div className="max-w-7xl mx-auto px-2 sm:px-3 md:px-4 lg:px-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2 min-w-0 flex-1">
+                <div className="flex items-center space-x-1 flex-shrink-0">
+                  <Bell className="h-4 w-4 text-orange-600 animate-pulse" />
+                  <span className="text-xs sm:text-sm font-semibold text-orange-800 hidden sm:inline">
+                    Trending
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="relative h-6 overflow-hidden">
+                    <div 
+                      className="absolute inset-0 transition-transform duration-500 ease-in-out"
+                      style={{ transform: `translateY(-${currentNewsIndex * 100}%)` }}
+                    >
+                      {trendingNews.map((news, index) => (
+                        <Link 
+                          key={news.id}
+                          to={news.link}
+                          className="flex items-center h-6 group hover:text-[#118DC4] transition-colors duration-200"
+                        >
+                          <div className="flex items-center space-x-2 min-w-0">
+                            {React.createElement(news.icon, {
+                              className: "h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0 text-orange-600 group-hover:text-[#118DC4] transition-colors"
+                            })}
+                            <span className="text-xs sm:text-sm text-gray-800 group-hover:text-[#118DC4] truncate font-medium transition-colors">
+                              {news.title}
+                            </span>
+                            {news.isNew && (
+                              <span className="inline-block px-2 py-0.5 bg-red-500 text-white text-xs rounded-full font-bold animate-pulse flex-shrink-0">
+                                NEW
+                              </span>
+                            )}
+                            <ExternalLink className="h-3 w-3 text-gray-400 group-hover:text-[#118DC4] transition-colors flex-shrink-0" />
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2 flex-shrink-0">
+                {/* News counter for mobile */}
+                <div className="sm:hidden text-xs text-orange-700 bg-orange-100 px-2 py-1 rounded-full font-medium">
+                  {currentNewsIndex + 1}/{trendingNews.length}
+                </div>
+                {/* News navigation dots */}
+                <div className="hidden sm:flex items-center space-x-1">
+                  {trendingNews.map((news, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentNewsIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#118DC4] focus:ring-offset-1 ${
+                        index === currentNewsIndex 
+                          ? 'bg-[#118DC4] scale-110' 
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Show news: ${news.title.substring(0, 50)}...`}
+                      title={news.title}
+                    />
+                  ))}
+                </div>
+                {/* Close button */}
+                <button
+                  onClick={() => setShowNotifications(false)}
+                  className="p-1 hover:bg-orange-100 rounded-full transition-colors duration-200 text-orange-600 hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-1"
+                  aria-label="Close trending news banner"
+                  title="Close notifications"
+                >
+                  <X className="h-3 w-3 sm:h-4 sm:w-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Progress bar */}
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-orange-200">
+            <div 
+              className="h-full bg-[#118DC4] transition-all duration-75 ease-linear"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Contact Info */}
       <div className="bg-gray-50/80 backdrop-blur-sm border-b py-1 sm:py-2">

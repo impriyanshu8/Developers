@@ -182,15 +182,15 @@ const Students = () => {
                     <h5 className="font-semibold mb-2">Computer Science & Engineering</h5>
                     <p className="text-sm text-gray-600">Intake: 120 students | Class Coordinator: Dr. Sarbjeet Singh</p>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: "#e6f3fb" }}>
                     <h5 className="font-semibold mb-2">Electronics & Communication</h5>
                     <p className="text-sm text-gray-600">Intake: 60 students | Class Coordinator: Dr. Jaget Singha</p>
                   </div>
-                  <div className="bg-purple-50 p-4 rounded-lg">
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: "#e6f3fb" }}>
                     <h5 className="font-semibold mb-2">Mechanical Engineering</h5>
                     <p className="text-sm text-gray-600">Intake: 60 students | Class Coordinator: Prof. Shankar Sehgal</p>
                   </div>
-                  <div className="bg-orange-50 p-4 rounded-lg">
+                  <div className="p-4 rounded-lg" style={{ backgroundColor: "#e6f3fb" }}>
                     <h5 className="font-semibold mb-2">Information Technology</h5>
                     <p className="text-sm text-gray-600">Intake: 60 students | Class Coordinator: Dr. Amandeep Verma</p>
                   </div>
@@ -228,7 +228,7 @@ const Students = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center">
-              <BookOpen className="h-6 w-6 mr-2 text-purple-600" />
+              <BookOpen className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
               Research Scholars
             </CardTitle>
           </CardHeader>
@@ -294,7 +294,7 @@ const Students = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center">
-              <Bell className="h-6 w-6 mr-2 text-orange-600" />
+              <Bell className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
               Student Notices & Announcements
             </CardTitle>
           </CardHeader>
@@ -333,14 +333,14 @@ const Students = () => {
       <div className="text-center">
         <div className="bg-gradient-to-r from-[#118DC4] to-[#0a6ba2] text-white rounded-2xl p-8 shadow-xl">
           <h3 className="text-2xl font-bold mb-4">Student Support Services</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="mb-6 max-w-2xl mx-auto" style={{ color: "#e6f3fb" }}>
             We are committed to providing comprehensive support for your academic journey and personal development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-[#118DC4] hover:bg-blue-50 font-semibold px-8 py-3">
+            <Button className="bg-white font-semibold px-8 py-3 hover:bg-gray-50" style={{ color: "#118DC4" }}>
               Student Portal
             </Button>
-            <Button className="bg-white text-[#118DC4] hover:bg-blue-50 font-semibold px-8 py-3">
+            <Button className="bg-white font-semibold px-8 py-3 hover:bg-gray-50" style={{ color: "#118DC4" }}>
               Download Syllabus
             </Button>
           </div>

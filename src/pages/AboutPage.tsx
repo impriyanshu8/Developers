@@ -286,28 +286,28 @@ const AboutPage = () => {
                 <CardContent>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <Award className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Award className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span className="text-gray-700">
                         Ranked among top engineering institutes (Tier‑1 NIRF
                         category)
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Award className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Award className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span className="text-gray-700">
                         78.4% placement in 2024‑25, Highest on‑campus CTC
                         ₹24.73 L, Avg ₹8.5 L
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Award className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Award className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span className="text-gray-700">
                         Strong collaborations and industry linkages across core
                         and IT sectors
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Award className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Award className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span className="text-gray-700">
                         Modern labs, smart classrooms, and rigorous academic
                         delivery
@@ -345,7 +345,7 @@ const AboutPage = () => {
                   </Link>
                   <Link to="/students" className="block">
                     <div className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                      <Users className="h-6 w-6 text-green-600 mb-2" />
+                      <Users className="h-6 w-6 mb-2" style={{ color: "#118DC4" }} />
                       <h4 className="font-semibold">Student Life</h4>
                       <p className="text-sm text-gray-600">
                         Campus life and activities
@@ -354,7 +354,7 @@ const AboutPage = () => {
                   </Link>
                   <Link to="/faculty" className="block">
                     <div className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                      <GraduationCap className="h-6 w-6 text-purple-600 mb-2" />
+                      <GraduationCap className="h-6 w-6 mb-2" style={{ color: "#118DC4" }} />
                       <h4 className="font-semibold">Faculty</h4>
                       <p className="text-sm text-gray-600">
                         Meet our expert faculty
@@ -747,25 +747,25 @@ const AboutPage = () => {
                 <CardContent>
                   <ul className="text-gray-700 space-y-3">
                     <li className="flex items-start">
-                      <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Lightbulb className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span>
                         To produce professionally competent students for a career in engineering and technology by providing value-based quality education
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Lightbulb className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span>
                         To provide the readily acceptable quality trained manpower to meet the requirements of the National and International industry in the emerging areas of engineering and technology as well as for research and design
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Lightbulb className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span>
                         To develop strong collaboration with academic and research institutes as well as the industry in the country and abroad
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Lightbulb className="h-5 w-5 mr-2 text-yellow-600 mt-0.5" />
+                      <Lightbulb className="h-5 w-5 mr-2 mt-0.5" style={{ color: "#118DC4" }} />
                       <span>
                         To provide world level consultancy to generate wealth through services and new product design
                       </span>
@@ -781,8 +781,8 @@ const AboutPage = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <h4 className="font-semibold text-blue-600 mb-2">
+                  <div className="text-center p-4 rounded-lg" style={{ backgroundColor: "#e6f3fb" }}>
+                    <h4 className="font-semibold mb-2" style={{ color: "#118DC4" }}>
                       Excellence
                     </h4>
                     <p className="text-sm text-gray-600">
@@ -790,8 +790,8 @@ const AboutPage = () => {
                       full tutorial & lab engagement
                     </p>
                   </div>
-                  <div className="text-center p-4 bg-green-50 rounded-lg">
-                    <h4 className="font-semibold text-green-600 mb-2">
+                  <div className="text-center p-4 rounded-lg" style={{ backgroundColor: "#e6f3fb" }}>
+                    <h4 className="font-semibold mb-2" style={{ color: "#118DC4" }}>
                       Innovation
                     </h4>
                     <p className="text-sm text-gray-600">
@@ -799,8 +799,8 @@ const AboutPage = () => {
                       grants and MoUs
                     </p>
                   </div>
-                  <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <h4 className="font-semibold text-purple-600 mb-2">
+                  <div className="text-center p-4 rounded-lg" style={{ backgroundColor: "#e6f3fb" }}>
+                    <h4 className="font-semibold mb-2" style={{ color: "#118DC4" }}>
                       Integrity
                     </h4>
                     <p className="text-sm text-gray-600">
@@ -818,11 +818,11 @@ const AboutPage = () => {
               {infrastructure.map((facility, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 text-center">
-                    <facility.icon className="h-8 w-8 mx-auto mb-3 text-blue-600" />
+                    <facility.icon className="h-8 w-8 mx-auto mb-3" style={{ color: "#118DC4" }} />
                     <h3 className="font-semibold text-lg mb-2">
                       {facility.name}
                     </h3>
-                    <p className="text-blue-600 font-medium">
+                    <p className="font-medium" style={{ color: "#118DC4" }}>
                       {facility.count}
                     </p>
                   </CardContent>
@@ -837,7 +837,7 @@ const AboutPage = () => {
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-3">
+                    <h4 className="font-semibold mb-3" style={{ color: "#118DC4" }}>
                       Academic Facilities
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-600">
@@ -865,7 +865,7 @@ const AboutPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-600 mb-3">
+                    <h4 className="font-semibold mb-3" style={{ color: "#118DC4" }}>
                       Student Amenities
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-600">

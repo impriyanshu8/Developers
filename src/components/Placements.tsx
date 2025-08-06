@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { TrendingUp, Users, Building, Award, Target, Star, Briefcase, DollarSign, MessageSquare, FileText, BarChart3, Globe, GraduationCap, Phone, Mail } from 'lucide-react';
+import { TrendingUp, Users, Building, Target, DollarSign, MessageSquare, FileText, BarChart3, Globe, GraduationCap, Phone, Mail } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 const Placements = () => {
@@ -14,7 +14,6 @@ const Placements = () => {
   const hashToTab = {
     "#tpo-message": "tpo-message",
     "#statistics": "statistics", 
-    "#recruiters": "recruiters",
     "#procedure": "procedure",
     "#portal": "portal",
     "#training": "training",
@@ -208,23 +207,23 @@ const Placements = () => {
                     <h4 className="text-lg font-semibold mb-4">Key Highlights</h4>
                     <ul className="space-y-2 text-gray-600">
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: "#118DC4" }}></div>
                         Comprehensive institute profile and achievements
                       </li>
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: "#118DC4" }}></div>
                         Department-wise student strength and specializations
                       </li>
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: "#118DC4" }}></div>
                         Past placement records and salary trends
                       </li>
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: "#118DC4" }}></div>
                         Infrastructure and facilities information
                       </li>
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: "#118DC4" }}></div>
                         Contact details and visit procedures
                       </li>
                     </ul>
@@ -239,7 +238,7 @@ const Placements = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <BarChart3 className="h-6 w-6 mr-2 text-purple-600" />
+                    <BarChart3 className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
                     Placement Statistics & Past Recruiters
                   </CardTitle>
                 </CardHeader>
@@ -299,7 +298,7 @@ const Placements = () => {
                 <div className="space-y-6">
                   {placementProcess.map((step, index) => (
                     <div key={index} className="flex items-start space-x-4">
-                      <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                      <div className="text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0" style={{ backgroundColor: "#118DC4" }}>
                         {step.step}
                       </div>
                       <div className="flex-1">
@@ -309,7 +308,7 @@ const Placements = () => {
                     </div>
                   ))}
                 </div>
-                <div className="mt-8 p-6 bg-blue-50 rounded-lg">
+                <div className="mt-8 p-6 rounded-lg" style={{ backgroundColor: "#e6f3fb" }}>
                   <h4 className="font-semibold mb-2">Important Guidelines</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Students must maintain minimum 60% aggregate throughout their academic tenure</li>
@@ -326,7 +325,7 @@ const Placements = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Globe className="h-6 w-6 mr-2 text-cyan-600" />
+                  <Globe className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
                   Placement Web Portal
                 </CardTitle>
               </CardHeader>
@@ -335,7 +334,7 @@ const Placements = () => {
                   <div>
                     <h4 className="text-lg font-semibold mb-4">For Students</h4>
                     <div className="space-y-3">
-                      <Button className="w-full justify-start bg-blue-600 hover:bg-blue-700">
+                      <Button className="w-full justify-start hover:opacity-90" style={{ backgroundColor: "#118DC4", color: "white" }}>
                         <Users className="h-4 w-4 mr-2" />
                         Student Login Portal
                       </Button>
@@ -365,8 +364,8 @@ const Placements = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <p className="text-sm text-yellow-800">
+                <div className="mt-6 p-4 rounded-lg" style={{ backgroundColor: "#e6f3fb", border: "1px solid #118DC4" }}>
+                  <p className="text-sm" style={{ color: "#0f7ab8" }}>
                     <strong>Note:</strong> For portal access credentials, please contact the Training & Placement Cell. 
                     New users need to complete the registration process before gaining access.
                   </p>
@@ -400,7 +399,7 @@ const Placements = () => {
                         <h5 className="font-semibold">Interview Preparation</h5>
                         <p className="text-sm text-gray-600">Mock interviews, HR rounds, group discussions</p>
                       </div>
-                      <div className="border-l-4 border-orange-500 pl-4">
+                      <div className="border-l-4 pl-4" style={{ borderColor: "#118DC4" }}>
                         <h5 className="font-semibold">Aptitude Training</h5>
                         <p className="text-sm text-gray-600">Quantitative, logical reasoning, verbal ability</p>
                       </div>
@@ -442,7 +441,7 @@ const Placements = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Phone className="h-6 w-6 mr-2 text-green-600" />
+                  <Phone className="h-6 w-6 mr-2" style={{ color: "#118DC4" }} />
                   Training & Placement Committee Team
                 </CardTitle>
               </CardHeader>
@@ -502,8 +501,10 @@ const Placements = () => {
               <Button className="bg-white font-semibold px-8 py-3 hover:bg-gray-50" style={{ color: "#118DC4" }}>
                 Contact Placement Cell
               </Button>
-             <Button className="bg-white font-semibold px-8 py-3 hover:bg-gray-50" style={{ color: "#118DC4" }}>
-               Download Brochure
+              <Button variant="outline" className="border-white text-white hover:bg-white font-semibold px-8 py-3" style={{
+                "&:hover": { color: "#118DC4" }
+              } as any}>
+                Download Brochure
               </Button>
             </div>
           </div>

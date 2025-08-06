@@ -258,13 +258,13 @@ const Admissions = () => {
           </Card>
           <Card className="text-center border-0 shadow-md bg-white">
             <CardContent className="p-6">
-              <div className="text-2xl font-bold text-green-600 mb-1">95%</div>
+              <div className="text-2xl font-bold mb-1" style={{ color: "#118DC4" }}>95%</div>
               <div className="text-slate-600 text-sm">Placement Rate</div>
             </CardContent>
           </Card>
           <Card className="text-center border-0 shadow-md bg-white">
             <CardContent className="p-6">
-              <div className="text-2xl font-bold text-purple-600 mb-1">
+              <div className="text-2xl font-bold mb-1" style={{ color: "#118DC4" }}>
                 ₹45 LPA
               </div>
               <div className="text-slate-600 text-sm">Highest Package</div>
@@ -272,7 +272,7 @@ const Admissions = () => {
           </Card>
           <Card className="text-center border-0 shadow-md bg-white">
             <CardContent className="p-6">
-              <div className="text-2xl font-bold text-orange-600 mb-1">22+</div>
+              <div className="text-2xl font-bold mb-1" style={{ color: "#118DC4" }}>22+</div>
               <div className="text-slate-600 text-sm">Years Legacy</div>
             </CardContent>
           </Card>

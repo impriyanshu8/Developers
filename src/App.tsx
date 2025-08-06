@@ -26,6 +26,7 @@ import PreviousYearPapersPage from "@/pages/PreviousYearPapersPage";
 import StudentsPage from "./pages/StudentsPage";
 import ImportantDownloadsPage from "./pages/ImportantDownloadsPage";
 import FacultyProfilePage from "./pages/FacultyProfilePage";
+import NewsPage from "./pages/NewsPage";
 import ScrollToTop from "./lib/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/students" element={<StudentsPage />} />
           <Route path="/importantDownload" element={<ImportantDownloadsPage />} />
           <Route path="/facultyprofile" element={<FacultyProfilePage />} />
+          <Route path="/news" element={<NewsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -382,7 +382,7 @@ const HomepageContent = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           <Link to="/admissions">
             <Card className="hover:shadow-xl transition-all duration-300 group cursor-pointer border-0 shadow-md hover:-translate-y-2 hover:shadow-green-500/20">
               <CardContent className="p-8 text-center">
@@ -442,6 +442,22 @@ const HomepageContent = () => {
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Career opportunities
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link to="/news">
+            <Card className="hover:shadow-xl transition-all duration-300 group cursor-pointer border-0 shadow-md hover:-translate-y-2 hover:shadow-red-500/20">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-red-500 group-hover:scale-110 transition-all duration-300">
+                  <Calendar className="h-8 w-8 text-red-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-semibold text-gray-900 group-hover:text-red-600 transition-colors mb-2">
+                  News & Updates
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Latest announcements & events
                 </p>
               </CardContent>
             </Card>
