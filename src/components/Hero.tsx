@@ -9,7 +9,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import UietImage from "../assets/images/UietImage.jpg";
+import UietImage from "../assets/images/UietImage.jpeg";
 
 const Hero = () => {
   const quickStats = [
